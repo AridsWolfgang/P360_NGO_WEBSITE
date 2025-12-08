@@ -1,0 +1,867 @@
+{% extends "base.html" %}
+
+{% block title %}Get Involved - Prosperity360 Foundation{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="hero" style="padding: 150px 0 80px; background: linear-gradient(rgba(142, 68, 173, 0.9), rgba(155, 89, 182, 0.9));">
+        <div class="container">
+            <h1>Get Involved</h1>
+            <p class="hero-description">
+                Join our movement to transform lives, systems, and economies across Africa and the Global South.
+            </p>
+        </div>
+    </section>
+
+    <!-- Ways to Get Involved -->
+    <section class="section">
+        <div class="container">
+            <h2>Ways to Engage</h2>
+            <p class="section-subtitle">Multiple pathways to contribute to inclusive prosperity</p>
+            
+            <div class="engagement-grid">
+                <div class="engagement-card" id="donate">
+                    <div class="engagement-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Donate</h3>
+                    <p>Your contribution fuels our work in transforming communities across the Global South.</p>
+                    <div class="donation-options">
+                        <div class="donation-option">
+                            <div class="donation-amount">$50</div>
+                            <p>Supports a farmer with climate-resilient seeds</p>
+                        </div>
+                        <div class="donation-option">
+                            <div class="donation-amount">$150</div>
+                            <p>Provides digital literacy training for 5 youth</p>
+                        </div>
+                        <div class="donation-option">
+                            <div class="donation-amount">$500</div>
+                            <p>Equips a community with clean energy solutions</p>
+                        </div>
+                    </div>
+                    <a href="#donation-form" class="btn btn-accent">Make a Donation</a>
+                </div>
+                
+                <div class="engagement-card" id="partner">
+                    <div class="engagement-icon" style="background: linear-gradient(135deg, #1a5276, #3498db);">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partner</h3>
+                    <p>Join as a corporate partner, government, or institutional collaborator.</p>
+                    <div class="partner-types">
+                        <div class="partner-type">
+                            <h4>Corporate Partnerships</h4>
+                            <p>CSR initiatives, employee volunteering, cause marketing</p>
+                        </div>
+                        <div class="partner-type">
+                            <h4>Institutional Partners</h4>
+                            <p>Foundations, multilateral agencies, development banks</p>
+                        </div>
+                        <div class="partner-type">
+                            <h4>Government Collaboration</h4>
+                            <p>Policy partnerships, program implementation, systems change</p>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('contact') }}" class="btn">Become a Partner</a>
+                </div>
+                
+                <div class="engagement-card" id="volunteer">
+                    <div class="engagement-icon" style="background: linear-gradient(135deg, #28a745, #2ecc71);">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Contribute your skills and time to our transformative programs.</p>
+                    <div class="volunteer-roles">
+                        <div class="volunteer-role">
+                            <h4>Field Volunteers</h4>
+                            <p>Community engagement, training, implementation support</p>
+                        </div>
+                        <div class="volunteer-role">
+                            <h4>Professional Services</h4>
+                            <p>Legal, marketing, IT, research, and other expertise</p>
+                        </div>
+                        <div class="volunteer-role">
+                            <h4>Virtual Volunteers</h4>
+                            <p>Remote support in content, translation, data analysis</p>
+                        </div>
+                    </div>
+                    <a href="#volunteer-form" class="btn">Volunteer Today</a>
+                </div>
+                
+                <div class="engagement-card">
+                    <div class="engagement-icon" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Advocate</h3>
+                    <p>Help spread awareness about inclusive prosperity and systems change.</p>
+                    <div class="advocacy-actions">
+                        <div class="advocacy-action">
+                            <i class="fas fa-share-alt"></i>
+                            <span>Share our content</span>
+                        </div>
+                        <div class="advocacy-action">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Host awareness events</span>
+                        </div>
+                        <div class="advocacy-action">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Write about our work</span>
+                        </div>
+                        <div class="advocacy-action">
+                            <i class="fas fa-hashtag"></i>
+                            <span>Join social media campaigns</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Join Campaign</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form -->
+    <section class="section" id="donation-form" style="background-color: var(--card-bg);">
+        <div class="container">
+            <h2>Make a Donation</h2>
+            <p class="section-subtitle">Your support transforms lives and builds prosperity</p>
+            
+            <div class="donation-form-container">
+                <div class="donation-info">
+                    <h3>Where Your Donation Goes</h3>
+                    <div class="impact-breakdown">
+                        <div class="impact-item">
+                            <div class="impact-percentage" style="width: 40%; background: var(--primary-color);"></div>
+                            <span>40% Program Implementation</span>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-percentage" style="width: 30%; background: var(--secondary-color);"></div>
+                            <span>30% Community Capacity Building</span>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-percentage" style="width: 20%; background: var(--accent-color);"></div>
+                            <span>20% Innovation & Research</span>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-percentage" style="width: 10%; background: #8e44ad;"></div>
+                            <span>10% Operational Costs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <h4>Transparent Reporting</h4>
+                                <p>Regular impact reports and financial transparency</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-certificate" style="color: var(--primary-color);"></i>
+                            <div>
+                                <h4>Tax Deductible</h4>
+                                <p>Donations are tax-deductible in multiple jurisdictions</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-globe" style="color: var(--accent-color);"></i>
+                            <div>
+                                <h4>Global Impact</h4>
+                                <p>Your contribution reaches communities across continents</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donation-form">
+                    <h3>Donation Details</h3>
+                    <form id="donationForm">
+                        <div class="form-group">
+                            <label for="amount">Donation Amount</label>
+                            <div class="amount-options">
+                                <button type="button" class="amount-option" data-amount="50">$50</button>
+                                <button type="button" class="amount-option" data-amount="100">$100</button>
+                                <button type="button" class="amount-option" data-amount="250">$250</button>
+                                <button type="button" class="amount-option" data-amount="500">$500</button>
+                                <input type="number" id="custom-amount" placeholder="Other amount" min="1">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="frequency">Donation Frequency</label>
+                            <div class="frequency-options">
+                                <label class="frequency-option">
+                                    <input type="radio" name="frequency" value="one-time" checked>
+                                    <span>One-time</span>
+                                </label>
+                                <label class="frequency-option">
+                                    <input type="radio" name="frequency" value="monthly">
+                                    <span>Monthly</span>
+                                </label>
+                                <label class="frequency-option">
+                                    <input type="radio" name="frequency" value="quarterly">
+                                    <span>Quarterly</span>
+                                </label>
+                                <label class="frequency-option">
+                                    <input type="radio" name="frequency" value="annually">
+                                    <span>Annually</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="designation">Designate Your Gift (Optional)</label>
+                            <select id="designation" class="form-control">
+                                <option value="">Where most needed</option>
+                                <option value="innovation">Innovation & Digital Inclusion</option>
+                                <option value="economic">Economic Empowerment</option>
+                                <option value="agriculture">Sustainable Food Systems</option>
+                                <option value="energy">Clean Energy Access</option>
+                                <option value="health">Health & WASH Systems</option>
+                                <option value="education">Education Transformation</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-accent" style="width: 100%;">
+                            <i class="fas fa-lock"></i> Donate Securely
+                        </button>
+                        
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i> Your donation is secure and encrypted
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Form -->
+    <section class="section" id="volunteer-form">
+        <div class="container">
+            <h2>Volunteer Application</h2>
+            <p class="section-subtitle">Join our team of change-makers and contribute your skills</p>
+            
+            <div class="volunteer-form-container">
+                <form id="volunteerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="volunteerType">Volunteer Type</label>
+                        <select id="volunteerType" class="form-control" required>
+                            <option value="">Select volunteer type</option>
+                            <option value="field">Field Volunteer</option>
+                            <option value="professional">Professional Services</option>
+                            <option value="virtual">Virtual Volunteer</option>
+                            <option value="corporate">Corporate Volunteer</option>
+                            <option value="student">Student Intern</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skills">Skills & Expertise</label>
+                        <div class="skills-grid">
+                            <label class="skill-option">
+                                <input type="checkbox" name="skills" value="community">
+                                <span>Community Development</span>
+                            </label>
+                            <label class="skill-option">
+                                <input type="checkbox" name="skills" value="education">
+                                <span>Education & Training</span>
+                            </label>
+                            <label class="skill-option">
+                                <input type="checkbox" name="skills" value="technology">
+                                <span>Technology & IT</span>
+                            </label>
+                            <label class="skill-option">
+                                <input type="checkbox" name="skills" value="health">
+                                <span>Health & WASH</span>
+                            </label>
+                            <label class="skill-option">
+                                <input type="checkbox" name="skills" value="agriculture">
+                                <span>Agriculture</span>
+                            </label>
+                            <label class="skill-option">
+                                <input type="checkbox" name="skills" value="business">
+                                <span>Business Development</span>
+                            </label>
+                            <label class="skill-option">
+                                <input type="checkbox" name="skills" value="research">
+                                <span>Research & Analysis</span>
+                            </label>
+                            <label class="skill-option">
+                                <input type="checkbox" name="skills" value="communications">
+                                <span>Communications</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="availability">Availability</label>
+                        <div class="availability-options">
+                            <label class="availability-option">
+                                <input type="radio" name="availability" value="full-time" required>
+                                <span>Full-time (30+ hours/week)</span>
+                            </label>
+                            <label class="availability-option">
+                                <input type="radio" name="availability" value="part-time">
+                                <span>Part-time (10-20 hours/week)</span>
+                            </label>
+                            <label class="availability-option">
+                                <input type="radio" name="availability" value="occasional">
+                                <span>Occasional/Project-based</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Why do you want to volunteer with Prosperity360?</label>
+                        <textarea id="message" class="form-control" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">
+                        Submit Volunteer Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Partnerships -->
+    <section class="section" style="background-color: var(--card-bg);">
+        <div class="container">
+            <h2>Corporate Partnerships</h2>
+            <p class="section-subtitle">Strategic opportunities for businesses to drive social impact</p>
+            
+            <div class="partnership-options">
+                <div class="partnership-option">
+                    <div class="partnership-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Employee Engagement</h3>
+                    <ul>
+                        <li>Skills-based volunteering programs</li>
+                        <li>Team-building through community projects</li>
+                        <li>Matching gift programs</li>
+                        <li>Employee fundraising campaigns</li>
+                    </ul>
+                </div>
+                
+                <div class="partnership-option">
+                    <div class="partnership-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Strategic Alliances</h3>
+                    <ul>
+                        <li>Co-creation of social innovation programs</li>
+                        <li>Shared value initiatives</li>
+                        <li>Technology and expertise sharing</li>
+                        <li>Supply chain integration</li>
+                    </ul>
+                </div>
+                
+                <div class="partnership-option">
+                    <div class="partnership-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Impact Investing</h3>
+                    <ul>
+                        <li>Social impact bonds</li>
+                        <li>Venture philanthropy</li>
+                        <li>Program-related investments</li>
+                        <li>Outcome-based funding</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="corporate-cta">
+                <h3>Ready to Partner?</h3>
+                <p>Contact our partnerships team to explore customized collaboration opportunities.</p>
+                <a href="{{ url_for('contact') }}" class="btn">Contact Partnerships Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Connected -->
+    <section class="section">
+        <div class="container">
+            <h2>Stay Connected</h2>
+            
+            <div class="connected-options">
+                <div class="connected-option">
+                    <div class="connected-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our monthly newsletter for updates, stories, and opportunities.</p>
+                    <form class="newsletter-form" id="footerNewsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-small">Subscribe</button>
+                    </form>
+                </div>
+                
+                <div class="connected-option">
+                    <div class="connected-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Social Media</h3>
+                    <p>Follow us and join the conversation about inclusive prosperity.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" style="background: #1877f2;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" style="background: #1da1f2;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" style="background: #0077b5;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" style="background: #e4405f;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" style="background: #ff0000;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="connected-option">
+                    <div class="connected-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Events</h3>
+                    <p>Join our webinars, workshops, and community events.</p>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">View Upcoming Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block head %}
+<style>
+    .engagement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .engagement-card {
+        background: var(--card-bg);
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: var(--transition);
+    }
+    
+    .engagement-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .engagement-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        margin: 0 auto 1.5rem;
+    }
+    
+    .donation-options {
+        margin: 1.5rem 0;
+    }
+    
+    .donation-option {
+        background: var(--light-color);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 0.8rem;
+        text-align: left;
+    }
+    
+    .donation-amount {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-bottom: 0.3rem;
+    }
+    
+    .partner-types, .volunteer-roles {
+        margin: 1.5rem 0;
+    }
+    
+    .partner-type, .volunteer-role {
+        background: var(--light-color);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 0.8rem;
+        text-align: left;
+    }
+    
+    .partner-type h4, .volunteer-role h4 {
+        color: var(--primary-color);
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+    }
+    
+    .advocacy-actions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .advocacy-action {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem;
+        background: var(--light-color);
+        border-radius: 8px;
+    }
+    
+    .advocacy-action i {
+        color: var(--primary-color);
+    }
+    
+    .donation-form-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+    
+    .impact-breakdown {
+        margin: 1.5rem 0;
+    }
+    
+    .impact-item {
+        margin-bottom: 1rem;
+    }
+    
+    .impact-percentage {
+        height: 8px;
+        border-radius: 4px;
+        margin-bottom: 0.3rem;
+    }
+    
+    .donation-features {
+        margin-top: 2rem;
+    }
+    
+    .feature-item {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        align-items: flex-start;
+    }
+    
+    .feature-item i {
+        font-size: 1.5rem;
+        margin-top: 0.2rem;
+    }
+    
+    .amount-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 0.5rem 0;
+    }
+    
+    .amount-option {
+        padding: 0.8rem 1.5rem;
+        background: var(--light-color);
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .amount-option:hover {
+        border-color: var(--primary-color);
+        background: var(--primary-color);
+        color: white;
+    }
+    
+    #custom-amount {
+        flex: 1;
+        min-width: 120px;
+        padding: 0.8rem;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+    }
+    
+    .frequency-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    .frequency-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+    
+    .form-note {
+        text-align: center;
+        margin-top: 1rem;
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+    
+    .volunteer-form-container {
+        max-width: 800px;
+        margin: 3rem auto 0;
+    }
+    
+    .form-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.8rem;
+        margin: 0.5rem 0;
+    }
+    
+    .skill-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem;
+        background: var(--light-color);
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    .availability-options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin: 0.5rem 0;
+    }
+    
+    .availability-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+    
+    .partnership-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+    
+    .partnership-option {
+        background: var(--bg-color);
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .partnership-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 auto 1rem;
+    }
+    
+    .partnership-option ul {
+        list-style: none;
+        text-align: left;
+        margin-top: 1rem;
+    }
+    
+    .partnership-option li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+    
+    .partnership-option li:before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--secondary-color);
+    }
+    
+    .corporate-cta {
+        text-align: center;
+        padding: 2rem;
+        background: var(--bg-color);
+        border-radius: 10px;
+        margin-top: 3rem;
+    }
+    
+    .connected-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .connected-option {
+        text-align: center;
+        padding: 2rem;
+        background: var(--card-bg);
+        border-radius: 10px;
+    }
+    
+    .connected-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 auto 1rem;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+    
+    .social-link:hover {
+        transform: translateY(-3px);
+    }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Donation amount selection
+    document.addEventListener('DOMContentLoaded', function() {
+        const amountOptions = document.querySelectorAll('.amount-option');
+        const customAmountInput = document.getElementById('custom-amount');
+        
+        amountOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove active class from all options
+                amountOptions.forEach(opt => opt.classList.remove('active'));
+                
+                // Add active class to clicked option
+                this.classList.add('active');
+                this.style.borderColor = 'var(--primary-color)';
+                this.style.background = 'var(--primary-color)';
+                this.style.color = 'white';
+                
+                // Set custom amount input to empty
+                customAmountInput.value = '';
+            });
+        });
+        
+        // Handle custom amount input
+        customAmountInput.addEventListener('focus', function() {
+            // Remove active class from all amount options
+            amountOptions.forEach(opt => {
+                opt.classList.remove('active');
+                opt.style.borderColor = '';
+                opt.style.background = '';
+                opt.style.color = '';
+            });
+        });
+        
+        // Donation form submission
+        const donationForm = document.getElementById('donationForm');
+        if (donationForm) {
+            donationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // In a real implementation, this would connect to a payment gateway
+                alert('Thank you for your donation! This would connect to a payment gateway in production.');
+                donationForm.reset();
+                
+                // Reset amount options
+                amountOptions.forEach(opt => {
+                    opt.classList.remove('active');
+                    opt.style.borderColor = '';
+                    opt.style.background = '';
+                    opt.style.color = '';
+                });
+            });
+        }
+        
+        // Volunteer form submission
+        const volunteerForm = document.getElementById('volunteerForm');
+        if (volunteerForm) {
+            volunteerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show success message
+                alert('Thank you for your volunteer application! We will contact you soon.');
+                volunteerForm.reset();
+            });
+        }
+        
+        // Newsletter forms
+        const newsletterForms = document.querySelectorAll('.newsletter-form');
+        newsletterForms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                
+                if (emailInput.value) {
+                    alert('Thank you for subscribing to our newsletter!');
+                    emailInput.value = '';
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

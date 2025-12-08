@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Prosperity360 Foundation{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Prosperity360</h1>
+            <div class="hero-subtitle">Transforming Lives, Systems, and Economies</div>
+            <p class="hero-description">
+                A Pan-African, Global South–rooted development institution accelerating multi-dimensional prosperity, 
+                systems transformation, and community-driven development across Africa, Latin America, South Asia, 
+                and other emerging regions.
+            </p>
+            <div class="hero-cta">
+                <a href="{{ url_for('get_involved') }}" class="btn">Join Our Movement</a>
+                <a href="{{ url_for('programs') }}" class="btn btn-secondary">Our Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Our Mission & Vision</h2>
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h3>Engineering Change, Not Waiting For It</h3>
+                    <p>Prosperity360 is not just another NGO. It's a movement; a new model for inclusive prosperity through innovation, empowerment, and community-driven change.</p>
+                    <p>We believe prosperity is not a privilege—it's a possibility. Our vision is a 360-degree prosperity revolution where every person, every idea, and every resource contributes to shared growth.</p>
+                    <a href="{{ url_for('about') }}" class="btn">Learn More About Us</a>
+                </div>
+                <div class="mission-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">54</div>
+                        <div class="stat-label">Countries Target</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">40M</div>
+                        <div class="stat-label">Households to Reach</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Strategic Pillars</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAs Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Take Action Today</h2>
+            <p class="section-subtitle">Join us in building a more prosperous Global South</p>
+            
+            <div class="cta-grid">
+                <div class="cta-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Donate</h3>
+                    <p>Support our work in transforming communities across the Global South.</p>
+                    <a href="{{ url_for('get_involved') }}" class="btn btn-small">Donate Now</a>
+                </div>
+                
+                <div class="cta-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Partner</h3>
+                    <p>Join as a corporate partner, government, or institutional collaborator.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-small">Become a Partner</a>
+                </div>
+                
+                <div class="cta-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Contribute your skills and time to our transformative programs.</p>
+                    <a href="{{ url_for('get_involved') }}#volunteer" class="btn btn-small">Volunteer Today</a>
+                </div>
+                
+                <div class="cta-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Advocate</h3>
+                    <p>Help spread awareness about inclusive prosperity and systems change.</p>
+                    <a href="#" class="btn btn-small">Join Campaign</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Preview -->
+    <section class="section">
+        <div class="container">
+            <h2>Our Strategic Pillars</h2>
+            <p class="section-subtitle">Six comprehensive programs driving multi-dimensional prosperity</p>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="program-content">
+                        <h3>Innovation & Systems</h3>
+                        <p>Digital inclusion, AI for equality, governance innovation, and South-South policy experimentation.</p>
+                        <a href="{{ url_for('programs') }}#innovation" class="btn btn-small">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="program-content">
+                        <h3>Economic Empowerment</h3>
+                        <p>Future-of-work skills, women & youth enterprises, green entrepreneurship.</p>
+                        <a href="{{ url_for('programs') }}#economic" class="btn btn-small">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="program-content">
+                        <h3>Sustainable Food Systems</h3>
+                        <p>Regenerative agriculture, climate-smart livelihoods, value-chain modernization.</p>
+                        <a href="{{ url_for('programs') }}#agriculture" class="btn btn-small">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Message -->
+    <section class="section" style="background-color: var(--card-bg);">
+        <div class="container">
+            <div class="founder-message">
+                <div class="founder-quote">
+                    <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <blockquote style="font-size: 1.5rem; font-style: italic; margin-bottom: 2rem;">
+                        "Prosperity is not a privilege, it is a possibility. Together, we can turn idle potential into national power."
+                    </blockquote>
+                    <div class="founder-info">
+                        <div class="founder-name">Ridwan Awosanya</div>
+                        <div class="founder-title">Founder, Prosperity360 Foundation</div>
+                    </div>
+                </div>
+                <div class="founder-cta">
+                    <p>Read the full Founder's Speech and join our movement for inclusive prosperity.</p>
+                    <a href="{{ url_for('about') }}#founder" class="btn">Read Founder's Speech</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,845 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Prosperity360 Foundation{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="hero" style="padding: 150px 0 80px; background: linear-gradient(rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.9));">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="hero-description">
+                Get in touch with our team to learn more, partner with us, or support our work.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you</p>
+            
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-icon" style="background: linear-gradient(135deg, #1a5276, #3498db);">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>General Inquiries</p>
+                    <a href="mailto:info@prosperity360.org" class="contact-link">info@prosperity360.org</a>
+                    <a href="mailto:partnerships@prosperity360.org" class="contact-link">partnerships@prosperity360.org</a>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon" style="background: linear-gradient(135deg, #28a745, #2ecc71);">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Available Monday-Friday, 9am-5pm GMT</p>
+                    <a href="tel:+2341234567890" class="contact-link">+234 123 456 7890</a>
+                    <a href="tel:+254123456789" class="contact-link">+254 123 456 789</a>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Headquarters & Regional Offices</p>
+                    <div class="address">
+                        <strong>Africa Headquarters:</strong><br>
+                        Lagos, Nigeria
+                    </div>
+                    <div class="address">
+                        <strong>East Africa Office:</strong><br>
+                        Nairobi, Kenya
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Connect Online</h3>
+                    <p>Follow us on social media</p>
+                    <div class="social-contact">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section" style="background-color: var(--card-bg);">
+        <div class="container">
+            <h2>Send Us a Message</h2>
+            
+            <div class="contact-form-container">
+                <form id="contactForm" method="POST" action="{{ url_for('contact') }}">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inquiryType">Inquiry Type *</label>
+                        <select id="inquiryType" name="inquiry_type" class="form-control" required>
+                            <option value="">Select inquiry type</option>
+                            <option value="general">General Information</option>
+                            <option value="partnership">Partnership Opportunities</option>
+                            <option value="donation">Donation & Funding</option>
+                            <option value="volunteer">Volunteering</option>
+                            <option value="media">Media & Press</option>
+                            <option value="career">Career Opportunities</option>
+                            <option value="program">Program Information</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select id="country" name="country" class="form-control" required>
+                            <option value="">Select your country</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="kenya">Kenya</option>
+                            <option value="rwanda">Rwanda</option>
+                            <option value="ghana">Ghana</option>
+                            <option value="south-africa">South Africa</option>
+                            <option value="other-africa">Other African Country</option>
+                            <option value="global">Outside Africa</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" checked>
+                            <span>Subscribe to our newsletter for updates</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+                
+                <div class="form-info">
+                    <h3>What happens next?</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Submit Your Inquiry</h4>
+                                <p>Fill out the form with your details and message</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Confirmation</h4>
+                                <p>You'll receive an automatic confirmation email</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Team Review</h4>
+                                <p>Our team reviews and routes your inquiry</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Response</h4>
+                                <p>You'll hear back from us within 2 business days</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="response-time">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Typical Response Time:</strong>
+                            <p>Within 2 business days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Offices -->
+    <section class="section">
+        <div class="container">
+            <h2>Regional Offices & Contacts</h2>
+            
+            <div class="regional-offices">
+                <div class="office-card">
+                    <div class="office-header" style="background: linear-gradient(135deg, #1a5276, #3498db);">
+                        <h3>Africa Headquarters</h3>
+                        <p>Lagos, Nigeria</p>
+                    </div>
+                    <div class="office-content">
+                        <div class="office-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Address:</strong>
+                                    <p>Prosperity360 Foundation<br>
+                                    123 Innovation Drive<br>
+                                    Lagos, Nigeria</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong>
+                                    <p>+234 123 456 7890</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong>
+                                    <p>lagos@prosperity360.org</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="office-region">
+                            <h4>Coverage Area</h4>
+                            <p>West Africa Region</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-header" style="background: linear-gradient(135deg, #28a745, #2ecc71);">
+                        <h3>East Africa Office</h3>
+                        <p>Nairobi, Kenya</p>
+                    </div>
+                    <div class="office-content">
+                        <div class="office-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Address:</strong>
+                                    <p>Prosperity360 Foundation<br>
+                                    456 Innovation Center<br>
+                                    Nairobi, Kenya</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong>
+                                    <p>+254 123 456 789</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong>
+                                    <p>nairobi@prosperity360.org</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="office-region">
+                            <h4>Coverage Area</h4>
+                            <p>East & Central Africa</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-header" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
+                        <h3>Southern Africa Office</h3>
+                        <p>Johannesburg, South Africa</p>
+                    </div>
+                    <div class="office-content">
+                        <div class="office-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Address:</strong>
+                                    <p>Prosperity360 Foundation<br>
+                                    789 Prosperity Square<br>
+                                    Johannesburg, South Africa</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong>
+                                    <p>+27 123 456 789</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong>
+                                    <p>johannesburg@prosperity360.org</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="office-region">
+                            <h4>Coverage Area</h4>
+                            <p>Southern Africa Region</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Contacts -->
+    <section class="section" style="background-color: var(--card-bg);">
+        <div class="container">
+            <h2>Key Team Contacts</h2>
+            
+            <div class="team-contacts">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Partnerships Team</h3>
+                        <p class="member-role">Strategic Alliances & Collaboration</p>
+                        <a href="mailto:partnerships@prosperity360.org" class="member-email">partnerships@prosperity360.org</a>
+                        <p class="member-desc">For corporate partnerships, institutional collaboration, and strategic alliances</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Program Team</h3>
+                        <p class="member-role">Program Implementation & Impact</p>
+                        <a href="mailto:programs@prosperity360.org" class="member-email">programs@prosperity360.org</a>
+                        <p class="member-desc">For program-specific inquiries, field operations, and impact questions</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Media & Communications</h3>
+                        <p class="member-role">Press, Media, & Public Relations</p>
+                        <a href="mailto:media@prosperity360.org" class="member-email">media@prosperity360.org</a>
+                        <p class="member-desc">For press inquiries, media partnerships, and communications</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Donor Relations</h3>
+                        <p class="member-role">Funding & Donor Engagement</p>
+                        <a href="mailto:donors@prosperity360.org" class="member-email">donors@prosperity360.org</a>
+                        <p class="member-desc">For donation inquiries, grant opportunities, and donor relations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can my organization partner with Prosperity360?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer multiple partnership opportunities including corporate social responsibility programs, employee volunteering, cause marketing, strategic alliances, and impact investing. Please contact our partnerships team at partnerships@prosperity360.org to discuss specific opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How are donations used?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Donations are allocated as follows: 40% to program implementation, 30% to community capacity building, 20% to innovation and research, and 10% to operational costs. We provide regular impact reports and maintain financial transparency.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I volunteer remotely?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer virtual volunteering opportunities in areas such as content creation, translation, data analysis, research, digital marketing, and online mentorship. Visit our Get Involved page to see current virtual volunteering opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does Prosperity360 measure impact?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We use our Multi-Dimensional Prosperity Framework to measure impact across six dimensions: economic capability, social wellbeing, environmental resilience, institutional strength, educational readiness, and systems innovation. We employ AI-powered monitoring systems, community scorecards, and annual Global Prosperity Reports.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I stay updated on your work?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Subscribe to our monthly newsletter, follow us on social media (@Prosperity360), or check our website regularly for updates, stories, and event announcements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>Global Presence Map</h3>
+                    <p>Interactive map showing our offices and program locations across Africa and the Global South</p>
+                    <div class="map-legends">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #1a5276;"></div>
+                            <span>Headquarters</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #28a745;"></div>
+                            <span>Regional Offices</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #f39c12;"></div>
+                            <span>Program Countries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block head %}
+<style>
+    .contact-info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .contact-info-card {
+        text-align: center;
+        padding: 2rem;
+        background: var(--card-bg);
+        border-radius: 10px;
+        transition: var(--transition);
+    }
+    
+    .contact-info-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .contact-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        margin: 0 auto 1.5rem;
+    }
+    
+    .contact-link {
+        display: block;
+        color: var(--primary-color);
+        text-decoration: none;
+        margin: 0.5rem 0;
+        transition: var(--transition);
+    }
+    
+    .contact-link:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+    }
+    
+    .address {
+        margin: 0.5rem 0;
+        text-align: left;
+        background: var(--light-color);
+        padding: 0.8rem;
+        border-radius: 8px;
+    }
+    
+    .social-contact {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+    
+    .social-icon:hover {
+        transform: translateY(-3px);
+        background: var(--secondary-color);
+    }
+    
+    .contact-form-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+    
+    .form-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        margin: 1rem 0;
+    }
+    
+    .process-steps {
+        margin: 2rem 0;
+    }
+    
+    .process-step {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        align-items: flex-start;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+    
+    .response-time {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--light-color);
+        border-radius: 8px;
+        margin-top: 2rem;
+    }
+    
+    .response-time i {
+        font-size: 2rem;
+        color: var(--primary-color);
+    }
+    
+    .regional-offices {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .office-card {
+        background: var(--card-bg);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+    }
+    
+    .office-header {
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .office-content {
+        padding: 1.5rem;
+    }
+    
+    .info-item {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        align-items: flex-start;
+    }
+    
+    .info-item i {
+        color: var(--primary-color);
+        margin-top: 0.2rem;
+    }
+    
+    .office-region {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .team-contacts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .team-member {
+        background: var(--bg-color);
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .member-avatar {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        margin: 0 auto 1rem;
+    }
+    
+    .member-role {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .member-email {
+        display: block;
+        color: var(--primary-color);
+        text-decoration: none;
+        margin: 0.5rem 0;
+    }
+    
+    .member-desc {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        color: var(--text-light);
+    }
+    
+    .faq-container {
+        max-width: 800px;
+        margin: 3rem auto 0;
+    }
+    
+    .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .faq-question {
+        width: 100%;
+        padding: 1.5rem;
+        background: var(--card-bg);
+        border: none;
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--dark-color);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: var(--transition);
+    }
+    
+    .faq-question:hover {
+        background: var(--light-color);
+    }
+    
+    .faq-answer {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .faq-answer.active {
+        padding: 1.5rem;
+        max-height: 500px;
+    }
+    
+    .map-container {
+        background: var(--card-bg);
+        border-radius: 10px;
+        padding: 3rem;
+        text-align: center;
+    }
+    
+    .map-placeholder {
+        padding: 2rem;
+    }
+    
+    .map-legends {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .legend-color {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+    }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // FAQ functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle active class
+                answer.classList.toggle('active');
+                
+                // Rotate icon
+                if (answer.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+                
+                // Close other FAQ items
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== this) {
+                        const otherAnswer = otherQuestion.nextElementSibling;
+                        const otherIcon = otherQuestion.querySelector('i');
+                        
+                        otherAnswer.classList.remove('active');
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+        
+        // Contact form submission (handled by Flask)
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                // Client-side validation
+                const requiredFields = this.querySelectorAll('[required]');
+                let valid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        valid = false;
+                        field.style.borderColor = 'var(--accent-color)';
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                
+                if (!valid) {
+                    e.preventDefault();
+                    alert('Please fill in all required fields.');
+                    return false;
+                }
+                
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // The form submission will be handled by Flask backend
+                // The response is handled in the main.js file
+            });
+        }
+    });
+</script>
+{% endblock %}
