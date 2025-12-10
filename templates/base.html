@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Prosperity360 Foundation - Transforming Lives Across Africa & Global South{% endblock %}</title>
+    <title>{% block title %}Prosperity360 Foundation - Transforming Lives Across Africa & Global South{% endblock %}
+    </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
     {% block head %}{% endblock %}
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container nav-container">
             <a href="{{ url_for('home') }}" class="logo">
-                <div>
-                    <div class="logo-text">Prosperity360</div>
-                    <div class="logo-subtext">Foundation</div>
+                <div class="logo-img">
+                    <!-- <img src="/static/images/logo.png" alt=""> -->
+                    <img src="/static/images/ngologo.png" alt="">
                 </div>
             </a>
-            
+
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-            
+
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -34,7 +37,14 @@
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 </ul>
             </nav>
-            
+
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/prosperity360/posts/?feedView=all" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+           
+            </div>
+
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
@@ -51,7 +61,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <div class="footer-logo">Prosperity360</div>
+                    <div class="footer-logo">
+                         <img src="/static/images/logo.png" alt="">
+                    </div>
                     <p>Transforming Lives, Systems, and Economies Across Africa & the Global South.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -61,7 +73,7 @@
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
@@ -72,7 +84,7 @@
                         <li><a href="{{ url_for('get_involved') }}">Get Involved</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-links">
                     <h4>Programs</h4>
                     <ul>
@@ -84,8 +96,8 @@
                         <li><a href="#education">Education</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-newsletter">
+
+                <div class="footer-newsletter footer-links">
                     <h4>Stay Updated</h4>
                     <p>Subscribe to our newsletter for the latest updates</p>
                     <form class="newsletter-form" id="newsletterForm">
@@ -96,9 +108,9 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2024 Prosperity360 Foundation. All rights reserved.</p>
+                <p>&copy; 2025 Prosperity360 Development Initiative. All rights reserved.</p>
                 <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
             </div>
         </div>
@@ -107,4 +119,5 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     {% block scripts %}{% endblock %}
 </body>
+
 </html>
