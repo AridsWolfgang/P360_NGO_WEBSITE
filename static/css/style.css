@@ -1,3 +1,11 @@
+/* 
+=======================================================================================================
+                        STYLE.CSS - MAIN STYLESHEET FOR P360 NGO WEBSITE                              =
+CSS is intentionally used for the entire style of the website for consistency and maintainability.    =
+                                    AUTHOR: AridsWolfgangX                                            =
+=======================================================================================================
+*/
+
 /* Base Styles & Reset */
 * {
   margin: 0;
@@ -205,15 +213,14 @@ p {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   padding: 120px 0 80px;
   overflow: hidden;
   color: white;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url("../images/background.jpg") center/cover no-repeat;
+  
 }
 
 .hero::before {
@@ -223,9 +230,10 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-
   z-index: 0;
   animation: zoomIn 20s infinite alternate;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../images/background.jpg") center/cover no-repeat;
 }
 
 .hero .container {
@@ -239,7 +247,7 @@ p {
   font-weight: 800;
   margin-bottom: 1rem;
   color: white;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  /* text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
   animation: slideInDown 1s ease-out;
 }
 
