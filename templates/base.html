@@ -10,46 +10,93 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
     {% block head %}{% endblock %}
 </head>
 
 <body>
+    <!-- Sub-Header -->
+    <div class="subheading-container">
+        <div class="welcome-section">
+            <i class="fas fa-home home-icon"></i>
+            <p class="welcome-text">Welcome to Prosperity360</p>
+        </div>
+
+        <div class="translation-section">
+            <button class="translate-btn" id="translateBtn">
+                <i class="fas fa-language translate-icon"></i>
+                <span id="currentLang">English</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <div class="language-dropdown" id="languageDropdown">
+                <ul class="language-list" id="languageList">
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="container nav-container">
-            <a href="{{ url_for('home') }}" class="logo">
-                <div class="logo-img">
-                    <!-- <img src="/static/images/logo.png" alt=""> -->
-                    <img src="/static/images/ngologo.png" alt="">
-                </div>
+            <div class="logo">
+                <a href="{{ url_for('home') }}" class="logo">
+                    <img src="/static/images/logo.png" alt="">
+                    <div class="logo-texts">
+                        <h1>Prosperity360</h1>
+                        <p>Development Initiative</p>
+                    </div>
+                </a>
+            </div>
             </a>
-
+            <!-- This is the section for the mobile menu button -->
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
             <nav>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About Us</a></li>
-                    <li><a href="{{ url_for('programs') }}">Programs</a></li>
-                    <li><a href="{{ url_for('impact') }}">Impact</a></li>
-                    <li><a href="{{ url_for('get_involved') }}">Get Involved</a></li>
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                </ul>
+                    <li><a href="{{ url_for('home') }}"><span>Strategic Pillars</span><span class="dropdown-icon"><i
+                                    class="fas fa-chevron-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{ url_for('innovation') }}">Innovation & Systems</a></li>
+                            <li><a href="{{ url_for('economic') }}">Economic Empowerment</a></li>
+                            <li><a href="{{ url_for('agriculture') }}">Food Systems</a></li>
+                            <li><a href="{{ url_for('energy') }}">Clean Energy</a></li>
+                            <li><a href="{{ url_for('health') }}">Health & WASH</a></li>
+                            <li><a href="{{ url_for('education') }}">Education</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ url_for('home') }}"><span>Impacts</span><span class="dropdown-icon"><i
+                                    class="fas fa-chevron-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{ url_for('innovation') }}">Innovation & Systems</a></li>
+                            <li><a href="{{ url_for('economic') }}">Economic Empowerment</a></li>
+                            <li><a href="{{ url_for('agriculture') }}">Food Systems</a></li>
+                            <li><a href="{{ url_for('energy') }}">Clean Energy</a></li>
+                            <li><a href="{{ url_for('health') }}">Health & WASH</a></li>
+                            <li><a href="{{ url_for('education') }}">Education</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ url_for('home') }}"><span>About Us</span><span class="dropdown-icon"><i
+                                    class="fas fa-chevron-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{ url_for('innovation') }}">Innovation & Systems</a></li>
+                            <li><a href="{{ url_for('economic') }}">Economic Empowerment</a></li>
+                            <li><a href="{{ url_for('agriculture') }}">Food Systems</a></li>
+                            <li><a href="{{ url_for('energy') }}">Clean Energy</a></li>
+                            <li><a href="{{ url_for('health') }}">Health & WASH</a></li>
+                            <li><a href="{{ url_for('education') }}">Education</a></li>
+                        </ul>
+                    </li>
             </nav>
 
-            <div class="social-links">
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/company/prosperity360/posts/?feedView=all" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-
+            <div class="header-btn">
+                <a href="{{ url_for('get_involved') }}">Get Involved</a>
             </div>
-
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
         </div>
     </header>
 

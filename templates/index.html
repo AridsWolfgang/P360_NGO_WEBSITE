@@ -3,180 +3,320 @@
 {% block title %}Home - Prosperity360 Development Initiative{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
+<!--=================== Hero Section ==================-->
 <section class="indexhero">
     <div class="container">
-        <h1>Prosperity360</h1>
-        <div class="indexhero-subtitle">Transforming Lives, Systems, and Economies</div>
+        <div class="indexhero-heading">
+            <h1>Transforming Lives, Systems, and Economies</h1>
+        </div>
         <p class="indexhero-description">
-            A Pan-African, Global South–rooted development institution accelerating multi-dimensional prosperity,
-            systems transformation, and community-driven development across Africa, Latin America, South Asia,
-            and other emerging regions.
+            A Pan-African, Global South–rooted development institution and alliance-based delivery mechanism dedicated
+            to accelerating multidimensional wellbeing, local systems transformation, and community-driven sustainable
+            development in contexts where human potential is abundant, but opportunity remains uneven.
         </p>
         <div class="indexhero-cta">
-            <a href="{{ url_for('get_involved') }}" class="btn">Join Our Movement</a>
             <a href="{{ url_for('programs') }}" class="btn btn-secondary">Our Programs</a>
         </div>
 </section>
-<!-- Mission Section -->
-<section class="section">
-    <div class="container">
-        <h2>Our Mission & Vision</h2>
-        <div class="mission-content">
-            <div class="mission-text">
-                <h3>Engineering Change, Not Waiting For It</h3>
-                <p>Prosperity360 is not just another NGO. It's a movement; a new model for inclusive prosperity through
-                    innovation, empowerment, and community-driven change.</p>
-                <p>We believe prosperity is not a privilege, it's a possibility. Our vision is a 360-degree prosperity
-                    revolution where every person, every idea, and every resource contributes to shared growth.</p>
-                <a href="{{ url_for('about') }}" class="btn">Learn More About Us</a>
-            </div>
-            <div class="mission-stats">
-                <div class="stat-card">
-                    <div class="stat-number">54</div>
-                    <div class="stat-label">Countries Target</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">40M</div>
-                    <div class="stat-label">Households to Reach</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">6</div>
-                    <div class="stat-label">Strategic Pillars</div>
-                </div>
-            </div>
+
+<!--================Mission Section ===================-->
+<section class="mission-statement">
+    <div class="statement container">
+        <p>Our vision is a 360-degree prosperity <br>
+            <span>revolution</span> where every person, every <br>
+            idea, and every resource <span>contributes</span> <br>
+            to <span>shared growth</span>.
+        </p>
+        <div class="mission-cta">
+            <a href="{{ url_for('get_involved')}}" class="btn btn-secondary">Get Started</a>
         </div>
     </div>
 </section>
 
-<!-- CTAs Section -->
-<section class="cta-section">
-    <div class="container">
-        <h2>Take Action Today</h2>
-        <p class="section-subtitle">Join us in building a more prosperous Global South</p>
-
-        <div class="cta-grid">
-            <div class="cta-card">
-                <div class="cta-icon">
-                    <i class="fas fa-hand-holding-heart"></i>
+<!--=============== Strategic Pillars Section =======================-->
+<section class="pillars">
+    <div class="pillars-container">
+        <h2>Strategic Pillars</h2>
+    </div>
+    <p class="subtitle">Our core principles that drive innovation, growth, and sustainable success. <br> Each pillar
+        represents a fundamental aspect of our strategic approach to achieving organizational excellence.</p>
+    <div class="pillars-list">
+        <a href="{{ url_for('innovation') }}">Innovation & Systems</a>
+        <a href="{{ url_for('economic') }}">Economic Empowerment</a>
+        <a href="{{ url_for('agriculture') }}">Food Systems</a>
+        <a href="{{ url_for('energy') }}">Clean Energy</a>
+        <a href="{{ url_for('health') }}">Health & WASH</a>
+        <a href="{{ url_for('education') }}">Education</a>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <!-- Card 1 -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="pillar-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Innovation & Technology</h3>
+                    <div class="pillar-number">01</div>
                 </div>
-                <h3>Donate</h3>
-                <p>Support our work in transforming communities across the Global South.</p>
-                <a href="{{ url_for('get_involved') }}" class="btn btn-small">Donate Now</a>
+                <div class="card-body">
+                    <p>Driving breakthrough solutions through cutting-edge technology and creative problem-solving
+                        approaches.</p>
+                    <ul class="pillar-features">
+                        <li><i class="fas fa-check-circle"></i> R&D Investment</li>
+                        <li><i class="fas fa-check-circle"></i> Digital Transformation</li>
+                        <li><i class="fas fa-check-circle"></i> Agile Development</li>
+                        <li><i class="fas fa-check-circle"></i> Emerging Tech Adoption</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="cta-card">
-                <div class="cta-icon">
-                    <i class="fas fa-hands-helping"></i>
+            <!-- Card 2 -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="pillar-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Customer Excellence</h3>
+                    <div class="pillar-number">02</div>
                 </div>
-                <h3>Partner</h3>
-                <p>Join as a corporate partner, government, or institutional collaborator.</p>
-                <a href="{{ url_for('contact') }}" class="btn btn-small">Become a Partner</a>
+                <div class="card-body">
+                    <p>Building lasting relationships through exceptional service, personalized experiences, and
+                        customer-centric solutions.</p>
+                    <ul class="pillar-features">
+                        <li><i class="fas fa-check-circle"></i> 24/7 Support</li>
+                        <li><i class="fas fa-check-circle"></i> Customer Feedback Integration</li>
+                        <li><i class="fas fa-check-circle"></i> Personalization</li>
+                        <li><i class="fas fa-check-circle"></i> Loyalty Programs</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="cta-card">
-                <div class="cta-icon">
-                    <i class="fas fa-user-plus"></i>
+            <!-- Card 3 -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="pillar-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <div class="pillar-number">03</div>
                 </div>
-                <h3>Volunteer</h3>
-                <p>Contribute your skills and time to our transformative programs.</p>
-                <a href="{{ url_for('get_involved') }}#volunteer" class="btn btn-small">Volunteer Today</a>
+                <div class="card-body">
+                    <p>Committing to environmental responsibility and sustainable practices for long-term ecological and
+                        business health.</p>
+                    <ul class="pillar-features">
+                        <li><i class="fas fa-check-circle"></i> Carbon Neutral Operations</li>
+                        <li><i class="fas fa-check-circle"></i> Circular Economy</li>
+                        <li><i class="fas fa-check-circle"></i> Sustainable Sourcing</li>
+                        <li><i class="fas fa-check-circle"></i> Green Innovation</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="cta-card">
-                <div class="cta-icon">
-                    <i class="fas fa-bullhorn"></i>
+            <!-- Card 4 -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="pillar-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Operational Excellence</h3>
+                    <div class="pillar-number">04</div>
                 </div>
-                <h3>Advocate</h3>
-                <p>Help spread awareness about inclusive prosperity and systems change.</p>
-                <a href="#" class="btn btn-small">Join Campaign</a>
+                <div class="card-body">
+                    <p>Optimizing processes and systems to deliver maximum efficiency, quality, and value across all
+                        operations.</p>
+                    <ul class="pillar-features">
+                        <li><i class="fas fa-check-circle"></i> Lean Methodology</li>
+                        <li><i class="fas fa-check-circle"></i> Continuous Improvement</li>
+                        <li><i class="fas fa-check-circle"></i> Quality Assurance</li>
+                        <li><i class="fas fa-check-circle"></i> Process Automation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="pillar-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Talent Development</h3>
+                    <div class="pillar-number">05</div>
+                </div>
+                <div class="card-body">
+                    <p>Investing in our people through continuous learning, leadership development, and inclusive growth
+                        opportunities.</p>
+                    <ul class="pillar-features">
+                        <li><i class="fas fa-check-circle"></i> Professional Training</li>
+                        <li><i class="fas fa-check-circle"></i> Leadership Programs</li>
+                        <li><i class="fas fa-check-circle"></i> Diversity & Inclusion</li>
+                        <li><i class="fas fa-check-circle"></i> Career Pathing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="pillar-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Strategic Partnerships</h3>
+                    <div class="pillar-number">06</div>
+                </div>
+                <div class="card-body">
+                    <p>Building synergistic alliances and collaborations that extend our capabilities and create mutual
+                        value.</p>
+                    <ul class="pillar-features">
+                        <li><i class="fas fa-check-circle"></i> Industry Alliances</li>
+                        <li><i class="fas fa-check-circle"></i> Academic Collaborations</li>
+                        <li><i class="fas fa-check-circle"></i> Technology Partnerships</li>
+                        <li><i class="fas fa-check-circle"></i> Community Engagement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="carousel-btn prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Dots Indicator -->
+    <div class="carousel-dots" id="carouselDots"></div>
+</section>
+
+<!--============ Testimonials Section =============================== -->
+<div class="testimonial-container">
+    <div class="testimonial-header">
+        <h1>What People Say</h1>
+        <p class="subtitle">Real feedback from clients and partners who've worked with us</p>
+    </div>
+
+    <div class="testimonial-carousel">
+        <div class="testimonial-track" id="testimonialTrack">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Working with this team has been transformative for our business. Their attention to detail and
+                    innovative approach helped us achieve results beyond our expectations. I highly recommend their
+                    services."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <span>JS</span>
+                    </div>
+                    <div class="author-name">Jessica Smith</div>
+                    <div class="author-role">CEO, TechVision Inc.</div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                    "The level of professionalism and dedication is outstanding. They delivered our project on time,
+                    within budget, and with exceptional quality. Truly a partner you can rely on."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <span>MR</span>
+                    </div>
+                    <div class="author-name">Michael Rodriguez</div>
+                    <div class="author-role">Director, Global Solutions</div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                    "We've worked with many agencies over the years, but this team stands out for their strategic
+                    thinking and execution. They understand our business goals and deliver solutions that drive real
+                    impact."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <span>AK</span>
+                    </div>
+                    <div class="author-name">Amanda Kim</div>
+                    <div class="author-role">VP of Marketing, GrowthLab</div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Exceptional service from start to finish. They took the time to understand our unique challenges
+                    and provided a solution that was both innovative and practical. Our metrics have improved
+                    significantly since we started working together."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <span>TW</span>
+                    </div>
+                    <div class="author-name">Thomas Wilson</div>
+                    <div class="author-role">Founder, FutureEdge</div>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Programs Preview -->
-<section class="section">
-    <div class="container">
-        <h2>Our Strategic Pillars</h2>
-        <p class="section-subtitle">Six comprehensive programs driving multi-dimensional prosperity</p>
+    <div class="carousel-nav">
+        <button class="nav-btn" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
 
-        <div class="programs-grid">
-            <div class="program-card">
-                <div class="program-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <div class="program-content">
-                    <h3>Innovation & Systems</h3>
-                    <p>Digital inclusion, AI for equality, governance innovation, and South-South policy
-                        experimentation.</p>
-                    <a href="{{ url_for('programs') }}#innovation" class="btn btn-small">Learn More</a>
-                </div>
-            </div>
+        <div class="carousel-dots" id="carouselDots"></div>
 
-            <div class="program-card">
-                <div class="program-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="program-content">
-                    <h3>Economic Empowerment</h3>
-                    <p>Future-of-work skills, women & youth enterprises, green entrepreneurship.</p>
-                    <a href="{{ url_for('programs') }}#economic" class="btn btn-small">Learn More</a>
-                </div>
-            </div>
-
-            <div class="program-card">
-                <div class="program-icon">
-                    <i class="fas fa-seedling"></i>
-                </div>
-                <div class="program-content">
-                    <h3>Sustainable Food Systems</h3>
-                    <p>Regenerative agriculture, climate-smart livelihoods, value-chain modernization.</p>
-                    <a href="{{ url_for('programs') }}#agriculture" class="btn btn-small">Learn More</a>
-                </div>
-            </div>
-        </div>
+        <button class="nav-btn" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </div>
-</section>
+</div>
 
-<!-- Founder's Message -->
-<section class="section" style="background-color: var(--card-bg);">
-    <div class="container">
-        <div class="founder-message">
-            <div class="founder-quote">
-                <i class="fas fa-quote-left"
-                    style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                <blockquote style="font-size: 1.5rem; font-style: italic; margin-bottom: 2rem;">
-                    "Prosperity is not a privilege, it is a possibility. Together, we can turn idle potential into
-                    national power."
-                </blockquote>
-                <div class="founder-info">
-                    <div class="founder-name">Ridwan Awosanya</div>
-                    <div class="founder-title">Founder, Prosperity360 Foundation</div>
-                </div>
-            </div>
-            <div class="founder-cta">
-                <p>Read the full Founder's Speech and join our movement for inclusive prosperity.</p>
-                <a href="{{ url_for('about') }}#founder" class="btn">Read Founder's Speech</a>
-            </div>
-        </div>
+<!--============ Newsletter Section =============================== -->
+<section class="newsletter">
+    <div class="newsletter-container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest news, events, and insights from Prosperity360 Development Initiative.</p>
+        <form action="{{ url_for('subscribe') }}" method="post" class="newsletter-form">
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
     </div>
 </section>
 {% endblock %}
 
 {% block head %}
 <style>
+    /* Hero Section - Elegant Image Background  */
     .indexhero {
         position: relative;
         min-height: 80vh;
         display: flex;
         align-items: center;
         overflow: hidden;
+        z-index: 1;
         color: white;
         text-align: center;
-        margin: 4rem 0 0 0;
-        padding: 5rem 2rem;
-
+        margin: 0 0 0 0;
+        padding: 0 20px;
+        border-top: 5px solid var(--color-teal-dark);
+       
     }
 
     .indexhero::before {
@@ -186,76 +326,37 @@
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 0;
+        z-index: -1;
         animation: zoomIn 20s infinite alternate;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-            url("/static/images/background.jpg") center/cover no-repeat;
+        background: url("../static/images/backgroundimg.jpg") center/cover no-repeat;
     }
 
     .indexhero .container {
         position: relative;
-        z-index: 2;
+        z-index: 1;
         max-width: 1000px;
     }
 
     .indexhero h1 {
-        font-size: 4.2rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-        color: white;
+        font-size: 4.5rem;
+        font-weight: bolder;
+        margin: 2rem 0 0 0;
+        line-height: 1.1;
+        color: var(--color-teal-deep);
+        font-family: "montserrat", sans-serif;
         animation: slideInDown 1s ease-out;
-    }
-
-
-    .indexhero-subtitle {
-        font-size: 1.8rem;
-        font-weight: 300;
-        margin-bottom: 2rem;
-        color: rgba(255, 255, 255, 0.9);
-        font-style: italic;
-        position: relative;
-        display: inline-block;
-        padding: 0 2rem;
-        animation: slideInUp 1s ease-out 0.3s both;
-    }
-
-    .indexhero-subtitle::before,
-    .indexhero-subtitle::after {
-        content: "✦";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-        color: #4fc3f7;
-    }
-
-    .indexhero-subtitle::before {
-        left: 0;
-    }
-
-    .indexhero-subtitle::after {
-        right: 0;
     }
 
     .indexhero-description {
         font-size: 1.2rem;
         line-height: 1.7;
-        max-width: 700px;
         margin: 0 auto 3rem;
-        color: rgba(255, 255, 255, 0.85);
-        padding: 2rem;
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        border-left: 4px solid #4fc3f7;
+        color: var(--color-teal-deep);
+        padding: 1.5rem;
         animation: fadeIn 1s ease-out 0.6s both;
     }
 
     .indexhero-cta {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
-        flex-wrap: wrap;
         animation: fadeIn 1s ease-out 0.9s both;
     }
 
@@ -266,10 +367,12 @@
         border-radius: 8px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        transition: all 0.3s ease;
         border: 2px solid transparent;
+        transition: all 0.3s ease;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         min-width: 180px;
+        text-decoration: none;
+
     }
 
     .indexhero .btn:hover {
@@ -278,7 +381,7 @@
     }
 
     .indexhero .btn-secondary {
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--color-warning);
         border-color: white;
         color: white;
     }
@@ -332,6 +435,589 @@
         }
     }
 
+    /* Mission Statement Section - Centered Text with Button    */
+
+    .mission-statement {
+        padding: 5rem 1rem;
+        text-align: center;
+    }
+
+    .mission-statement .statement p {
+        font-size: 2rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        color: var(--color-teal-deep);
+        font-weight: lighter;
+        font-style: italic;
+    }
+
+    .mission-statement .statement p span {
+        font-weight: bold;
+        color: var(--color-teal-deep);
+    }
+
+
+    .mission-cta {
+        padding-top: 2rem;
+        animation: fadeIn 1s ease-out 0.9s both;
+    }
+
+    .mission-cta .btn {
+        padding: 1.1rem 2.2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        min-width: 180px;
+        text-decoration: none;
+
+    }
+
+    .mission-cta .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .mission-cta .btn-secondary {
+        background: var(--color-success);
+        border-color: white;
+        color: white;
+    }
+
+    .mission-cta .btn-secondary:hover {
+        background: white;
+        color: #1a5276;
+    }
+
+    /* Strategic Pillars Section  */
+    .pillars {
+        padding: 5rem 1rem;
+        background-color: var(--bg-primary-light);
+    }
+
+    .pillars-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .pillars-container::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--color-teal-deep);
+        border-radius: 2px;
+    }
+
+    .pillars-container h2 {
+        font-size: 2.5rem;
+        color: var(--color-teal-deep);
+        margin-bottom: 2rem;
+    }
+
+    .pillars-container p.subtitle {
+        font-size: 1.2rem;
+        color: var(--color-teal-deep);
+        text-align: center;
+        /* max-width: 800px; */
+        /* margin: 0 auto 3rem; */
+    }
+
+    .pillars-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .pillars-list a {
+        background-color: var(--color-teal-light);
+        color: var(--color-teal-deep);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .pillars-list a:hover {
+        background-color: var(--color-teal-deep);
+        color: white;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        margin: 30px auto;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        padding: 30px 0;
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        padding: 10px 0;
+    }
+
+    .pillar-card {
+        flex: 0 0 350px;
+        margin: 0 15px;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid #f0f0f0;
+    }
+
+    .pillar-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-header {
+        padding: 25px 25px 15px;
+        background: var(--bg-primary-gradient);
+        color: white;
+        position: relative;
+    }
+
+    .pillar-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .card-header h3 {
+        font-size: 1.6rem;
+        margin-bottom: 5px;
+    }
+
+    .pillar-number {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: rgba(255, 255, 255, 0.2);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+
+    .card-body p {
+        color: #555;
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .pillar-features {
+        list-style-type: none;
+        margin-top: 20px;
+    }
+
+    .pillar-features li {
+        padding: 8px 0;
+        border-bottom: 1px dashed #eee;
+        display: flex;
+        align-items: center;
+    }
+
+    .pillar-features li:last-child {
+        border-bottom: none;
+    }
+
+    .pillar-features li i {
+        color: #2ecc71;
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+        color: #2c3e50;
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-btn:hover {
+        background-color: #3498db;
+        color: white;
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    }
+
+    .carousel-btn.prev {
+        left: 20px;
+    }
+
+    .carousel-btn.next {
+        right: 20px;
+    }
+
+    /* Dots Indicator */
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd;
+        margin: 0 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+        background-color: #3498db;
+        transform: scale(1.2);
+    }
+
+
+    /* Animation for card entrance */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .pillar-card {
+        animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .card-header {
+        animation-delay: 0.1s;
+    }
+
+    /* Testimonials Section  */
+    .testimonial-container {}
+
+    .testimonial-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .testimonial-header h1 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        color: #7f8c8d;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Testimonial Carousel */
+    .testimonial-carousel {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        padding: 40px 0;
+    }
+
+    .testimonial-track {
+        display: flex;
+        transition: transform 0.4s ease;
+    }
+
+    .testimonial-slide {
+        min-width: 100%;
+        padding: 20px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quote-icon {
+        font-size: 2.5rem;
+        color: #3498db;
+        margin-bottom: 30px;
+        opacity: 0.2;
+    }
+
+    .testimonial-text {
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: #2c3e50;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        max-width: 700px;
+        font-style: italic;
+    }
+
+    .testimonial-author {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .author-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        margin-bottom: 15px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: #7f8c8d;
+        font-weight: 300;
+    }
+
+    .author-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    .author-role {
+        font-size: 0.95rem;
+        color: #7f8c8d;
+    }
+
+    /* Navigation */
+    .carousel-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #e0e0e0;
+        background: white;
+        color: #7f8c8d;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-btn:hover {
+        border-color: #3498db;
+        color: #3498db;
+        box-shadow: 0 3px 10px rgba(52, 152, 219, 0.1);
+    }
+
+    .carousel-dots {
+        display: flex;
+        margin: 0 30px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ddd;
+        margin: 0 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .dot.active {
+        background-color: #3498db;
+        transform: scale(1.2);
+    }
+
+    /* Footer */
+    .footer {
+        margin-top: 80px;
+        text-align: center;
+        color: #95a5a6;
+        font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .testimonial-slide {
+            padding: 20px 30px;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .testimonial-slide {
+            padding: 20px;
+        }
+
+        .nav-btn {
+            width: 45px;
+            height: 45px;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+        }
+    }
+
+    /* Animation */
+    .testimonial-slide {
+        animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Newsletter Section  */
+    .newsletter {
+        background-color: var(--bg-primary);
+        padding: 4rem 1rem;
+        text-align: center;
+    }
+
+    .newsletter-container h2 {
+        font-size: 2.5rem;
+        color: var(--color-teal-deep);
+        margin-bottom: 1rem;
+    }
+
+    .newsletter-container p {
+        font-size: 1.2rem;
+        color: var(--color-teal-deep);
+        margin-bottom: 2rem;
+    }
+
+    .newsletter-form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 12px 15px;
+        font-size: 1rem;
+        border: 2px solid var(--color-teal-deep);
+        border-radius: 8px;
+        width: 300px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .newsletter-form .btn-secondary {
+        padding: 12px 25px;
+        font-size: 1rem;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        min-width: 150px;
+        text-decoration: none;
+    }
+
+    .newsletter-form .btn-secondary:hover {
+        background: white;
+        color: #1a5276;
+    }
+
+    .newsletter-form input[type="email"]:focus {
+        outline: none;
+        border-color: var(--color-warning);
+        box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+    }
+
+    .newsletter-form .btn-secondary:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+    }
+
+    .newsletter-form .btn-secondary {
+        background: var(--color-warning);
+        border-color: white;
+        color: white;
+    }
+
+
+
+
+    /* Responsiveness Adjustments that has to do with index.html */
     @media (max-width: 768px) {
         .indexhero h1 {
             font-size: 2.8rem;
@@ -345,54 +1031,53 @@
             font-size: 1rem;
             padding: 1.5rem;
         }
+
+        .mission-statement .statement p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+
+        }
     }
 
-    .btn {
-        display: inline-block;
-        padding: 1rem 2rem;
-        background: linear-gradient(135deg,
-                var(--primary-color),
-                var(--secondary-color));
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        transition: var(--transition);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 0.9rem;
+
+    @media (max-width: 850px) {
+        .pillar-card {
+            flex: 0 0 320px;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+        }
     }
 
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        color: white;
-    }
+    @media (max-width: 600px) {
+        .pillar-card {
+            flex: 0 0 280px;
+            margin: 0 10px;
+        }
 
-    .btn-secondary {
-        background: transparent;
-        border: 2px solid white;
-        color: white;
-    }
+        h1 {
+            font-size: 2rem;
+        }
 
-    .btn-secondary:hover {
-        background: white;
-        color: var(--primary-color);
-    }
+        .carousel-btn {
+            width: 45px;
+            height: 45px;
+            font-size: 18px;
+        }
 
-    .btn-accent {
-        background: var(--accent-color);
-    }
+        .carousel-btn.prev {
+            left: 10px;
+        }
 
-    .btn-accent:hover {
-        background: #e55a2b;
-    }
+        .carousel-btn.next {
+            right: 10px;
+        }
 
-    .btn-small {
-        padding: 0.5rem 1.5rem;
-        font-size: 0.8rem;
+        .card-header,
+        .card-body {
+            padding: 20px;
+        }
     }
 </style>
 {% endblock %}

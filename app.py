@@ -16,6 +16,30 @@ def about():
 def programs():
     return render_template('programs.html')
 
+@app.route('/programs/innovation')
+def innovation():
+    return render_template('programs/innovation.html')
+
+@app.route('/programs/economic')
+def economic():
+    return render_template('programs/economic.html')
+
+@app.route('/programs/agriculture')
+def agriculture():
+    return render_template('programs/agriculture.html')
+
+@app.route('/programs/energy')
+def energy():
+    return render_template('programs/energy.html')
+
+@app.route('/programs/health')
+def health():
+    return render_template('programs/health.html')
+
+@app.route('/programs/education')
+def education():
+    return render_template('programs/education.html')
+
 @app.route('/impact')
 def impact():
     return render_template('impact.html')
