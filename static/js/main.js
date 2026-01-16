@@ -1,512 +1,390 @@
+/* 
+ /$$$$$$$                                                             /$$   /$$                /$$$$$$   /$$$$$$   /$$$$$$                                                                        
+| $$__  $$                                                           |__/  | $$               /$$__  $$ /$$__  $$ /$$$_  $$                                                                       
+| $$  \ $$ /$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$   /$$$$$$  /$$ /$$$$$$   /$$   /$$|__/  \ $$| $$  \__/| $$$$\ $$                                                                       
+| $$$$$$$//$$__  $$ /$$__  $$ /$$_____/ /$$__  $$ /$$__  $$ /$$__  $$| $$|_  $$_/  | $$  | $$   /$$$$$/| $$$$$$$ | $$ $$ $$                                                                       
+| $$____/| $$  \__/| $$  \ $$|  $$$$$$ | $$  \ $$| $$$$$$$$| $$  \__/| $$  | $$    | $$  | $$  |___  $$| $$__  $$| $$\ $$$$                                                                       
+| $$     | $$      | $$  | $$ \____  $$| $$  | $$| $$_____/| $$      | $$  | $$ /$$| $$  | $$ /$$  \ $$| $$  \ $$| $$ \ $$$                                                                       
+| $$     | $$      |  $$$$$$/ /$$$$$$$/| $$$$$$$/|  $$$$$$$| $$      | $$  |  $$$$/|  $$$$$$$|  $$$$$$/|  $$$$$$/|  $$$$$$/                                                                       
+|__/     |__/       \______/ |_______/ | $$____/  \_______/|__/      |__/   \___/   \____  $$ \______/  \______/  \______/                                                                        
+                                       | $$                                         /$$  | $$                                                                                                     
+                                       | $$                                        |  $$$$$$/                                                                                                     
+                                       |__/                                         \______/                                                                                                      
+ /$$$$$$$                                /$$                                                         /$$           /$$$$$$           /$$   /$$     /$$             /$$     /$$                    
+| $$__  $$                              | $$                                                        | $$          |_  $$_/          |__/  | $$    |__/            | $$    |__/                    
+| $$  \ $$  /$$$$$$  /$$    /$$ /$$$$$$ | $$  /$$$$$$   /$$$$$$  /$$$$$$/$$$$   /$$$$$$  /$$$$$$$  /$$$$$$          | $$   /$$$$$$$  /$$ /$$$$$$   /$$  /$$$$$$  /$$$$$$   /$$ /$$    /$$ /$$$$$$ 
+| $$  | $$ /$$__  $$|  $$  /$$//$$__  $$| $$ /$$__  $$ /$$__  $$| $$_  $$_  $$ /$$__  $$| $$__  $$|_  $$_/          | $$  | $$__  $$| $$|_  $$_/  | $$ |____  $$|_  $$_/  | $$|  $$  /$$//$$__  $$
+| $$  | $$| $$$$$$$$ \  $$/$$/| $$$$$$$$| $$| $$  \ $$| $$  \ $$| $$ \ $$ \ $$| $$$$$$$$| $$  \ $$  | $$            | $$  | $$  \ $$| $$  | $$    | $$  /$$$$$$$  | $$    | $$ \  $$/$$/| $$$$$$$$
+| $$  | $$| $$_____/  \  $$$/ | $$_____/| $$| $$  | $$| $$  | $$| $$ | $$ | $$| $$_____/| $$  | $$  | $$ /$$        | $$  | $$  | $$| $$  | $$ /$$| $$ /$$__  $$  | $$ /$$| $$  \  $$$/ | $$_____/
+| $$$$$$$/|  $$$$$$$   \  $/  |  $$$$$$$| $$|  $$$$$$/| $$$$$$$/| $$ | $$ | $$|  $$$$$$$| $$  | $$  |  $$$$/       /$$$$$$| $$  | $$| $$  |  $$$$/| $$|  $$$$$$$  |  $$$$/| $$   \  $/  |  $$$$$$$
+|_______/  \_______/    \_/    \_______/|__/ \______/ | $$____/ |__/ |__/ |__/ \_______/|__/  |__/   \___/        |______/|__/  |__/|__/   \___/  |__/ \_______/   \___/  |__/    \_/    \_______/
+                                                      | $$                                                                                                                                        
+                                                      | $$                                                                                                                                        
+                                                      |__/               
+
+*/
+
+
+// Header & Footer Interactive Features
 document.addEventListener('DOMContentLoaded', function () {
-    // Language data with flags (using emoji flags for simplicity)
-    const languages = [
-        { code: 'en', name: 'English', flag: '🇺🇸', welcome: 'Welcome to Prosperity360' },
-        { code: 'fr', name: 'Français', flag: '🇫🇷', welcome: 'Bienvenue à Prosperity360' },
-        { code: 'ar', name: 'العربية', flag: '🇸🇦', welcome: 'مرحبًا بكم في Prosperity360' },
-    ];
-
-    // DOM elements
-    const translateBtn = document.getElementById('translateBtn');
-    const languageDropdown = document.getElementById('languageDropdown');
-    const languageList = document.getElementById('languageList');
-    const currentLangElement = document.getElementById('currentLang');
-    const welcomeTextElement = document.querySelector('.welcome-text');
-    const displayCurrentLang = document.getElementById('displayCurrentLang');
-
-    // Current language
-    let currentLanguage = languages[0];
-
-    // Populate language list
-    function populateLanguageList() {
-        languageList.innerHTML = '';
-
-        languages.forEach(language => {
-            const li = document.createElement('li');
-            li.dataset.code = language.code;
-
-            // Create flag element
-            const flagSpan = document.createElement('span');
-            flagSpan.className = 'language-flag';
-            flagSpan.textContent = language.flag;
-
-            // Create language name element
-            const nameSpan = document.createElement('span');
-            nameSpan.textContent = language.name;
-
-            li.appendChild(flagSpan);
-            li.appendChild(nameSpan);
-
-            // Mark if this is the current language
-            if (language.code === currentLanguage.code) {
-                li.classList.add('selected');
-            }
-
-            // Add click event
-            li.addEventListener('click', () => selectLanguage(language));
-
-            languageList.appendChild(li);
-        });
-    }
-
-    // Select a language
-    function selectLanguage(language) {
-        currentLanguage = language;
-
-        // Update button text
-        currentLangElement.textContent = language.name;
-
-        // Update welcome text
-        const prosperitySpan = document.createElement('span');
-        prosperitySpan.className = 'prosperity-text';
-        prosperitySpan.textContent = 'Prosperity360';
-
-        welcomeTextElement.innerHTML = '';
-        welcomeTextElement.appendChild(document.createTextNode(language.welcome.replace('Prosperity360', '')));
-        welcomeTextElement.appendChild(prosperitySpan);
-
-        // Update display text
-        displayCurrentLang.textContent = language.name;
-
-        // Update selected state in dropdown
-        const allListItems = languageList.querySelectorAll('li');
-        allListItems.forEach(item => {
-            if (item.dataset.code === language.code) {
-                item.classList.add('selected');
-            } else {
-                item.classList.remove('selected');
-            }
-        });
-
-        // Close dropdown
-        languageDropdown.classList.remove('active');
-    }
-
-    // Toggle dropdown
-    translateBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        languageDropdown.classList.toggle('active');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function (e) {
-        if (!translateBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
-            languageDropdown.classList.remove('active');
-        }
-    });
-
-    // Initialize
-    populateLanguageList();
-
-    // Demo: Change language automatically every 10 seconds for demonstration
-    let demoIndex = 0;
-    setInterval(() => {
-        demoIndex = (demoIndex + 1) % languages.length;
-        selectLanguage(languages[demoIndex]);
-    }, 10000);
+    // Initialize all interactive components
+    initMobileMenu();
+    initLanguageSelector();
+    initSmoothScroll();
+    initActiveNavLinks();
+    initHoverEffects();
 });
 
 // Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
+function initMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const body = document.body;
 
-if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    if (!mobileMenuBtn || !nav) return;
 
-        // Toggle between hamburger and close icons
+    // Create overlay for mobile menu
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        mobileMenuBtn.classList.toggle('active');
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+
+        // Change icon
         const icon = mobileMenuBtn.querySelector('i');
-        if (icon) {
-            icon.className = navLinks.classList.contains('active')
-                ? 'fas fa-times'
-                : 'fas fa-bars';
+        if (mobileMenuBtn.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
         } else {
-            // Fallback if there's no <i> element inside
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
         }
-    });
+    }
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-
-            const icon = mobileMenuBtn.querySelector('i');
-            if (icon) {
-                icon.className = 'fas fa-bars';
-            } else {
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        }
-    });
-
-    // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
+    // Close mobile menu when clicking a link
+    navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+            if (window.innerWidth <= 768) {
+                toggleMobileMenu();
+            }
 
-            const icon = mobileMenuBtn.querySelector('i');
-            if (icon) {
-                icon.className = 'fas fa-bars';
-            } else {
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            // Handle dropdown toggle on mobile
+            const dropdown = link.nextElementSibling;
+            if (dropdown && dropdown.tagName === 'UL') {
+                if (window.innerWidth <= 768) {
+                    dropdown.classList.toggle('active');
+                }
             }
         });
     });
 
-    // Close menu on window resize (optional)
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', toggleMobileMenu);
 
-            const icon = mobileMenuBtn.querySelector('i');
-            if (icon) {
-                icon.className = 'fas fa-bars';
-            } else {
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            }
+    // Toggle menu button
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileMenu();
+    });
+
+    // Close menu when pressing Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('active')) {
+            toggleMobileMenu();
         }
     });
-}
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
 
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+    // Add no-scroll class to body
+    const style = document.createElement('style');
+    style.textContent = `
+        body.no-scroll {
+            overflow: hidden;
         }
-    });
-});
-
-// Contact Form Submission
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-
-        try {
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-
-            const formData = new FormData(contactForm);
-            const response = await fetch('/contact', {
-                method: 'POST',
-                body: formData
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                alert(result.message);
-                contactForm.reset();
-            } else {
-                alert('Error: ' + result.message);
-            }
-        } catch (error) {
-            alert('An error occurred. Please try again.');
-            console.error('Error:', error);
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-        }
-    });
+    `;
+    document.head.appendChild(style);
 }
 
-// Newsletter Subscription
-const newsletterForm = document.getElementById('newsletterForm');
-if (newsletterForm) {
-    newsletterForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
+// Language Selector
+function initLanguageSelector() {
+    const translateBtn = document.getElementById('translateBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
+    const languageList = document.getElementById('languageList');
+    const currentLang = document.getElementById('currentLang');
 
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        const submitBtn = newsletterForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
+    if (!translateBtn || !languageDropdown || !languageList) return;
 
-        if (!emailInput.value) {
-            alert('Please enter your email address');
-            return;
+    // Available languages
+    const languages = [
+        { code: 'en', name: 'English', flag: '🇺🇸' },
+        { code: 'fr', name: 'Français', flag: '🇫🇷' },
+        { code: 'es', name: 'Español', flag: '🇪🇸' },
+        { code: 'pt', name: 'Português', flag: '🇵🇹' },
+        { code: 'sw', name: 'Swahili', flag: '🇰🇪' },
+        { code: 'ar', name: 'العربية', flag: '🇸🇦' }
+    ];
+
+    // Create language list items
+    languages.forEach(lang => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <i class="flag-icon">${lang.flag}</i>
+            <span>${lang.name}</span>
+        `;
+
+        if (lang.code === 'en') {
+            li.classList.add('active');
         }
 
-        try {
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Subscribing...';
+        li.addEventListener('click', () => {
+            // Update current language
+            currentLang.textContent = lang.name;
 
-            const formData = new FormData(newsletterForm);
-            const response = await fetch('/subscribe', {
-                method: 'POST',
-                body: formData
+            // Update active state
+            document.querySelectorAll('#languageList li').forEach(item => {
+                item.classList.remove('active');
             });
+            li.classList.add('active');
 
-            const result = await response.json();
+            // Close dropdown
+            languageDropdown.classList.remove('show');
+            translateBtn.classList.remove('active');
 
-            if (result.success) {
-                alert(result.message);
-                newsletterForm.reset();
-            } else {
-                alert('Error: ' + result.message);
-            }
-        } catch (error) {
-            alert('An error occurred. Please try again.');
-            console.error('Error:', error);
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
+            // Here you would typically:
+            // 1. Save language preference to localStorage
+            // 2. Update page content with translations
+            // 3. Refresh or update the page
+            localStorage.setItem('preferredLanguage', lang.code);
+
+            // Show translation loading message (optional)
+            showTranslationMessage(lang.name);
+        });
+
+        languageList.appendChild(li);
+    });
+
+    // Toggle dropdown
+    translateBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        languageDropdown.classList.toggle('show');
+        translateBtn.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!translateBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+            languageDropdown.classList.remove('show');
+            translateBtn.classList.remove('active');
         }
     });
-}
 
-// Stats Counter Animation
-const animateCounters = () => {
-    const counters = document.querySelectorAll('.stat-number');
-
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-
-        const updateCounter = () => {
-            current += increment;
-            if (current < target) {
-                counter.textContent = Math.ceil(current).toLocaleString();
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.textContent = target.toLocaleString();
-            }
-        };
-
-        updateCounter();
-    });
-};
-
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            if (entry.target.classList.contains('stats-grid')) {
-                animateCounters();
-            }
-            entry.target.classList.add('animated');
+    // Close dropdown when pressing Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && languageDropdown.classList.contains('show')) {
+            languageDropdown.classList.remove('show');
+            translateBtn.classList.remove('active');
         }
     });
-}, observerOptions);
 
-// Observe elements for animation
-document.querySelectorAll('.program-card, .pillar-item, .cta-card, .stats-grid').forEach(el => {
-    observer.observe(el);
-});
-
-// Parallax effect for hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    // Load saved language preference
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        const selectedLang = languages.find(lang => lang.code === savedLang);
+        if (selectedLang) {
+            currentLang.textContent = selectedLang.name;
+        }
     }
-});
+}
 
-// Initialize on DOM load
-document.addEventListener('DOMContentLoaded', () => {
-    // Add loading animation
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s';
+// Translation message function
+function showTranslationMessage(langName) {
+    // Create notification
+    const notification = document.createElement('div');
+    notification.className = 'translation-notification';
+    notification.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary-color);
+        color: white;
+        padding: 15px 20px;
+        border-radius: var(--radius);
+        box-shadow: 0 10px 30px rgba(0, 128, 128, 0.3);
+        z-index: 10000;
+        animation: slideInRight 0.3s ease;
+        max-width: 300px;
+    `;
 
+    notification.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <i class="fas fa-language" style="font-size: 1.2rem;"></i>
+            <div>
+                <strong>Language Changed</strong>
+                <p style="margin: 5px 0 0 0; font-size: 0.9rem;">Switched to ${langName}</p>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(notification);
+
+    // Remove notification after 3 seconds
     setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-});
+        notification.style.animation = 'fadeOut 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
 
+    // Add fadeOut animation if not exists
+    if (!document.querySelector('#fadeOutStyle')) {
+        const style = document.createElement('style');
+        style.id = 'fadeOutStyle';
+        style.textContent = `
+            @keyframes fadeOut {
+                from { opacity: 1; transform: translateX(0); }
+                to { opacity: 0; transform: translateX(100px); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
 
-// Carousel scripts
-document.addEventListener('DOMContentLoaded', function () {
-    const track = document.getElementById('carouselTrack');
-    const cards = document.querySelectorAll('.pillar-card');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dotsContainer = document.getElementById('carouselDots');
+// Smooth Scroll for Internal Links
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
 
-    let currentIndex = 0;
-    const cardWidth = cards[0].offsetWidth + 30; // Card width + margin
-    const visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
-    const totalCards = cards.length;
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                e.preventDefault();
 
-    // Create dots for navigation
-    for (let i = 0; i < totalCards; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (i === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-            goToSlide(i);
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                    const nav = document.querySelector('nav');
+                    const overlay = document.querySelector('.nav-overlay');
+
+                    if (mobileMenuBtn && mobileMenuBtn.classList.contains('active')) {
+                        mobileMenuBtn.classList.remove('active');
+                        nav.classList.remove('active');
+                        overlay?.classList.remove('active');
+                        document.body.classList.remove('no-scroll');
+
+                        // Reset icon
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+
+                // Scroll to target
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
         });
-        dotsContainer.appendChild(dot);
+    });
+}
+
+// Active Navigation Links
+function initActiveNavLinks() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPath = window.location.pathname;
+
+    function updateActiveNav() {
+        navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            link.classList.remove('active');
+
+            if (linkPath === currentPath) {
+                link.classList.add('active');
+            }
+        });
     }
 
-    const dots = document.querySelectorAll('.dot');
+    // Initial update
+    updateActiveNav();
 
-    // Update carousel position
-    function updateCarousel() {
-        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    // Update on navigation (for single page apps)
+    window.addEventListener('popstate', updateActiveNav);
+}
 
-        // Update active dot
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
+// Hover Effects
+function initHoverEffects() {
+    // Add hover effect to logo
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('mouseenter', function () {
+            const img = this.querySelector('img');
+            if (img) img.style.transform = 'scale(1.05)';
         });
 
-        // Disable/enable buttons based on position
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex >= totalCards - visibleCards;
-
-        // Style disabled buttons
-        prevBtn.style.opacity = prevBtn.disabled ? '0.5' : '1';
-        nextBtn.style.opacity = nextBtn.disabled ? '0.5' : '1';
+        logo.addEventListener('mouseleave', function () {
+            const img = this.querySelector('img');
+            if (img) img.style.transform = 'scale(1)';
+        });
     }
 
-    function goToSlide(index) {
-        // Ensure index is within bounds
-        currentIndex = Math.max(0, Math.min(index, totalCards - visibleCards));
-        updateCarousel();
-    }
+    // Add hover effect to social links
+    const socialLinks = document.querySelectorAll('.social-links a');
+    socialLinks.forEach(link => {
+        link.addEventListener('mouseenter', function () {
+            const icon = this.querySelector('i');
+            if (icon) {
+                icon.style.transform = 'rotate(10deg) scale(1.2)';
+            }
+        });
 
-    function nextSlide() {
-        if (currentIndex < totalCards - visibleCards) {
-            currentIndex++;
-            updateCarousel();
+        link.addEventListener('mouseleave', function () {
+            const icon = this.querySelector('i');
+            if (icon) {
+                icon.style.transform = 'rotate(0) scale(1)';
+            }
+        });
+    });
+}
+
+// Sticky Header on Scroll
+function initStickyHeader() {
+    const header = document.querySelector('.header');
+    const welcomeBar = document.querySelector('.subheading-container');
+
+    if (!header || !welcomeBar) return;
+
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        // Add shadow when scrolled
+        if (currentScroll > 10) {
+            header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
+        } else {
+            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
         }
-    }
 
-    function prevSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
+        // Hide/show header on scroll (optional)
+        if (window.innerWidth <= 768) {
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+                welcomeBar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+                welcomeBar.style.transform = 'translateY(0)';
+            }
         }
-    }
 
-    // Event listeners for buttons
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') nextSlide();
-        if (e.key === 'ArrowLeft') prevSlide();
+        lastScroll = currentScroll;
     });
+}
 
-    // Handle window resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            // Recalculate card width after resize
-            const newCardWidth = cards[0].offsetWidth + 30;
-            // Update position based on new width
-            track.style.transform = `translateX(-${currentIndex * newCardWidth}px)`;
-        }, 250);
-    });
-
-    // Initialize carousel
-    updateCarousel();
-
-    // Auto-rotate carousel (optional)
-    let autoRotate = setInterval(nextSlide, 5000);
-
-    // Pause auto-rotate on hover
-    track.parentElement.addEventListener('mouseenter', () => {
-        clearInterval(autoRotate);
-    });
-
-    track.parentElement.addEventListener('mouseleave', () => {
-        autoRotate = setInterval(nextSlide, 5000);
-    });
-});
-
-
-
-// Testimonial Carousel
-document.addEventListener('DOMContentLoaded', function () {
-    const track = document.getElementById('testimonialTrack');
-    const slides = document.querySelectorAll('.testimonial-slide');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dotsContainer = document.getElementById('carouselDots');
-
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-
-    // Create dots
-    for (let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (i === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-    }
-
-    const dots = document.querySelectorAll('.dot');
-
-    // Update carousel
-    function updateCarousel() {
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Update dots
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
-        });
-    }
-
-    function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        updateCarousel();
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-    }
-
-    // Event listeners
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') nextSlide();
-        if (e.key === 'ArrowLeft') prevSlide();
-    });
-
-    // Auto-rotate every 8 seconds
-    let autoRotate = setInterval(nextSlide, 8000);
-
-    // Pause auto-rotate on hover
-    track.parentElement.addEventListener('mouseenter', () => {
-        clearInterval(autoRotate);
-    });
-
-    track.parentElement.addEventListener('mouseleave', () => {
-        autoRotate = setInterval(nextSlide, 8000);
-    });
-
-    // Initialize
-    updateCarousel();
-});
+// Initialize sticky header
+initStickyHeader();

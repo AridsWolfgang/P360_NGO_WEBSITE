@@ -1,0 +1,241 @@
+
+/* translation-styles.css - RTL and Translation Styles */
+
+/* RTL Language Support */
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl .nav-links {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.rtl .logo {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.rtl .carousel-btn.prev {
+  left: auto;
+  right: 0;
+}
+
+.rtl .carousel-btn.next {
+  right: auto;
+  left: 0;
+}
+
+.rtl .form-group {
+  text-align: right;
+}
+
+.rtl .footer-links ul {
+  padding-right: 0;
+}
+
+.rtl .social-links {
+  justify-content: flex-start;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.language-dropdown.show {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.language-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-list li {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-list li:hover {
+  background: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.language-list li.active {
+  background: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.language-list li .flag-icon {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* Language Switcher Button */
+.translate-btn {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.translate-btn:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow);
+}
+
+.translate-btn.active {
+  border-color: var(--primary-color);
+}
+
+.translate-icon {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+/* Language Notification */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+/* RTL-specific adjustments */
+.rtl .translate-btn {
+  flex-direction: row-reverse;
+}
+
+.rtl .language-dropdown {
+  right: auto;
+  left: 0;
+}
+
+.rtl .indexhero-cta,
+.rtl .mission-cta {
+  text-align: right;
+}
+
+.rtl .pillars-list {
+  justify-content: flex-start;
+}
+
+.rtl .testimonial-text {
+  text-align: right;
+}
+
+.rtl .newsletter-form {
+  flex-direction: row-reverse;
+}
+
+/* Form adjustments for RTL */
+.rtl .form-control {
+  text-align: right;
+}
+
+.rtl .form-group label {
+  text-align: right;
+  display: block;
+}
+
+.rtl .checkbox-label {
+  flex-direction: row-reverse;
+}
+
+.rtl .amount-options,
+.rtl .frequency-options,
+.rtl .skills-grid {
+  direction: rtl;
+}
+
+/* Carousel adjustments for RTL */
+.rtl .carousel-track {
+  direction: rtl;
+}
+
+.rtl .carousel-dots {
+  direction: ltr; /* Keep dots direction consistent */
+}
+
+/* Mobile menu adjustments for RTL */
+@media (max-width: 768px) {
+  .rtl nav {
+    right: auto;
+    left: -100%;
+  }
+
+  .rtl nav.active {
+    left: 0;
+    right: auto;
+  }
+
+  .rtl .mobile-menu-btn {
+    right: auto;
+    left: 20px;
+  }
+}
+
+/* Accessibility improvements for language switcher */
+.translate-btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.language-list li:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: -2px;
+}
+
+/* Smooth transition for language changes */
+[data-translate],
+[data-translate-html] {
+  transition: opacity 0.3s ease;
+}
+
+.translating {
+  opacity: 0.7;
+}

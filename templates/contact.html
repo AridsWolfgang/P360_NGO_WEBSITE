@@ -3,925 +3,1873 @@
 {% block title %}Contact Us - Prosperity360 Foundation{% endblock %}
 
 {% block content %}
-    <!-- Page Header -->
-    <section class="contacthero" style="padding: 150px 0 80px; background: linear-gradient(rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.9));">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p class="hero-description">
-                Get in touch with our team to learn more, partner with us, or support our work.
-            </p>
-        </div>
-    </section>
+<!-- Page Header -->
+<section class="contacthero">
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p class="contacthero-subtitle">
+            Get in touch with our team to learn more, partner with us, or support our work.
+        </p>
+    </div>
+</section>
 
-    <!-- Contact Information -->
-    <section class="section">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p class="section-subtitle">We'd love to hear from you</p>
-            
-            <div class="contact-info-grid">
-                <div class="contact-info-card">
-                    <div class="contact-icon" style="background: linear-gradient(135deg, #1a5276, #3498db);">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Us</h3>
-                    <p>General Inquiries</p>
-                    <a href="mailto:prosperity360degree@gmail.com" class="contact-link">info@prosperity360.org</a>
-                    <a href="mailto:prosperity360degree@gmail.com" class="contact-link">partnerships@prosperity360.org</a>
+<!-- Contact Information -->
+<section class="contact-section">
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <p class="section-subtitle">We'd love to hear from you</p>
+
+        <div class="contact-info-grid">
+            <div class="contact-info-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                
-                <div class="contact-info-card">
-                    <div class="contact-icon" style="background: linear-gradient(135deg, #28a745, #2ecc71);">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Call Us</h3>
-                    <p>Available Monday-Friday, 9am-5pm GMT</p>
-                    <a href="tel:+2341234567890" class="contact-link">+234 805 123 7534</a>
-                    <!-- <a href="tel:+254123456789" class="contact-link">+254 123 456 789</a> -->
+                <h3>Email Us</h3>
+                <p>General Inquiries</p>
+                <a href="mailto:prosperity360degree@gmail.com" class="contact-link">info@prosperity360.org</a>
+                <a href="mailto:prosperity360degree@gmail.com" class="contact-link">partnerships@prosperity360.org</a>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
                 </div>
-                
-                <div class="contact-info-card">
-                    <div class="contact-icon" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
-                        <i class="fas fa-map-marker-alt"></i>
+                <h3>Call Us</h3>
+                <p>Available Monday-Friday, 9am-5pm GMT</p>
+                <a href="tel:+2341234567890" class="contact-link">+234 805 123 7534</a>
+                <!-- <a href="tel:+254123456789" class="contact-link">+254 123 456 789</a> -->
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Visit Us</h3>
+                <p>Headquarters & Regional Offices</p>
+                <div class="address">
+                    <strong>Africa Headquarters:</strong><br>
+                    Abuja, Nigeria
+                </div>
+                <!-- <div class="address">
+                    <strong>East Africa Office:</strong><br>
+                    Yet to be revealed
+                </div> -->
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Connect Online</h3>
+                <p>Follow us on social media</p>
+                <div class="social-contact">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="form-section">
+    <div class="form-container">
+        <h2>Send Us a Message</h2>
+
+        <div class="contact-form-container">
+            <form id="contactForm" method="POST" action="{{ url_for('contact') }}">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
                     </div>
-                    <h3>Visit Us</h3>
-                    <p>Headquarters & Regional Offices</p>
-                    <div class="address">
-                        <strong>Africa Headquarters:</strong><br>
-                        Abuja, Nigeria
-                    </div>
-                    <div class="address">
-                        <strong>East Africa Office:</strong><br>
-                        Yet to be revealed
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
                     </div>
                 </div>
-                
-                <div class="contact-info-card">
-                    <div class="contact-icon" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
-                        <i class="fas fa-comments"></i>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" name="organization" class="form-control">
                     </div>
-                    <h3>Connect Online</h3>
-                    <p>Follow us on social media</p>
-                    <div class="social-contact">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inquiryType">Inquiry Type *</label>
+                    <select id="inquiryType" name="inquiry_type" class="form-control" required>
+                        <option value="">Select inquiry type</option>
+                        <option value="general">General Information</option>
+                        <option value="partnership">Partnership Opportunities</option>
+                        <option value="donation">Donation & Funding</option>
+                        <option value="volunteer">Volunteering</option>
+                        <option value="media">Media & Press</option>
+                        <option value="career">Career Opportunities</option>
+                        <option value="program">Program Information</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <select id="country" name="country" class="form-control" required>
+                        <option value="">Select your country</option>
+                        <option value="nigeria">Nigeria</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="rwanda">Rwanda</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="south-africa">South Africa</option>
+                        <option value="other-africa">Other African Country</option>
+                        <option value="global">Outside Africa</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" checked>
+                        <span>Subscribe to our newsletter for updates</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+
+            <div class="form-info">
+                <h3>What happens next?</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Submit Your Inquiry</h4>
+                            <p>Fill out the form with your details and message</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Confirmation</h4>
+                            <p>You'll receive an automatic confirmation email</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Team Review</h4>
+                            <p>Our team reviews and routes your inquiry</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Response</h4>
+                            <p>You'll hear back from us within 2 business days</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="response-time">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Typical Response Time:</strong>
+                        <p>Within 2 business days</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Form -->
-    <section class="section" style="background-color: var(--card-bg);">
-        <div class="container">
-            <h2>Send Us a Message</h2>
-            
-            <div class="contact-form-container">
-                <form id="contactForm" method="POST" action="{{ url_for('contact') }}">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
+<!-- Team Contacts -->
+<section class="team-section">
+    <div class="team-container">
+        <h2>Key Team Contacts</h2>
+
+        <div class="team-contacts">
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3>Partnerships Team</h3>
+                    <p class="member-role">Strategic Alliances & Collaboration</p>
+                    <a href="mailto:prosperity360degree@gmail.com"
+                        class="member-email">partnerships@prosperity360.org</a>
+                    <p class="member-desc">For corporate partnerships, institutional collaboration, and strategic
+                        alliances</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3>Program Team</h3>
+                    <p class="member-role">Program Implementation & Impact</p>
+                    <a href="mailto:prosperity360degree@gmail.com" class="member-email">programs@prosperity360.org</a>
+                    <p class="member-desc">For program-specific inquiries, field operations, and impact questions</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3>Media & Communications</h3>
+                    <p class="member-role">Press, Media, & Public Relations</p>
+                    <a href="mailto:prosperity360degree@gmail.com" class="member-email">media@prosperity360.org</a>
+                    <p class="member-desc">For press inquiries, media partnerships, and communications</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3>Donor Relations</h3>
+                    <p class="member-role">Funding & Donor Engagement</p>
+                    <a href="prosperity360degree@gmail.com" class="member-email">donors@prosperity360.org</a>
+                    <p class="member-desc">For donation inquiries, grant opportunities, and donor relations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can my organization partner with Prosperity360?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer multiple partnership opportunities including corporate social responsibility programs,
+                        employee volunteering, cause marketing, strategic alliances, and impact investing. Please
+                        contact our partnerships team at partnerships@prosperity360.org to discuss specific
+                        opportunities.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How are donations used?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Donations are allocated as follows: 40% to program implementation, 30% to community capacity
+                        building, 20% to innovation and research, and 10% to operational costs. We provide regular
+                        impact reports and maintain financial transparency.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I volunteer remotely?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! We offer virtual volunteering opportunities in areas such as content creation, translation,
+                        data analysis, research, digital marketing, and online mentorship. Visit our Get Involved page
+                        to see current virtual volunteering opportunities.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How does Prosperity360 measure impact?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We use our Multi-Dimensional Prosperity Framework to measure impact across six dimensions:
+                        economic capability, social wellbeing, environmental resilience, institutional strength,
+                        educational readiness, and systems innovation. We employ AI-powered monitoring systems,
+                        community scorecards, and annual Global Prosperity Reports.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I stay updated on your work?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Subscribe to our monthly newsletter, follow us on social media (@Prosperity360), or check our
+                        website regularly for updates, stories, and event announcements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map & Location -->
+<section class="map-section">
+    <div class="map-section-container">
+        <h2>Our Global Presence</h2>
+        <p class="section-subtitle">Interactive map showing our offices and program locations across Africa and the
+            Global South</p>
+
+        <div class="map-container">
+            <!-- Map will be loaded here -->
+            <div id="prosperityMap"></div>
+
+            <div class="map-controls">
+                <div class="map-legend">
+                    <h4><i class="fas fa-map-pin"></i> Location Legend</h4>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #008080;"></div>
+                        <span>Headquarters (Abuja, Nigeria)</span>
                     </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="organization">Organization</label>
-                            <input type="text" id="organization" name="organization" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-control">
-                        </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #e74c3c;"></div>
+                        <span>Regional Offices</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="inquiryType">Inquiry Type *</label>
-                        <select id="inquiryType" name="inquiry_type" class="form-control" required>
-                            <option value="">Select inquiry type</option>
-                            <option value="general">General Information</option>
-                            <option value="partnership">Partnership Opportunities</option>
-                            <option value="donation">Donation & Funding</option>
-                            <option value="volunteer">Volunteering</option>
-                            <option value="media">Media & Press</option>
-                            <option value="career">Career Opportunities</option>
-                            <option value="program">Program Information</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #27ae60;"></div>
+                        <span>Program Countries</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="country">Country *</label>
-                        <select id="country" name="country" class="form-control" required>
-                            <option value="">Select your country</option>
-                            <option value="nigeria">Nigeria</option>
-                            <option value="kenya">Kenya</option>
-                            <option value="rwanda">Rwanda</option>
-                            <option value="ghana">Ghana</option>
-                            <option value="south-africa">South Africa</option>
-                            <option value="other-africa">Other African Country</option>
-                            <option value="global">Outside Africa</option>
-                        </select>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #f39c12;"></div>
+                        <span>Upcoming Offices</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message *</label>
-                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="newsletter" checked>
-                            <span>Subscribe to our newsletter for updates</span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn" style="width: 100%;">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
-                
-                <div class="form-info">
-                    <h3>What happens next?</h3>
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4>Submit Your Inquiry</h4>
-                                <p>Fill out the form with your details and message</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>Confirmation</h4>
-                                <p>You'll receive an automatic confirmation email</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4>Team Review</h4>
-                                <p>Our team reviews and routes your inquiry</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h4>Response</h4>
-                                <p>You'll hear back from us within 2 business days</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="response-time">
-                        <i class="fas fa-clock"></i>
+                </div>
+
+                <div class="map-stats">
+                    <div class="stat">
+                        <i class="fas fa-flag"></i>
                         <div>
-                            <strong>Typical Response Time:</strong>
-                            <p>Within 2 business days</p>
+                            <h4>10+</h4>
+                            <p>Countries Active</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>50+</h4>
+                            <p>Program Locations</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-globe-africa"></i>
+                        <div>
+                            <h4>3</h4>
+                            <p>Continents</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Regional Offices -->
-    <section class="section">
-        <div class="container">
-            <h2>Regional Offices & Contacts</h2>
-            
-            <div class="regional-offices">
-                <div class="office-card">
-                    <div class="office-header" style="background: linear-gradient(135deg, #1a5276, #3498db);">
-                        <h3>Africa Headquarters</h3>
-                        <p>Abuja, Nigeria</p>
-                    </div>
-                    <div class="office-content">
-                        <div class="office-info">
-                            <div class="info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <strong>Address:</strong>
-                                    <p>................<br>
-                                    Abuja, Nigeria</p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <strong>Phone:</strong>
-                                    <p>+234 805 123 7534</p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <strong>Email:</strong>
-                                    <p>prosperity360degree@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="office-region">
-                            <h4>Coverage Area</h4>
-                            <p>West Africa Region</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="office-card">
-                    <div class="office-header" style="background: linear-gradient(135deg, #28a745, #2ecc71);">
-                        <h3>East Africa Office</h3>
-                        <p>..............</p>
-                    </div>
-                    <div class="office-content">
-                        <div class="office-info">
-                            <div class="info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <strong>Address:</strong>
-                                    <p>..................<br>
-                                    .............</p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <strong>Phone:</strong>
-                                    <p>.................</p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <strong>Email:</strong>
-                                    <p>...................</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="office-region">
-                            <h4>Coverage Area</h4>
-                            <p>East & Central Africa</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="office-card">
-                    <div class="office-header" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
-                        <h3>Southern Africa Office</h3>
-                        <p>........................</p>
-                    </div>
-                    <div class="office-content">
-                        <div class="office-info">
-                            <div class="info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <strong>Address:</strong>
-                                    <p>.................<br>
-                                    .................<br>
-                                   ................</p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <strong>Phone:</strong>
-                                    <p>..........</p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <strong>Email:</strong>
-                                    <p>........................</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="office-region">
-                            <h4>Coverage Area</h4>
-                            <p>Southern Africa Region</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Contacts -->
-    <section class="section" style="background-color: var(--card-bg);">
-        <div class="container">
-            <h2>Key Team Contacts</h2>
-            
-            <div class="team-contacts">
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3>Partnerships Team</h3>
-                        <p class="member-role">Strategic Alliances & Collaboration</p>
-                        <a href="mailto:prosperity360degree@gmail.com" class="member-email">partnerships@prosperity360.org</a>
-                        <p class="member-desc">For corporate partnerships, institutional collaboration, and strategic alliances</p>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3>Program Team</h3>
-                        <p class="member-role">Program Implementation & Impact</p>
-                        <a href="mailto:prosperity360degree@gmail.com" class="member-email">programs@prosperity360.org</a>
-                        <p class="member-desc">For program-specific inquiries, field operations, and impact questions</p>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3>Media & Communications</h3>
-                        <p class="member-role">Press, Media, & Public Relations</p>
-                        <a href="mailto:prosperity360degree@gmail.com" class="member-email">media@prosperity360.org</a>
-                        <p class="member-desc">For press inquiries, media partnerships, and communications</p>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3>Donor Relations</h3>
-                        <p class="member-role">Funding & Donor Engagement</p>
-                        <a href="prosperity360degree@gmail.com" class="member-email">donors@prosperity360.org</a>
-                        <p class="member-desc">For donation inquiries, grant opportunities, and donor relations</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How can my organization partner with Prosperity360?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We offer multiple partnership opportunities including corporate social responsibility programs, employee volunteering, cause marketing, strategic alliances, and impact investing. Please contact our partnerships team at partnerships@prosperity360.org to discuss specific opportunities.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How are donations used?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Donations are allocated as follows: 40% to program implementation, 30% to community capacity building, 20% to innovation and research, and 10% to operational costs. We provide regular impact reports and maintain financial transparency.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can I volunteer remotely?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! We offer virtual volunteering opportunities in areas such as content creation, translation, data analysis, research, digital marketing, and online mentorship. Visit our Get Involved page to see current virtual volunteering opportunities.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How does Prosperity360 measure impact?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We use our Multi-Dimensional Prosperity Framework to measure impact across six dimensions: economic capability, social wellbeing, environmental resilience, institutional strength, educational readiness, and systems innovation. We employ AI-powered monitoring systems, community scorecards, and annual Global Prosperity Reports.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How can I stay updated on your work?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Subscribe to our monthly newsletter, follow us on social media (@Prosperity360), or check our website regularly for updates, stories, and event announcements.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map & Location -->
-    <section class="section" style="padding-top: 0;">
-        <div class="container">
-            <div class="map-container">
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                    <h3>Global Presence Map</h3>
-                    <p>Interactive map showing our offices and program locations across Africa and the Global South</p>
-                    <div class="map-legends">
-                        <div class="legend-item">
-                            <div class="legend-color" style="background: #1a5276;"></div>
-                            <span>Headquarters</span>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-color" style="background: #28a745;"></div>
-                            <span>Regional Offices</span>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-color" style="background: #f39c12;"></div>
-                            <span>Program Countries</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 {% endblock %}
 
 {% block head %}
 <style>
+    /* ===== CONTACT HERO SECTION ===== */
     .contacthero {
-        position: relative;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
+        background: linear-gradient(135deg, #008080 0%, #006666 100%);
         color: white;
+        padding: 100px 20px;
         text-align: center;
-        margin: 4rem 0 0 0;
-        padding: 5rem 2rem;
-
     }
 
-    .contacthero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-        animation: zoomIn 20s infinite alternate;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-            url("/static/images/contact (2).jpg") center/cover no-repeat;
-    }
-
-    .contacthero .container {
-        position: relative;
-        z-index: 2;
-        max-width: 1000px;
+    
+    .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
     .contacthero h1 {
-        font-size: 4.2rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-        color: white;
-        animation: slideInDown 1s ease-out;
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
     }
-
 
     .contacthero-subtitle {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.9;
         font-weight: 300;
-        margin-bottom: 2rem;
-        color: rgba(255, 255, 255, 0.9);
-        font-style: italic;
-        position: relative;
-        display: inline-block;
-        padding: 0 2rem;
-        animation: slideInUp 1s ease-out 0.3s both;
     }
 
-    .contacthero-subtitle::before,
-    .contacthero-subtitle::after {
-        content: "✦";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-        color: #4fc3f7;
+    /* ===== CONTACT INFORMATION SECTION ===== */
+    .contact-section {
+        padding: 80px 20px;
+        background: #fafafa;
     }
 
-    .contacthero-subtitle::before {
-        left: 0;
+    .contact-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 300;
     }
 
-    .contacthero-subtitle::after {
-        right: 0;
+    .section-subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 60px;
+        font-size: 1.1rem;
     }
 
-    .contacthero-description {
-        font-size: 1.2rem;
-        line-height: 1.7;
-        max-width: 700px;
-        margin: 0 auto 3rem;
-        color: rgba(255, 255, 255, 0.85);
-        padding: 2rem;
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        border-left: 4px solid #4fc3f7;
-        animation: fadeIn 1s ease-out 0.6s both;
-    }
     .contact-info-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
-    
+
     .contact-info-card {
+        background: white;
+        border-radius: 12px;
+        padding: 40px 30px;
         text-align: center;
-        padding: 2rem;
-        background: var(--card-bg);
-        border-radius: 10px;
-        transition: var(--transition);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #eee;
     }
-    
+
     .contact-info-card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     }
-    
+
     .contact-icon {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
+        background: rgba(0, 128, 128, 0.1);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-size: 2rem;
-        margin: 0 auto 1.5rem;
+        margin: 0 auto 25px;
     }
-    
+
+    .contact-icon i {
+        font-size: 1.8rem;
+        color: #008080;
+    }
+
+    .contact-info-card h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .contact-info-card p {
+        color: #666;
+        margin-bottom: 25px;
+        font-size: 0.95rem;
+    }
+
     .contact-link {
         display: block;
-        color: var(--primary-color);
+        color: #008080;
         text-decoration: none;
-        margin: 0.5rem 0;
-        transition: var(--transition);
+        margin: 10px 0;
+        font-weight: 500;
+        transition: color 0.3s ease;
     }
-    
+
     .contact-link:hover {
-        color: var(--secondary-color);
+        color: #006666;
         text-decoration: underline;
     }
-    
+
     .address {
-        margin: 0.5rem 0;
+        margin: 15px 0;
         text-align: left;
-        background: var(--light-color);
-        padding: 0.8rem;
-        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
-    
+
+    .address strong {
+        color: #333;
+        font-weight: 600;
+    }
+
     .social-contact {
         display: flex;
         justify-content: center;
-        gap: 1rem;
-        margin-top: 1rem;
+        gap: 15px;
+        margin-top: 20px;
     }
-    
+
     .social-icon {
         width: 40px;
         height: 40px;
+        background: #f0f0f0;
         border-radius: 50%;
-        background: var(--primary-color);
-        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: #666;
         text-decoration: none;
-        transition: var(--transition);
+        transition: all 0.3s ease;
     }
-    
+
     .social-icon:hover {
+        background: #008080;
+        color: white;
         transform: translateY(-3px);
-        background: var(--secondary-color);
     }
-    
+
+    /* ===== CONTACT FORM SECTION ===== */
+    .form-section {
+        padding: 80px 20px;
+        background: white;
+    }
+
+    .form-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .form-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 50px;
+        font-weight: 300;
+    }
+
     .contact-form-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 3rem;
-        margin-top: 3rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
-    
+
+    /* Form Styles */
     .form-row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-        margin-bottom: 1rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
     }
-    
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        background: white;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: #008080;
+        box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.1);
+    }
+
+    textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+    }
+
     .checkbox-label {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 10px;
         cursor: pointer;
-        margin: 1rem 0;
+        font-size: 0.95rem;
+        color: #555;
     }
-    
-    .process-steps {
-        margin: 2rem 0;
+
+    .checkbox-label input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: #008080;
     }
-    
+
+    .btn {
+        background: #008080;
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn:hover {
+        background: #006666;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 128, 128, 0.2);
+    }
+
+    /* Form Info Sidebar */
+    .form-info {
+        background: #fafafa;
+        border-radius: 12px;
+        padding: 40px;
+        border: 1px solid #eee;
+    }
+
+    .form-info h3 {
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
     .process-step {
         display: flex;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
+        gap: 20px;
+        margin-bottom: 25px;
         align-items: flex-start;
     }
-    
+
     .step-number {
-        width: 30px;
-        height: 30px;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        width: 36px;
+        height: 36px;
+        background: #008080;
         color: white;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 0.9rem;
         flex-shrink: 0;
     }
-    
+
+    .step-content h4 {
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .step-content p {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
     .response-time {
         display: flex;
         align-items: center;
-        gap: 1rem;
-        padding: 1rem;
-        background: var(--light-color);
+        gap: 15px;
+        margin-top: 40px;
+        padding: 20px;
+        background: white;
         border-radius: 8px;
-        margin-top: 2rem;
+        border-left: 4px solid #008080;
     }
-    
+
     .response-time i {
-        font-size: 2rem;
-        color: var(--primary-color);
+        color: #008080;
+        font-size: 1.5rem;
     }
-    
-    .regional-offices {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
+
+    .response-time strong {
+        color: #333;
+        font-weight: 600;
     }
-    
-    .office-card {
-        background: var(--card-bg);
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
+
+    .response-time p {
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 5px;
     }
-    
-    .office-header {
-        color: white;
-        padding: 1.5rem;
+
+    /* ===== TEAM CONTACTS SECTION ===== */
+    .team-section {
+        padding: 80px 20px;
+        background: #fafafa;
+    }
+
+    .team-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .team-section h2 {
         text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 50px;
+        font-weight: 300;
     }
-    
-    .office-content {
-        padding: 1.5rem;
-    }
-    
-    .info-item {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        align-items: flex-start;
-    }
-    
-    .info-item i {
-        color: var(--primary-color);
-        margin-top: 0.2rem;
-    }
-    
-    .office-region {
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--border-color);
-    }
-    
+
     .team-contacts {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
-    
+
     .team-member {
-        background: var(--bg-color);
-        padding: 1.5rem;
-        border-radius: 10px;
-        text-align: center;
+        background: white;
+        border-radius: 12px;
+        padding: 35px;
+        border: 1px solid #eee;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
+    .team-member:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border-color: #008080;
+    }
+
     .member-avatar {
-        width: 80px;
-        height: 80px;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        width: 60px;
+        height: 60px;
+        background: rgba(0, 128, 128, 0.1);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-size: 2rem;
-        margin: 0 auto 1rem;
+        margin-bottom: 25px;
     }
-    
+
+    .member-avatar i {
+        font-size: 1.5rem;
+        color: #008080;
+    }
+
+    .member-info h3 {
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
     .member-role {
-        color: var(--text-light);
+        color: #008080;
         font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+        font-weight: 500;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
-    
+
     .member-email {
-        display: block;
-        color: var(--primary-color);
+        display: inline-block;
+        color: #008080;
         text-decoration: none;
-        margin: 0.5rem 0;
+        margin: 10px 0;
+        font-weight: 500;
+        font-size: 0.95rem;
     }
-    
+
+    .member-email:hover {
+        text-decoration: underline;
+    }
+
     .member-desc {
+        color: #666;
         font-size: 0.9rem;
-        margin-top: 0.5rem;
-        color: var(--text-light);
+        line-height: 1.6;
+        margin-top: 15px;
     }
-    
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section {
+        padding: 80px 20px;
+        background: white;
+    }
+
     .faq-container {
         max-width: 800px;
-        margin: 3rem auto 0;
+        margin: 0 auto;
     }
-    
+
+    .faq-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 50px;
+        font-weight: 300;
+    }
+
+    /* ===== FAQ ACCORDION - COMPLETE FIX ===== */
+    .faq-section {
+        padding: 80px 20px;
+        background: white;
+    }
+
+    .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .faq-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 50px;
+        font-weight: 300;
+    }
+
+    .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
     .faq-item {
-        margin-bottom: 1rem;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
         overflow: hidden;
+        background: white;
+        transition: all 0.3s ease;
     }
-    
+
+    .faq-item:hover {
+        border-color: #008080;
+        box-shadow: 0 5px 20px rgba(0, 128, 128, 0.1);
+    }
+
     .faq-question {
         width: 100%;
-        padding: 1.5rem;
-        background: var(--card-bg);
+        padding: 22px 25px;
+        background: white;
         border: none;
         text-align: left;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--dark-color);
+        font-size: 1.15rem;
+        color: #333;
+        font-weight: 500;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        transition: var(--transition);
+        transition: all 0.3s ease;
+        position: relative;
+        outline: none;
     }
-    
+
     .faq-question:hover {
-        background: var(--light-color);
+        background: #f8f9fa;
     }
-    
-    .faq-answer {
-        padding: 0 1.5rem;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+
+    .faq-question:focus {
+        box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
     }
-    
-    .faq-answer.active {
-        padding: 1.5rem;
-        max-height: 500px;
-    }
-    
-    .map-container {
-        background: var(--card-bg);
-        border-radius: 10px;
-        padding: 3rem;
+
+    .faq-question i {
+        color: #008080;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-left: 15px;
+        font-size: 0.9rem;
+        min-width: 16px;
         text-align: center;
     }
-    
-    .map-placeholder {
-        padding: 2rem;
+
+    /* Active state for question */
+    .faq-question.active {
+        background: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
     }
-    
-    .map-legends {
+
+    .faq-question.active i {
+        transform: rotate(180deg);
+    }
+
+    /* FAQ Answer Styles */
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 25px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: #fdfdfd;
+    }
+
+    .faq-answer.active {
+        max-height: 1000px;
+        padding: 0 25px 25px 25px;
+    }
+
+    .faq-answer p {
+        color: #555;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 1rem;
+        padding-top: 20px;
+    }
+
+    .faq-item {
+        animation: fadeInUp 0.5s ease-out forwards;
+        /* opacity: 0; */
+    }
+
+    .faq-item:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .faq-item:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .faq-item:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .faq-item:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .faq-item:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    /* Optional: Add a subtle indicator */
+    .faq-question::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 20px;
+        background: #008080;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 0 2px 2px 0;
+    }
+
+    .faq-question.active::before {
+        opacity: 1;
+    }
+
+    /* Responsive FAQ */
+    @media (max-width: 768px) {
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .faq-question {
+            padding: 18px 20px;
+            font-size: 1.05rem;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+        }
+
+        .faq-answer.active {
+            padding: 0 20px 20px 20px;
+        }
+
+        .faq-answer p {
+            padding-top: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section {
+            padding: 50px 15px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+        }
+
+        .faq-question {
+            padding: 16px 18px;
+            font-size: 1rem;
+        }
+
+        .faq-question i {
+            margin-left: 10px;
+        }
+
+        .faq-answer {
+            padding: 0 18px;
+        }
+
+        .faq-answer.active {
+            padding: 0 18px 18px 18px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            padding-top: 12px;
+        }
+    }
+
+    /* Print styles */
+    @media print {
+        .faq-answer {
+            max-height: none !important;
+            padding: 10px 25px !important;
+            display: block !important;
+        }
+
+        .faq-question i {
+            display: none;
+        }
+    }
+
+    /* ===== INTERACTIVE MAP STYLES ===== */
+    .map-section {
+        padding: 80px 20px;
+        background: #fafafa;
+    }
+
+    .map-section-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .map-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+
+    .map-section .section-subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 50px;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .map-container {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border: 1px solid #eee;
+    }
+
+    #prosperityMap {
+        height: 500px;
+        width: 100%;
+        z-index: 1;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Leaflet Map Customization */
+    .leaflet-container {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .leaflet-control-attribution {
+        font-size: 11px !important;
+    }
+
+    .leaflet-popup-content {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .leaflet-popup-content h3 {
+        color: #008080;
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .leaflet-popup-content p {
+        margin: 5px 0;
+        color: #555;
+    }
+
+    .leaflet-popup-content a {
+        color: #008080;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .leaflet-popup-content a:hover {
+        text-decoration: underline;
+    }
+
+    /* Map Controls */
+    .map-controls {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        background: white;
+    }
+
+    .map-legend {
+        padding: 25px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border-left: 4px solid #008080;
+    }
+
+    .map-legend h4 {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        margin-top: 2rem;
+        align-items: center;
+        gap: 10px;
     }
-    
+
+    .map-legend h4 i {
+        color: #008080;
+    }
+
     .legend-item {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 12px;
+        margin-bottom: 12px;
     }
-    
+
     .legend-color {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
         border-radius: 4px;
+        flex-shrink: 0;
+    }
+
+    .legend-item span {
+        color: #555;
+        font-size: 0.95rem;
+    }
+
+    /* Map Stats */
+    .map-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .map-stats .stat {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .map-stats .stat:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        background: white;
+    }
+
+    .map-stats .stat i {
+        font-size: 1.8rem;
+        color: #008080;
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 128, 128, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .map-stats .stat h4 {
+        color: #333;
+        font-size: 1.8rem;
+        margin: 0 0 5px 0;
+        font-weight: 700;
+    }
+
+    .map-stats .stat p {
+        color: #666;
+        font-size: 0.9rem;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        #prosperityMap {
+            height: 450px;
+        }
+
+        .map-controls {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .map-stats {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .map-section {
+            padding: 60px 20px;
+        }
+
+        .map-section h2 {
+            font-size: 2rem;
+        }
+
+        #prosperityMap {
+            height: 400px;
+        }
+
+        .map-controls {
+            padding: 25px;
+        }
+
+        .map-legend {
+            padding: 20px;
+        }
+
+        .map-stats {
+            grid-template-columns: 1fr;
+        }
+
+        .map-stats .stat {
+            padding: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #prosperityMap {
+            height: 350px;
+        }
+
+        .map-controls {
+            padding: 20px;
+        }
+
+        .map-legend {
+            padding: 18px;
+        }
+
+        .map-legend h4 {
+            font-size: 1.1rem;
+        }
+
+        .legend-item span {
+            font-size: 0.9rem;
+        }
+
+        .map-stats .stat h4 {
+            font-size: 1.5rem;
+        }
+
+        .map-stats .stat i {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    /* Custom Marker Icons */
+    .custom-marker {
+        background: none;
+        border: none;
+    }
+
+    .marker-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        border: 3px solid white;
+    }
+
+    .marker-icon.headquarters {
+        background: #008080;
+    }
+
+    .marker-icon.regional {
+        background: #e74c3c;
+    }
+
+    .marker-icon.program {
+        background: #27ae60;
+    }
+
+    .marker-icon.upcoming {
+        background: #f39c12;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 768px) {
+        .contacthero h1 {
+            font-size: 2.5rem;
+        }
+
+        .contacthero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .contact-form-container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-info-grid,
+        .team-contacts {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-section h2,
+        .form-section h2,
+        .team-section h2,
+        .section h2 {
+            font-size: 2rem;
+        }
+
+        .contact-form-container,
+        .team-contacts {
+            max-width: 500px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .contacthero {
+            padding: 60px 20px;
+        }
+
+        .contacthero h1 {
+            font-size: 2rem;
+        }
+
+        .contact-section,
+        .form-section,
+        .team-section,
+        .section,
+        .map-section {
+            padding: 50px 20px;
+        }
+
+        .form-info {
+            padding: 30px;
+        }
+
+        .contact-info-card,
+        .team-member {
+            padding: 30px 20px;
+        }
+
+        .map-placeholder {
+            padding: 40px 20px;
+        }
+
+        .map-legends {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .contact-info-card,
+    .team-member,
+    .faq-item,
+    .map-container {
+        animation: fadeInUp 0.5s ease-out;
+    }
+
+    .contact-info-card:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .contact-info-card:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .contact-info-card:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .contact-info-card:nth-child(4) {
+        animation-delay: 0.4s;
     }
 </style>
 {% endblock %}
 
 {% block scripts %}
 <script>
-    // FAQ functionality
-    document.addEventListener('DOMContentLoaded', function() {
+
+
+    // FAQ Accordion Functionality
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all FAQ questions
         const faqQuestions = document.querySelectorAll('.faq-question');
-        
+
+        // Initialize the first FAQ as open (optional)
+        // Uncomment if you want the first FAQ open by default:
+        // if (faqQuestions.length > 0) {
+        //     openFAQ(faqQuestions[0]);
+        // }
+
+        // Add click event to each FAQ question
         faqQuestions.forEach(question => {
-            question.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
-                const icon = this.querySelector('i');
-                
-                // Toggle active class
-                answer.classList.toggle('active');
-                
-                // Rotate icon
-                if (answer.classList.contains('active')) {
-                    icon.style.transform = 'rotate(180deg)';
-                } else {
-                    icon.style.transform = 'rotate(0deg)';
+            question.addEventListener('click', toggleFAQ);
+
+            // Add keyboard support
+            question.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleFAQ.call(this);
                 }
-                
-                // Close other FAQ items
-                faqQuestions.forEach(otherQuestion => {
-                    if (otherQuestion !== this) {
-                        const otherAnswer = otherQuestion.nextElementSibling;
-                        const otherIcon = otherQuestion.querySelector('i');
-                        
-                        otherAnswer.classList.remove('active');
-                        otherIcon.style.transform = 'rotate(0deg)';
+
+                // Arrow key navigation
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const nextFAQ = this.parentElement.nextElementSibling?.querySelector('.faq-question');
+                    if (nextFAQ) {
+                        nextFAQ.focus();
+                        openFAQ(nextFAQ);
                     }
-                });
+                }
+
+                if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prevFAQ = this.parentElement.previousElementSibling?.querySelector('.faq-question');
+                    if (prevFAQ) {
+                        prevFAQ.focus();
+                        openFAQ(prevFAQ);
+                    }
+                }
             });
         });
-        
-        // Contact form submission (handled by Flask)
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                // Client-side validation
-                const requiredFields = this.querySelectorAll('[required]');
-                let valid = true;
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        valid = false;
-                        field.style.borderColor = 'var(--accent-color)';
-                    } else {
-                        field.style.borderColor = '';
-                    }
-                });
-                
-                if (!valid) {
+
+        // Function to toggle FAQ
+        function toggleFAQ() {
+            const isActive = this.classList.contains('active');
+            const answer = this.nextElementSibling;
+
+            if (isActive) {
+                closeFAQ(this);
+            } else {
+                // Close all other FAQs
+                closeAllFAQs();
+                // Open this one
+                openFAQ(this);
+            }
+        }
+
+        // Function to open a specific FAQ
+        function openFAQ(question) {
+            const answer = question.nextElementSibling;
+
+            // Add active classes
+            question.classList.add('active');
+            question.setAttribute('aria-expanded', 'true');
+            answer.classList.add('active');
+
+            // Calculate actual height for smooth animation
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+
+        // Function to close a specific FAQ
+        function closeFAQ(question) {
+            const answer = question.nextElementSibling;
+
+            // Remove active classes
+            question.classList.remove('active');
+            question.setAttribute('aria-expanded', 'false');
+            answer.classList.remove('active');
+
+            // Reset max-height
+            answer.style.maxHeight = null;
+        }
+
+        // Function to close all FAQs
+        function closeAllFAQs() {
+            faqQuestions.forEach(question => {
+                closeFAQ(question);
+            });
+        }
+
+        // Add ARIA attributes for accessibility
+        faqQuestions.forEach((question, index) => {
+            const answer = question.nextElementSibling;
+            const questionId = `faq-question-${index + 1}`;
+            const answerId = `faq-answer-${index + 1}`;
+
+            question.id = questionId;
+            question.setAttribute('aria-expanded', 'false');
+            question.setAttribute('aria-controls', answerId);
+
+            answer.id = answerId;
+            answer.setAttribute('aria-labelledby', questionId);
+            answer.setAttribute('role', 'region');
+        });
+
+        // Smooth scroll to FAQ when clicked from elsewhere on page
+        const faqHashLinks = document.querySelectorAll('a[href*="#faq"]');
+        faqHashLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const hash = this.getAttribute('href');
+                if (hash.includes('#faq')) {
                     e.preventDefault();
-                    alert('Please fill in all required fields.');
-                    return false;
+                    const targetId = hash.split('#')[1];
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        const faqQuestion = targetElement.querySelector('.faq-question');
+                        if (faqQuestion) {
+                            openFAQ(faqQuestion);
+                            setTimeout(() => {
+                                faqQuestion.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }, 100);
+                        }
+                    }
                 }
-                
-                // Show loading state
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
-                
-                // The form submission will be handled by Flask backend
-                // The response is handled in the main.js file
+            });
+        });
+
+        // Auto-close FAQs when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.faq-item')) {
+                closeAllFAQs();
+            }
+        });
+
+        // Fix for Safari: force reflow to ensure smooth animation
+        if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+            faqQuestions.forEach(question => {
+                const answer = question.nextElementSibling;
+                answer.style.display = 'block';
+                answer.style.maxHeight = '0';
+                answer.style.overflow = 'hidden';
             });
         }
     });
+
+    // Optional: Add a "Open All" / "Close All" button
+    function createFAQControls() {
+        const faqContainer = document.querySelector('.faq-container');
+        if (!faqContainer) return;
+
+        const controls = document.createElement('div');
+        controls.className = 'faq-controls';
+        controls.style.cssText = `
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 20px;
+    `;
+
+        const openAllBtn = document.createElement('button');
+        openAllBtn.textContent = 'Open All';
+        openAllBtn.className = 'faq-control-btn';
+        openAllBtn.style.cssText = `
+        background: #008080;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem;
+    `;
+
+        const closeAllBtn = document.createElement('button');
+        closeAllBtn.textContent = 'Close All';
+        closeAllBtn.className = 'faq-control-btn';
+        closeAllBtn.style.cssText = `
+        background: #f0f0f0;
+        color: #333;
+        border: 1px solid #ddd;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem;
+    `;
+
+        openAllBtn.onclick = function () {
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.add('active');
+                q.nextElementSibling.classList.add('active');
+                q.nextElementSibling.style.maxHeight = q.nextElementSibling.scrollHeight + 'px';
+            });
+        };
+
+        closeAllBtn.onclick = function () {
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+                q.nextElementSibling.style.maxHeight = null;
+            });
+        };
+
+        controls.appendChild(openAllBtn);
+        controls.appendChild(closeAllBtn);
+        faqContainer.insertBefore(controls, faqContainer.firstChild);
+    }
+
+    // Uncomment if you want controls:
+    // document.addEventListener('DOMContentLoaded', createFAQControls);
+
+
+
+
+
+
+
+    // Initialize Interactive Map
+    function initProsperityMap() {
+        // Center map on Africa
+        const map = L.map('prosperityMap').setView([9.0820, 8.6753], 3); // Centered on Nigeria
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Define custom marker icons
+        const headquartersIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div class="marker-icon headquarters"><i class="fas fa-flag"></i></div>',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+            popupAnchor: [0, -40]
+        });
+
+        const regionalIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div class="marker-icon regional"><i class="fas fa-building"></i></div>',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+            popupAnchor: [0, -40]
+        });
+
+        const programIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div class="marker-icon program"><i class="fas fa-hands-helping"></i></div>',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+            popupAnchor: [0, -40]
+        });
+
+        const upcomingIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div class="marker-icon upcoming"><i class="fas fa-clock"></i></div>',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+            popupAnchor: [0, -40]
+        });
+
+        // Headquarters - Abuja, Nigeria
+        L.marker([9.0765, 7.3986], { icon: headquartersIcon })
+            .addTo(map)
+            .bindPopup(`
+            <div style="min-width: 200px;">
+                <h3>🏢 Africa Headquarters</h3>
+                <p><strong>Location:</strong> Abuja, Nigeria</p>
+                <p><strong>Type:</strong> Headquarters</p>
+                <p><strong>Focus:</strong> Strategic Leadership & Operations</p>
+                <a href="mailto:info@prosperity360.org" style="color: #008080; text-decoration: none;">
+                    📧 info@prosperity360.org
+                </a>
+            </div>
+        `);
+
+        // Regional Offices
+        L.marker([-1.2921, 36.8219], { icon: regionalIcon }) // Nairobi, Kenya
+            .addTo(map)
+            .bindPopup(`
+            <div style="min-width: 200px;">
+                <h3>🌍 East Africa Office</h3>
+                <p><strong>Location:</strong> Nairobi, Kenya</p>
+                <p><strong>Type:</strong> Regional Office</p>
+                <p><strong>Coverage:</strong> Kenya, Tanzania, Uganda, Rwanda</p>
+                <a href="mailto:eastafrica@prosperity360.org" style="color: #008080; text-decoration: none;">
+                    📧 eastafrica@prosperity360.org
+                </a>
+            </div>
+        `);
+
+        L.marker([-1.9706, 30.1044], { icon: upcomingIcon }) // Kigali, Rwanda
+            .addTo(map)
+            .bindPopup(`
+            <div style="min-width: 200px;">
+                <h3>🚀 Innovation Hub (Upcoming)</h3>
+                <p><strong>Location:</strong> Kigali, Rwanda</p>
+                <p><strong>Type:</strong> Innovation Center</p>
+                <p><strong>Status:</strong> Launching Q4 2024</p>
+                <p><i>Focus on tech innovation and digital transformation</i></p>
+            </div>
+        `);
+
+        L.marker([6.5244, 3.3792], { icon: regionalIcon }) // Lagos, Nigeria
+            .addTo(map)
+            .bindPopup(`
+            <div style="min-width: 200px;">
+                <h3>🌍 West Africa Office</h3>
+                <p><strong>Location:</strong> Lagos, Nigeria</p>
+                <p><strong>Type:</strong> Regional Office</p>
+                <p><strong>Coverage:</strong> Nigeria, Ghana, Senegal, Ivory Coast</p>
+                <a href="mailto:westafrica@prosperity360.org" style="color: #008080; text-decoration: none;">
+                    📧 westafrica@prosperity360.org
+                </a>
+            </div>
+        `);
+
+        // Program Countries - Adding multiple locations
+        const programCountries = [
+            { coords: [-26.2041, 28.0473], name: "South Africa", city: "Johannesburg", programs: 5 },
+            { coords: [14.7175, -17.4677], name: "Senegal", city: "Dakar", programs: 3 },
+            { coords: [5.5560, -0.1969], name: "Ghana", city: "Accra", programs: 4 },
+            { coords: [-15.3875, 28.3228], name: "Zambia", city: "Lusaka", programs: 2 },
+            { coords: [-18.6657, 35.5296], name: "Mozambique", city: "Maputo", programs: 3 },
+            { coords: [-1.9579, 30.1127], name: "Rwanda", city: "Kigali", programs: 4 },
+            { coords: [0.3136, 32.5811], name: "Uganda", city: "Kampala", programs: 3 },
+            { coords: [-6.7924, 39.2083], name: "Tanzania", city: "Dar es Salaam", programs: 4 }
+        ];
+
+        programCountries.forEach(country => {
+            L.marker(country.coords, { icon: programIcon })
+                .addTo(map)
+                .bindPopup(`
+                <div style="min-width: 200px;">
+                    <h3>${country.name}</h3>
+                    <p><strong>City:</strong> ${country.city}</p>
+                    <p><strong>Active Programs:</strong> ${country.programs}</p>
+                    <p><strong>Status:</strong> Active Program Country</p>
+                    <p><em>Focus areas: Education, Health, Economic Empowerment</em></p>
+                </div>
+            `);
+        });
+
+        // Add a layer control
+        const baseMaps = {
+            "Street View": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+            "Satellite": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png')
+        };
+
+        const overlayMaps = {
+            "Headquarters": L.layerGroup([]),
+            "Regional Offices": L.layerGroup([]),
+            "Program Countries": L.layerGroup([])
+        };
+
+        L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+        // Add fullscreen control
+        map.addControl(new L.Control.Fullscreen());
+
+        // Fit bounds to show all markers
+        const bounds = L.latLngBounds([
+            [-35, -20], // Southwest bounds
+            [38, 55]    // Northeast bounds
+        ]);
+        map.fitBounds(bounds);
+
+        // Add zoom control
+        L.control.zoom({
+            position: 'topright'
+        }).addTo(map);
+
+        // Add a scale
+        L.control.scale({
+            imperial: false,
+            metric: true
+        }).addTo(map);
+    }
+
+    // Initialize map when page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        // Wait a bit to ensure Leaflet is loaded
+        setTimeout(() => {
+            if (document.getElementById('prosperityMap')) {
+                initProsperityMap();
+            }
+        }, 100);
+    });
+
+    // Handle window resize for map
+    window.addEventListener('resize', function () {
+        if (window.map) {
+            window.map.invalidateSize();
+        }
+    });
+
 </script>
 {% endblock %}

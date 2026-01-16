@@ -4,9 +4,8 @@
 
 {% block content %}
 <!-- Page Header -->
-<section class="programhero style="padding: 150px 0 80px; background-image: linear-gradient(rgba(40, 167, 69, 0.9), rgba(26,
-    82, 118, 0.9));"">
-    <div class="container">
+<section class="programhero">
+    <div class="programhero-container">
         <h1>Our Strategic Pillars</h1>
         <p class="programhero-description">
             Six comprehensive programs driving multi-dimensional prosperity, systems transformation, and
@@ -15,8 +14,8 @@
     </div>
 </section>
 <!-- Programs Navigation -->
-<section class="section" style="padding: 2rem 0; background-color: var(--card-bg);">
-    <div class="container">
+<section class="program-section">
+    <div class="program-container">
         <div class="programs-nav">
             <a href="#innovation" class="program-nav-item">
                 <i class="fas fa-brain"></i>
@@ -45,322 +44,337 @@
         </div>
     </div>
 </section>
+<!-- Strategic Framework Pillars -->
+<div class="strategic-container">
+    <header class="page-header">
+        <h1>Strategic Framework Pillars</h1>
+        <p>Six interconnected pillars for sustainable development and impact. Click on each pillar to explore its key
+            initiatives and expected outcomes.</p>
+    </header>
 
-<!-- Pillar 1: Innovation -->
-<section class="section" id="innovation">
-    <div class="container">
-        <div class="pillar-header">
-            <div class="pillar-icon" style="background: linear-gradient(135deg, #1a5276, #3498db);">
-                <i class="fas fa-brain"></i>
+    <div class="accordion-container">
+        <!-- Pillar 1: Innovation -->
+        <div class="accordion-item" id="innovation">
+            <div class="accordion-header">
+                <div class="pillar-number">01</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="pillar-title">
+                    <h2>Global Innovation, Digital Inclusion & Systems Transformation</h2>
+                    <p>Fostering innovation and digital access to transform systems</p>
+                </div>
+                <div class="accordion-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </div>
-            <div>
-                <h2>Pillar 1: Global Innovation, Digital Inclusion & Systems Transformation</h2>
-                <p class="pillar-sdgs">
-                    <!-- <strong>Global SDGs:</strong> 9, 16, 10, 17 -->
-                </p>
+            <div class="accordion-content">
+                <div class="pillar-content">
+                    <h3>Key Initiatives</h3>
+                    <div class="initiatives-grid">
+                        <div class="initiative-item">
+                            <i class="fas fa-flask"></i>
+                            <h4>Social Innovation Labs</h4>
+                            <p>Establishing labs across Africa, Asia, and Latin America for local solution development
+                            </p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-globe"></i>
+                            <h4>Digital Public Goods</h4>
+                            <p>Developing open-source digital tools for improved service delivery</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-robot"></i>
+                            <h4>AI for Equality</h4>
+                            <p>Leveraging artificial intelligence to promote inclusion and reduce inequality</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-cogs"></i>
+                            <h4>Governance Innovation</h4>
+                            <p>Accelerating transparent and effective governance systems</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-impact">
+                        <h3>Expected Impact</h3>
+                        <ul>
+                            <li>50 national systems transformed through innovation partnerships</li>
+                            <li>South-South policy experimentation and knowledge exchange</li>
+                            <li>Digital inclusion for marginalized communities</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="pillar-content">
-            <h3>Key Initiatives</h3>
-            <div class="initiatives-grid">
-                <div class="initiative-item">
-                    <i class="fas fa-flask"></i>
-                    <h4>Social Innovation Labs</h4>
-                    <p>Establishing labs across Africa, Asia, and Latin America for local solution development</p>
+        <!-- Pillar 2: Economic Empowerment -->
+        <div class="accordion-item" id="economic">
+            <div class="accordion-header">
+                <div class="pillar-number">02</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                <div class="initiative-item">
-                    <i class="fas fa-globe"></i>
-                    <h4>Digital Public Goods</h4>
-                    <p>Developing open-source digital tools for improved service delivery</p>
+                <div class="pillar-title">
+                    <h2>Human Capital, Economic Mobility & Inclusion</h2>
+                    <p>Building skills and opportunities for economic participation</p>
                 </div>
-                <div class="initiative-item">
-                    <i class="fas fa-robot"></i>
-                    <h4>AI for Equality</h4>
-                    <p>Leveraging artificial intelligence to promote inclusion and reduce inequality</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-cogs"></i>
-                    <h4>Governance Innovation</h4>
-                    <p>Accelerating transparent and effective governance systems</p>
+                <div class="accordion-toggle">
+                    <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
+            <div class="accordion-content">
+                <div class="pillar-content">
+                    <h3>Key Initiatives</h3>
+                    <div class="initiatives-grid">
+                        <div class="initiative-item">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Future-of-Work Skills</h4>
+                            <p>Developing pipelines for emerging job markets and digital economies</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-female"></i>
+                            <h4>Women & Youth Enterprises</h4>
+                            <p>Building ecosystems for women and youth entrepreneurship</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-recycle"></i>
+                            <h4>Green Entrepreneurship</h4>
+                            <p>Supporting sustainable business models and circular economies</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <h4>Labour Mobility Partnerships</h4>
+                            <p>Facilitating cross-border employment opportunities</p>
+                        </div>
+                    </div>
 
-            <div class="pillar-impact">
-                <h3>Expected Impact</h3>
-                <ul>
-                    <li>50 national systems transformed through innovation partnerships</li>
-                    <li>South-South policy experimentation and knowledge exchange</li>
-                    <li>Digital inclusion for marginalized communities</li>
-                </ul>
+                    <div class="pillar-impact">
+                        <h3>Expected Impact</h3>
+                        <ul>
+                            <li>1 million entrepreneurs supported</li>
+                            <li>Informal economy transformation</li>
+                            <li>Enhanced economic mobility for women and youth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pillar 3: Agriculture -->
+        <div class="accordion-item" id="agriculture">
+            <div class="accordion-header">
+                <div class="pillar-number">03</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="pillar-title">
+                    <h2>Sustainable Food Systems & Climate-Resilient Livelihoods</h2>
+                    <p>Building resilient agricultural systems for food security</p>
+                </div>
+                <div class="accordion-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <div class="pillar-content">
+                    <h3>Key Initiatives</h3>
+                    <div class="initiatives-grid">
+                        <div class="initiative-item">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Regenerative Agriculture</h4>
+                            <p>Promoting sustainable farming practices that restore ecosystems</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <h4>Value-Chain Modernization</h4>
+                            <p>Strengthening agricultural value chains from farm to market</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-cloud-sun"></i>
+                            <h4>Climate-Smart Livelihoods</h4>
+                            <p>Developing resilient rural economies adapted to climate change</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Nutrition Corridors</h4>
+                            <p>Creating regional food and nutrition security systems</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-impact">
+                        <h3>Expected Impact</h3>
+                        <ul>
+                            <li>5 million farmers in resilient food systems</li>
+                            <li>Enhanced food security across regions</li>
+                            <li>Strengthened cooperative economies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pillar 4: Clean Energy -->
+        <div class="accordion-item" id="energy">
+            <div class="accordion-header">
+                <div class="pillar-number">04</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="pillar-title">
+                    <h2>Clean Energy Access & Climate Resilience</h2>
+                    <p>Expanding renewable energy and building climate resilience</p>
+                </div>
+                <div class="accordion-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <div class="pillar-content">
+                    <h3>Key Initiatives</h3>
+                    <div class="initiatives-grid">
+                        <div class="initiative-item">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Universal Clean Energy</h4>
+                            <p>Expanding access to renewable energy in rural districts</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Climate-Resilient Infrastructure</h4>
+                            <p>Building infrastructure that withstands climate shocks</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <h4>Circular Economy Hubs</h4>
+                            <p>Establishing centers for waste-to-resource transformation</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-tree"></i>
+                            <h4>Carbon Credit Access</h4>
+                            <p>Enabling communities to benefit from carbon markets</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-impact">
+                        <h3>Expected Impact</h3>
+                        <ul>
+                            <li>50 million people with clean energy access</li>
+                            <li>Enhanced disaster risk reduction systems</li>
+                            <li>Community participation in climate finance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pillar 5: Health -->
+        <div class="accordion-item" id="health">
+            <div class="accordion-header">
+                <div class="pillar-number">05</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="pillar-title">
+                    <h2>Health Equity, Nutrition & WASH Systems</h2>
+                    <p>Improving health outcomes and access to essential services</p>
+                </div>
+                <div class="accordion-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <div class="pillar-content">
+                    <h3>Key Initiatives</h3>
+                    <div class="initiatives-grid">
+                        <div class="initiative-item">
+                            <i class="fas fa-clinic-medical"></i>
+                            <h4>Primary Healthcare Strengthening</h4>
+                            <p>Improving access to quality primary healthcare services</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-virus-slash"></i>
+                            <h4>NTD Elimination</h4>
+                            <p>Targeted programs for neglected tropical diseases</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-laptop-medical"></i>
+                            <h4>Digital Health & Telemedicine</h4>
+                            <p>Expanding healthcare access through technology</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-hand-holding-water"></i>
+                            <h4>WASH Systems</h4>
+                            <p>Water, sanitation and hygiene systems for fragile communities</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-impact">
+                        <h3>Expected Impact</h3>
+                        <ul>
+                            <li>50 million people with improved WASH access</li>
+                            <li>Enhanced cross-border epidemic preparedness</li>
+                            <li>Reduced health inequities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pillar 6: Education -->
+        <div class="accordion-item" id="education">
+            <div class="accordion-header">
+                <div class="pillar-number">06</div>
+                <div class="pillar-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="pillar-title">
+                    <h2>Education Transformation & Future Skills</h2>
+                    <p>Transforming education systems for future-ready skills</p>
+                </div>
+                <div class="accordion-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <div class="pillar-content">
+                    <h3>Key Initiatives</h3>
+                    <div class="initiatives-grid">
+                        <div class="initiative-item">
+                            <i class="fas fa-atom"></i>
+                            <h4>Pan-African STEM Hubs</h4>
+                            <p>Establishing innovation centers for science and technology</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>EdTech School Improvement</h4>
+                            <p>Leveraging technology for enhanced learning outcomes</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-robot"></i>
+                            <h4>AI & Coding Academies</h4>
+                            <p>Building skills in emerging technologies</p>
+                        </div>
+                        <div class="initiative-item">
+                            <i class="fas fa-industry"></i>
+                            <h4>School-to-Industry Bridges</h4>
+                            <p>Connecting education with employment opportunities</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-impact">
+                        <h3>Expected Impact</h3>
+                        <ul>
+                            <li>10 million learners in STEM education</li>
+                            <li>Teacher digital upskilling</li>
+                            <li>Enhanced future readiness for youth</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Pillar 2: Economic Empowerment -->
-<section class="section" id="economic" style="background-color: var(--card-bg);">
-    <div class="container">
-        <div class="pillar-header">
-            <div class="pillar-icon" style="background: linear-gradient(135deg, #28a745, #2ecc71);">
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <div>
-                <h2>Pillar 2: Human Capital, Economic Mobility & Inclusion</h2>
-                <p class="pillar-sdgs">
-                    <!-- <strong>Global SDGs:</strong> 1, 5, 8, 4, 10 -->
-                </p>
-            </div>
-        </div>
-
-        <div class="pillar-content">
-            <h3>Key Initiatives</h3>
-            <div class="initiatives-grid">
-                <div class="initiative-item">
-                    <i class="fas fa-briefcase"></i>
-                    <h4>Future-of-Work Skills</h4>
-                    <p>Developing pipelines for emerging job markets and digital economies</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-female"></i>
-                    <h4>Women & Youth Enterprises</h4>
-                    <p>Building ecosystems for women and youth entrepreneurship</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-recycle"></i>
-                    <h4>Green Entrepreneurship</h4>
-                    <p>Supporting sustainable business models and circular economies</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-exchange-alt"></i>
-                    <h4>Labour Mobility Partnerships</h4>
-                    <p>Facilitating cross-border employment opportunities</p>
-                </div>
-            </div>
-
-            <div class="pillar-impact">
-                <h3>Expected Impact</h3>
-                <ul>
-                    <li>1 million entrepreneurs supported</li>
-                    <li>Informal economy transformation</li>
-                    <li>Enhanced economic mobility for women and youth</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pillar 3: Agriculture -->
-<section class="section" id="agriculture">
-    <div class="container">
-        <div class="pillar-header">
-            <div class="pillar-icon" style="background: linear-gradient(135deg, #27ae60, #16a085);">
-                <i class="fas fa-seedling"></i>
-            </div>
-            <div>
-                <h2>Pillar 3: Sustainable Food Systems & Climate-Resilient Livelihoods</h2>
-                <p class="pillar-sdgs">
-                    <!-- <strong>Global SDGs:</strong> 2, 12, 13, 15, 1 -->
-                </p>
-            </div>
-        </div>
-
-        <div class="pillar-content">
-            <h3>Key Initiatives</h3>
-            <div class="initiatives-grid">
-                <div class="initiative-item">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Regenerative Agriculture</h4>
-                    <p>Promoting sustainable farming practices that restore ecosystems</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-project-diagram"></i>
-                    <h4>Value-Chain Modernization</h4>
-                    <p>Strengthening agricultural value chains from farm to market</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-cloud-sun"></i>
-                    <h4>Climate-Smart Livelihoods</h4>
-                    <p>Developing resilient rural economies adapted to climate change</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-utensils"></i>
-                    <h4>Nutrition Corridors</h4>
-                    <p>Creating regional food and nutrition security systems</p>
-                </div>
-            </div>
-
-            <div class="pillar-impact">
-                <h3>Expected Impact</h3>
-                <ul>
-                    <li>5 million farmers in resilient food systems</li>
-                    <li>Enhanced food security across regions</li>
-                    <li>Strengthened cooperative economies</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pillar 4: Clean Energy -->
-<section class="section" id="energy" style="background-color: var(--card-bg);">
-    <div class="container">
-        <div class="pillar-header">
-            <div class="pillar-icon" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
-                <i class="fas fa-sun"></i>
-            </div>
-            <div>
-                <h2>Pillar 4: Clean Energy Access & Climate Resilience</h2>
-                <p class="pillar-sdgs">
-                    <!-- <strong>Global SDGs:</strong> 7, 11, 12, 13 -->
-                </p>
-            </div>
-        </div>
-
-        <div class="pillar-content">
-            <h3>Key Initiatives</h3>
-            <div class="initiatives-grid">
-                <div class="initiative-item">
-                    <i class="fas fa-bolt"></i>
-                    <h4>Universal Clean Energy</h4>
-                    <p>Expanding access to renewable energy in rural districts</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Climate-Resilient Infrastructure</h4>
-                    <p>Building infrastructure that withstands climate shocks</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-sync-alt"></i>
-                    <h4>Circular Economy Hubs</h4>
-                    <p>Establishing centers for waste-to-resource transformation</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-tree"></i>
-                    <h4>Carbon Credit Access</h4>
-                    <p>Enabling communities to benefit from carbon markets</p>
-                </div>
-            </div>
-
-            <div class="pillar-impact">
-                <h3>Expected Impact</h3>
-                <ul>
-                    <li>50 million people with clean energy access</li>
-                    <li>Enhanced disaster risk reduction systems</li>
-                    <li>Community participation in climate finance</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pillar 5: Health -->
-<section class="section" id="health">
-    <div class="container">
-        <div class="pillar-header">
-            <div class="pillar-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
-                <i class="fas fa-heartbeat"></i>
-            </div>
-            <div>
-                <h2>Pillar 5: Health Equity, Nutrition & WASH Systems</h2>
-                <p class="pillar-sdgs">
-                    <!-- <strong>Global SDGs:</strong> 3, 2, 6, 10 -->
-                </p>
-            </div>
-        </div>
-
-        <div class="pillar-content">
-            <h3>Key Initiatives</h3>
-            <div class="initiatives-grid">
-                <div class="initiative-item">
-                    <i class="fas fa-clinic-medical"></i>
-                    <h4>Primary Healthcare Strengthening</h4>
-                    <p>Improving access to quality primary healthcare services</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-virus-slash"></i>
-                    <h4>NTD Elimination</h4>
-                    <p>Targeted programs for neglected tropical diseases</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-laptop-medical"></i>
-                    <h4>Digital Health & Telemedicine</h4>
-                    <p>Expanding healthcare access through technology</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-hand-holding-water"></i>
-                    <h4>WASH Systems</h4>
-                    <p>Water, sanitation and hygiene systems for fragile communities</p>
-                </div>
-            </div>
-
-            <div class="pillar-impact">
-                <h3>Expected Impact</h3>
-                <ul>
-                    <li>50 million people with improved WASH access</li>
-                    <li>Enhanced cross-border epidemic preparedness</li>
-                    <li>Reduced health inequities</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pillar 6: Education -->
-<section class="section" id="education" style="background-color: var(--card-bg);">
-    <div class="container">
-        <div class="pillar-header">
-            <div class="pillar-icon" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div>
-                <h2>Pillar 6: Education Transformation & Future Skills</h2>
-                <p class="pillar-sdgs">
-                    <!-- <strong>Global SDGs:</strong> 4, 8, 9 -->
-                </p>
-            </div>
-        </div>
-
-        <div class="pillar-content">
-            <h3>Key Initiatives</h3>
-            <div class="initiatives-grid">
-                <div class="initiative-item">
-                    <i class="fas fa-atom"></i>
-                    <h4>Pan-African STEM Hubs</h4>
-                    <p>Establishing innovation centers for science and technology</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-laptop-code"></i>
-                    <h4>EdTech School Improvement</h4>
-                    <p>Leveraging technology for enhanced learning outcomes</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-robot"></i>
-                    <h4>AI & Coding Academies</h4>
-                    <p>Building skills in emerging technologies</p>
-                </div>
-                <div class="initiative-item">
-                    <i class="fas fa-industry"></i>
-                    <h4>School-to-Industry Bridges</h4>
-                    <p>Connecting education with employment opportunities</p>
-                </div>
-            </div>
-
-            <div class="pillar-impact">
-                <h3>Expected Impact</h3>
-                <ul>
-                    <li>10 million learners in STEM education</li>
-                    <li>Teacher digital upskilling</li>
-                    <li>Enhanced future readiness for youth</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Delivery Architecture -->
-<section class="section">
-    <div class="container">
+    <!-- Delivery Architecture -->
+    <section class="architecture-section">
         <h2>Our Delivery Architecture</h2>
         <p class="section-subtitle">Globally inspired, locally rooted implementation model</p>
 
@@ -391,223 +405,1158 @@
                 <p>Africa, South Asia, Latin America Hubs, South-South Learning</p>
             </div>
         </div>
-    </div>
-</section>
-{% endblock %}
+    </section>
+    {% endblock %}
 
-{% block head %}
-<style>
-    .programhero {
-        position: relative;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        color: white;
-        text-align: center;
-        margin: 4rem 0 0 0;
-        padding: 5rem 2rem;
+    {% block head %}
+    <style>
+        /* ===== PROGRAMS PAGE STYLES ===== */
 
-    }
+        /* Base Variables */
+        :root {
+            --primary-color: #008080;
+            --primary-light: rgba(0, 128, 128, 0.1);
+            --primary-dark: #006666;
+            --text-dark: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --background-light: #fafafa;
+            --border-color: #e0e0e0;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+        }
 
-    .programhero::before {
-        content: "";
-        position: absolute;
+        /* ===== HERO SECTION ===== */
+        .programhero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .programhero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .programhero-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .programhero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .programhero-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ===== PROGRAMS NAVIGATION ===== */
+        .program-section {
+            padding: 40px 20px;
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .program-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .programs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+
+        .program-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 20px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-width: 100px;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+        }
+
+        .program-nav-item:hover,
+        .program-nav-item.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .program-nav-item i {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .program-nav-item:hover i,
+        .program-nav-item.active i {
+            transform: scale(1.2);
+        }
+
+        .program-nav-item span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* ===== STRATEGIC FRAMEWORK ===== */
+        .strategic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .page-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ===== ACCORDION PILLARS ===== */
+        .accordion-container {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+        }
+
+        .accordion-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item.active {
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 40px rgba(0, 128, 128, 0.1);
+        }
+
+        .accordion-header {
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            position: relative;
+        }
+
+        .accordion-header:hover {
+            background: rgba(0, 128, 128, 0.02);
+        }
+
+        .accordion-item.active .accordion-header {
+            background: var(--primary-light);
+        }
+
+        .pillar-number {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--primary-color);
+            opacity: 0.3;
+            min-width: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item.active .pillar-number {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .pillar-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item.active .pillar-icon {
+            background: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .pillar-icon i {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item.active .pillar-icon i {
+            color: var(--white);
+        }
+
+        .pillar-title {
+            flex: 1;
+        }
+
+        .pillar-title h2 {
+            color: var(--text-dark);
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .pillar-title p {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .accordion-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-toggle {
+            background: var(--primary-color);
+            transform: rotate(180deg);
+        }
+
+        .accordion-toggle i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-toggle i {
+            color: var(--white);
+        }
+
+        /* Accordion Content */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 2000px;
+        }
+
+        .pillar-content {
+            padding: 0 30px 30px 165px;
+        }
+
+        .pillar-content h3 {
+            color: var(--text-dark);
+            font-size: 1.4rem;
+            margin: 30px 0 25px;
+            font-weight: 600;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .pillar-content h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        /* Initiatives Grid */
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .initiative-item {
+            background: var(--background-light);
+            border-radius: var(--radius);
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .initiative-item:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .initiative-item i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .initiative-item:hover i {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .initiative-item h4 {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .initiative-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Pillar Impact */
+        .pillar-impact ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pillar-impact li {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .pillar-impact li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* ===== DELIVERY ARCHITECTURE ===== */
+        .architecture-section {
+            margin-top: 100px;
+            padding: 60px 40px;
+            background: var(--background-light);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .architecture-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .architecture-section .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            counter-reset: level-counter;
+        }
+
+        .architecture-level {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 35px 25px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            counter-increment: level-counter;
+        }
+
+        .architecture-level::before {
+            content: counter(level-counter);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .architecture-level:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .architecture-level h3 {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            font-weight: 600;
+        }
+
+        .architecture-level p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Apply animations */
+        .programhero-container {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .programs-nav {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .accordion-container,
+        .architecture-section {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .accordion-item,
+        .architecture-level {
+            animation: slideInRight 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* Stagger animations for accordion items */
+        .accordion-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .accordion-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .accordion-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .accordion-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .accordion-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .accordion-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        /* Stagger animations for architecture levels */
+        .architecture-level:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .architecture-level:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .architecture-level:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .architecture-level:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .architecture-level:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .initiatives-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .architecture-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .programhero {
+                padding: 80px 20px;
+            }
+
+            .programhero h1 {
+                font-size: 2.5rem;
+            }
+
+            .programhero-description {
+                font-size: 1.1rem;
+            }
+
+            .programs-nav {
+                gap: 8px;
+            }
+
+            .program-nav-item {
+                padding: 12px 15px;
+                min-width: 85px;
+            }
+
+            .program-nav-item i {
+                font-size: 1.3rem;
+            }
+
+            .program-nav-item span {
+                font-size: 0.85rem;
+            }
+
+            .strategic-container {
+                padding: 40px 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .accordion-header {
+                padding: 25px 20px;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .pillar-number {
+                font-size: 2rem;
+                min-width: 50px;
+            }
+
+            .pillar-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .pillar-icon i {
+                font-size: 1.5rem;
+            }
+
+            .pillar-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .pillar-content {
+                padding: 0 20px 20px 20px;
+            }
+
+            .initiatives-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-section {
+                padding: 40px 20px;
+            }
+
+            .architecture-section h2 {
+                font-size: 2rem;
+            }
+
+            .architecture-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .architecture-level {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .programhero {
+                padding: 60px 15px;
+            }
+
+            .programhero h1 {
+                font-size: 2rem;
+            }
+
+            .program-hero-description {
+                font-size: 1rem;
+            }
+
+            .programs-nav {
+                gap: 5px;
+            }
+
+            .program-nav-item {
+                padding: 10px;
+                min-width: 75px;
+            }
+
+            .program-nav-item i {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+            }
+
+            .program-nav-item span {
+                font-size: 0.8rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .accordion-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .pillar-number {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 1.8rem;
+            }
+
+            .pillar-icon {
+                order: -1;
+                width: 50px;
+                height: 50px;
+                margin-right: 15px;
+            }
+
+            .pillar-title {
+                flex: 0 0 calc(100% - 70px);
+            }
+
+            .accordion-toggle {
+                position: absolute;
+                top: 20px;
+                right: 60px;
+            }
+
+            .pillar-content h3 {
+                font-size: 1.3rem;
+                margin-top: 20px;
+            }
+
+            .pillar-impact li {
+                font-size: 1rem;
+                padding-left: 25px;
+            }
+
+            .architecture-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ===== ENHANCEMENTS ===== */
+
+        /* Active state for navigation when scrolling */
+        .program-nav-item.scroll-active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        /* Smooth scroll for navigation */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 140px;
+        }
+
+        /* Optional: Add connecting lines between architecture levels */
+        .architecture-grid {
+            position: relative;
+        }
+
+        .architecture-grid::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-light);
+            z-index: -1;
+            display: none;
+        }
+
+        @media (min-width: 769px) {
+            .architecture-grid::before {
+                display: block;
+            }
+
+            .architecture-level::before {
+                z-index: 1;
+            }
+        }
+
+        /* Optional: Add hover effect to pillar numbers */
+        .pillar-number {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-number::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(0, 128, 128, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .accordion-item.active .pillar-number::after {
+            opacity: 1;
+        }
+
+        /* Optional: Add pulse animation for active navigation items */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 128, 128, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 128, 128, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 128, 128, 0);
+            }
+        }
+
+        .program-nav-item.active {
+            animation: pulse 2s infinite;
+        }
+
+        /* Optional: Add subtle gradient to active accordion header */
+        .accordion-item.active .accordion-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+        }
+    </style>
+    {% endblock %}
+
+    {% block scripts %}
+    <script>
+        // Programs Page Interactive Features
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize all interactive components
+            initAccordion();
+            initProgramNavigation();
+            initScrollSpy();
+            initHoverEffects();
+
+            // Initialize animated counters for impact numbers
+            initImpactCounters();
+        });
+
+        // Accordion Functionality
+        function initAccordion() {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            // Open first accordion by default
+            if (accordionItems.length > 0) {
+                accordionItems[0].classList.add('active');
+            }
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+
+                header.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other accordions
+                    accordionItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Open clicked accordion if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+
+                        // Scroll to item if partially off-screen
+                        const rect = item.getBoundingClientRect();
+                        if (rect.top < 100 || rect.bottom > window.innerHeight - 100) {
+                            item.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'nearest'
+                            });
+                        }
+                    }
+                });
+
+                // Keyboard support
+                header.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+
+                    // Arrow navigation between accordions
+                    if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        const nextItem = item.nextElementSibling;
+                        if (nextItem) {
+                            nextItem.querySelector('.accordion-header').click();
+                            nextItem.querySelector('.accordion-header').focus();
+                        }
+                    }
+
+                    if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        const prevItem = item.previousElementSibling;
+                        if (prevItem) {
+                            prevItem.querySelector('.accordion-header').click();
+                            prevItem.querySelector('.accordion-header').focus();
+                        }
+                    }
+                });
+
+                // Add ARIA attributes for accessibility
+                const content = item.querySelector('.accordion-content');
+                const itemId = item.getAttribute('id');
+                const headerId = `header-${itemId}`;
+                const contentId = `content-${itemId}`;
+
+                header.setAttribute('id', headerId);
+                header.setAttribute('aria-expanded', item.classList.contains('active'));
+                header.setAttribute('aria-controls', contentId);
+                header.setAttribute('role', 'button');
+
+                content.setAttribute('id', contentId);
+                content.setAttribute('aria-labelledby', headerId);
+                content.setAttribute('role', 'region');
+            });
+        }
+
+        // Program Navigation with Scroll Spy
+        function initProgramNavigation() {
+            const navItems = document.querySelectorAll('.program-nav-item');
+            const sections = document.querySelectorAll('.accordion-item');
+
+            // Function to update active nav item
+            function updateActiveNav() {
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                // Update nav items
+                navItems.forEach(item => {
+                    const href = item.getAttribute('href').substring(1);
+                    item.classList.remove('active', 'scroll-active');
+
+                    if (href === currentSection) {
+                        item.classList.add('active', 'scroll-active');
+                    }
+                });
+            }
+
+            // Click handler for nav items
+            navItems.forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        // Remove active class from all nav items
+                        navItems.forEach(nav => nav.classList.remove('active', 'scroll-active'));
+
+                        // Add active class to clicked item
+                        this.classList.add('active', 'scroll-active');
+
+                        // Open the accordion if closed
+                        const accordionItem = targetSection.closest('.accordion-item');
+                        if (accordionItem && !accordionItem.classList.contains('active')) {
+                            accordionItem.querySelector('.accordion-header').click();
+                        }
+
+                        // Smooth scroll to section
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 120,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Update on scroll
+            window.addEventListener('scroll', updateActiveNav);
+
+            // Initial update
+            updateActiveNav();
+        }
+
+        // Scroll Spy for Sections
+        function initScrollSpy() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '-120px 0px -40px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id');
+                    const navItem = document.querySelector(`.program-nav-item[href="#${id}"]`);
+
+                    if (entry.isIntersecting) {
+                        navItem?.classList.add('scroll-active');
+                    } else {
+                        navItem?.classList.remove('scroll-active');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all accordion items
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                observer.observe(item);
+            });
+        }
+
+        // Hover Effects
+        function initHoverEffects() {
+            // Add hover effect to initiative items
+            const initiativeItems = document.querySelectorAll('.initiative-item');
+            initiativeItems.forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    const icon = this.querySelector('i');
+                    icon.style.transform = 'scale(1.2) rotate(10deg)';
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    const icon = this.querySelector('i');
+                    icon.style.transform = 'scale(1) rotate(0)';
+                });
+            });
+
+            // Add hover effect to architecture levels
+            const architectureLevels = document.querySelectorAll('.architecture-level');
+            architectureLevels.forEach(level => {
+                level.addEventListener('mouseenter', function () {
+                    const number = this.querySelector('.level-number');
+                    number.style.transform = 'scale(1.2) translateX(-50%)';
+                });
+
+                level.addEventListener('mouseleave', function () {
+                    const number = this.querySelector('.level-number');
+                    number.style.transform = 'scale(1) translateX(-50%)';
+                });
+            });
+        }
+
+        // Animated Impact Counters (if you add numbers later)
+        function initImpactCounters() {
+            const counters = document.querySelectorAll('.impact-number');
+
+            if (counters.length === 0) return;
+
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const frameDuration = 1000 / 60;
+                        const totalFrames = Math.round(duration / frameDuration);
+                        let currentFrame = 0;
+
+                        const animate = () => {
+                            currentFrame++;
+                            const progress = currentFrame / totalFrames;
+                            const currentValue = Math.round(target * progress);
+
+                            counter.textContent = currentValue.toLocaleString();
+
+                            if (currentFrame < totalFrames) {
+                                requestAnimationFrame(animate);
+                            } else {
+                                counter.textContent = target.toLocaleString();
+                            }
+                        };
+
+                        requestAnimationFrame(animate);
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // Optional: Add progress indicator for scroll
+        function initProgressIndicator() {
+            const progressBar = document.createElement('div');
+            progressBar.className = 'scroll-progress';
+            progressBar.style.cssText = `
+        position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-        animation: zoomIn 20s infinite alternate;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-            url("/static/images/programBg.jpg") center/cover no-repeat;
-    }
+        height: 3px;
+        background: var(--primary-color);
+        width: 0%;
+        z-index: 9999;
+        transition: width 0.1s ease;
+    `;
+            document.body.appendChild(progressBar);
 
-    .programhero .container {
-        position: relative;
-        z-index: 2;
-        max-width: 1000px;
-    }
+            window.addEventListener('scroll', () => {
+                const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = (window.scrollY / windowHeight) * 100;
+                progressBar.style.width = `${scrolled}%`;
+            });
+        }
 
-    .programhero h1 {
-        font-size: 4.2rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-        color: white;
-        animation: slideInDown 1s ease-out;
-    }
+        // Uncomment to enable progress indicator
+        initProgressIndicator();
 
 
-    .programhero-subtitle {
-        font-size: 1.8rem;
-        font-weight: 300;
-        margin-bottom: 2rem;
-        color: rgba(255, 255, 255, 0.9);
-        font-style: italic;
-        position: relative;
-        display: inline-block;
-        padding: 0 2rem;
-        animation: slideInUp 1s ease-out 0.3s both;
-    }
-
-    .programhero-subtitle::before,
-    .programhero-subtitle::after {
-        content: "✦";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-        color: #4fc3f7;
-    }
-
-    .programhero-subtitle::before {
-        left: 0;
-    }
-
-    .programhero-subtitle::after {
-        right: 0;
-    }
-
-    .programhero-description {
-        font-size: 1.2rem;
-        line-height: 1.7;
-        max-width: 700px;
-        margin: 0 auto 3rem;
-        color: rgba(255, 255, 255, 0.85);
-        padding: 2rem;
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        border-left: 4px solid #4fc3f7;
-        animation: fadeIn 1s ease-out 0.6s both;
-    }
 
 
-    .programs-nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: 0 auto;
-    }
 
-    .program-nav-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        text-decoration: none;
-        color: var(--text-color);
-        transition: var(--transition);
-        border-radius: 8px;
-        min-width: 100px;
-    }
 
-    .program-nav-item:hover {
-        background-color: var(--primary-color);
-        color: white;
-    }
-
-    .program-nav-item i {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .pillar-header {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        margin-bottom: 3rem;
-    }
-
-    .pillar-icon {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 2rem;
-        flex-shrink: 0;
-    }
-
-    .pillar-sdgs {
-        color: var(--text-light);
-        margin-top: 0.5rem;
-    }
-
-    .initiatives-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin: 2rem 0;
-    }
-
-    .initiative-item {
-        background: var(--card-bg);
-        padding: 1.5rem;
-        border-radius: 8px;
-        border-left: 4px solid var(--primary-color);
-    }
-
-    .initiative-item i {
-        font-size: 2rem;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-    }
-
-    .pillar-impact ul {
-        list-style: none;
-        padding-left: 1rem;
-    }
-
-    .pillar-impact li {
-        margin-bottom: 0.5rem;
-        position: relative;
-        padding-left: 1.5rem;
-    }
-
-    .pillar-impact li:before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: var(--secondary-color);
-        font-weight: bold;
-    }
-
-    .architecture-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-
-    .architecture-level {
-        text-align: center;
-        padding: 2rem;
-        background: var(--card-bg);
-        border-radius: 10px;
-        transition: var(--transition);
-    }
-
-    .architecture-level:hover {
-        transform: translateY(-5px);
-    }
-
-    .level-number {
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 0 auto 1rem;
-    }
-
-</style>
-{% endblock %}
+    </script>
+    {% endblock %}

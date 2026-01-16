@@ -5,9 +5,8 @@
 {% block content %}
 
 <!-- Page Header -->
-<section class="abouthero"
-    style="padding: 150px 0 80px; background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(40, 167, 69, 0.9));">
-    <div class="container">
+<section class="abouthero">
+    <div class="about-container">
         <h1>About Prosperity360</h1>
         <p class="hero-description">
             A global development foundation headquartered in Africa and working across the Global South to uplift
@@ -19,7 +18,7 @@
 
 <!-- Who We Are -->
 <section class="about-section">
-    <div class="container">
+    <div class="about-container">
         <h2>Who We Are</h2>
         <div class="about-content">
             <div class="about-text">
@@ -28,36 +27,16 @@
                     accelerates <strong>multi-dimensional prosperity</strong>, <strong>systems transformation</strong>,
                     and <strong>community-driven development</strong> across Africa, Latin America, South Asia, and
                     other emerging regions.</p>
-
-                <h3>Our Belief</h3>
-                <p>Prosperity is <strong>not</strong> a single metric; it is a constellation:</p>
-                <ul class="prosperity-list">
-                    <li><i class="fas fa-check-circle"></i> Income</li>
-                    <li><i class="fas fa-check-circle"></i> Inclusion</li>
-                    <li><i class="fas fa-check-circle"></i> Resilience</li>
-                    <li><i class="fas fa-check-circle"></i> Opportunity</li>
-                    <li><i class="fas fa-check-circle"></i> Dignity</li>
-                    <li><i class="fas fa-check-circle"></i> Voice</li>
-                </ul>
-
                 <h3>Our Philosophy</h3>
                 <p><em>"Prosperity grows when people, systems, and institutions work in harmony."</em></p>
-                <p>We do not <em>just</em> "run projects or programs." We <strong>build systems</strong>, strengthen
-                    institutions, and empower communities.</p>
-            </div>
-            <div class="about-image">
-                <div class="image-placeholder">
-                    <i class="fas fa-globe-africa"></i>
-                    <p class="image-caption">Building bridges across the Global South</p>
-                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- The Case -->
-<section class="section" style="background-color: var(--card-bg);">
-    <div class="container">
+<section class="case-section">
+    <div class="case-container">
         <h2>The Case for an African/Global South Prosperity Foundation</h2>
 
         <div class="stats-grid" style="margin: 3rem 0;">
@@ -74,181 +53,12 @@
                 <p>of future workforce growth</p>
             </div>
         </div>
-
-        <div class="case-content">
-            <h3>Opportunity Meets Challenge</h3>
-            <p>Africa and the Global South hold the world's <strong>fastest-growing economies</strong> — yet the most
-                fragile social systems. Persistent barriers continue to limit potential:</p>
-
-            <div class="challenges-grid">
-                <div class="challenge-item">
-                    <i class="fas fa-user-slash" style="color: var(--accent-color);"></i>
-                    <span>Unemployment</span>
-                </div>
-                <div class="challenge-item">
-                    <i class="fas fa-cloud-sun" style="color: var(--accent-color);"></i>
-                    <span>Climate Shocks</span>
-                </div>
-                <div class="challenge-item">
-                    <i class="fas fa-unlink" style="color: var(--accent-color);"></i>
-                    <span>Weak Systems</span>
-                </div>
-                <div class="challenge-item">
-                    <i class="fas fa-balance-scale" style="color: var(--accent-color);"></i>
-                    <span>Inequitable Access</span>
-                </div>
-                <div class="challenge-item">
-                    <i class="fas fa-apple-alt" style="color: var(--accent-color);"></i>
-                    <span>Food Insecurity</span>
-                </div>
-                <div class="challenge-item">
-                    <i class="fas fa-road" style="color: var(--accent-color);"></i>
-                    <span>Infrastructure Gaps</span>
-                </div>
-            </div>
-
-            <p style="margin-top: 2rem;">Prosperity360 exists to build the <strong>infrastructure of
-                    opportunity</strong> from the ground up — one ward/township/district at a time.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Founder's Speech Section -->
-<section class="section" id="founder">
-    <div class="container">
-        <h2>Founder's Speech</h2>
-        <!-- <div class="founder-speech">
-            <div class="speech-quote">
-                <i class="fas fa-quote-left"
-                    style="float: left; font-size: 2rem; color: var(--primary-color); margin-right: 1rem;"></i>
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
-                    There comes a time in every generation when ordinary people must rise to confront extraordinary
-                    inequality. When the world must pause and ask: how can we live in a land of abundance, and yet, so
-                    many remain poor, unemployed, or unseen? I was born in that paradox.
-                </p>
-
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
-                    Prosperity360 is not <em>just</em> another NGO. It is a <strong>movement</strong>; a new model for
-                    <strong>inclusive prosperity through innovation, empowerment, and community-driven change</strong>.
-                    I believe that when people are equipped to create value, communities can design their own future.
-                </p>
-
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
-                    We reject the myth of scarcity. Africa is not poor, it is <em>underconnected</em>. It is not lacking
-                    wealth, it is lacking <em>alignment</em>. Prosperity360 exists to align people, purpose, and
-                    possibility.
-                </p>
-            </div>
-
-            <div class="founder-signature">
-                <div style="border-top: 2px solid var(--primary-color); padding-top: 1rem; margin-top: 2rem;">
-                    <div style="font-weight: bold; font-size: 1.2rem;">Ridwan Awosanya</div>
-                    <div>Founder, Prosperity360 Foundation</div>
-                </div>
-            </div>
-
-            <div class="speech-cta">
-                <a href="{{ url_for('get_involved') }}" class="btn">
-                    <i class="fas fa-hands-helping"></i> Join Our Movement
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i> Contact Us
-                </a>
-            </div>
-        </div> -->
-        <div class="founder-speech">
-            <div class="speech-quote">
-                <i class="fas fa-quote-left"></i>
-                <p>There comes a time in every generation when ordinary people must rise to confront extraordinary
-                    inequality. When the world must pause and ask: how can we live in a land of abundance, and yet, so
-                    many remain poor, unemployed, or unseen? I was born in that paradox.</p>
-
-                <p>Prosperity360 is not <em>just</em> another NGO. It is a <strong>movement</strong>; a new model for
-                    <strong>inclusive prosperity through innovation, empowerment, and community-driven change</strong>.
-                    I believe that when people are equipped to create value, communities can design their own future.
-                </p>
-
-                <p>We reject the myth of scarcity. Africa is not poor, it is <em>underconnected</em>. It is not lacking
-                    wealth, it is lacking <em>alignment</em>. Prosperity360 exists to align people, purpose, and
-                    possibility.</p>
-            </div>
-            <div class="founder-signature">
-                <div>
-                    <div class="signature-name">Ridwan Awosanya</div>
-                    <div class="signature-title">Founder, Prosperity360 Foundation</div>
-                </div>
-            </div>
-            <div class="speech-cta">
-                <a href="{{ url_for('get_involved') }}" class="btn">
-                    <i class="fas fa-hands-helping"></i> Join Our Movement
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i> Contact Us
-                </a>
-            </div>
-        </div>
     </div>
 </section>
 
 <!-- Multi-Dimensional Framework -->
-<!-- <section class="section" style="background-color: var(--card-bg);">
-    <div class="container">
-        <h2>Our Multi-Dimensional Prosperity Framework</h2>
-        <p class="section-subtitle">Measuring prosperity across six dimensions for holistic development</p>
-
-        <div class="framework-grid">
-            <div class="framework-item">
-                <div class="framework-icon" style="background: linear-gradient(135deg, #1a5276, #2c3e50);">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Economic Capability</h3>
-                <p>Income, skills, jobs, and economic mobility</p>
-            </div>
-
-            <div class="framework-item">
-                <div class="framework-icon" style="background: linear-gradient(135deg, #28a745, #2ecc71);">
-                    <i class="fas fa-heartbeat"></i>
-                </div>
-                <h3>Social Wellbeing</h3>
-                <p>Health, nutrition, inclusion, and social protection</p>
-            </div>
-
-            <div class="framework-item">
-                <div class="framework-icon" style="background: linear-gradient(135deg, #27ae60, #16a085);">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <h3>Environmental Resilience</h3>
-                <p>Climate adaptation, clean energy, sustainable ecosystems</p>
-            </div>
-
-            <div class="framework-item">
-                <div class="framework-icon" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
-                    <i class="fas fa-landmark"></i>
-                </div>
-                <h3>Institutional Strength</h3>
-                <p>Local governance, community structures, systems</p>
-            </div>
-
-            <div class="framework-item">
-                <div class="framework-icon" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3>Educational Readiness</h3>
-                <p>STEM, digital literacy, innovation skills</p>
-            </div>
-
-            <div class="framework-item">
-                <div class="framework-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <h3>Systems of Innovation</h3>
-                <p>Technology, AI, policy transformation</p>
-            </div>
-        </div>
-    </div>
-</section> -->
-<section class="section prosperity-framework">
-    <div class="container">
+<section class="framework-section prosperity-framework">
+    <div class="framework-container">
         <h2>Our Multi-Dimensional Prosperity Framework</h2>
         <p class="section-subtitle">Measuring prosperity across six dimensions for holistic development</p>
 
@@ -307,985 +117,309 @@
 
 {% block head %}
 <style>
+    /* ===== ABOUT PAGE STYLES ===== */
+
+    /* Base Variables */
     :root {
-        --accent-color: #2A6EBB;
-        --dark-bg: #1a2639;
-        --light-bg: #f8fafc;
-        --text-dark: #2d3748;
-        --text-light: #718096;
-        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        --hover-shadow: 0 8px 15px rgba(42, 110, 187, 0.1);
+        --primary-color: #008080;
+        --primary-light: rgba(0, 128, 128, 0.1);
+        --primary-dark: #006666;
+        --text-dark: #333;
+        --text-light: #666;
+        --white: #ffffff;
+        --background-light: #fafafa;
+        --border-color: #e0e0e0;
+        --shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     }
 
-    .abouthero {
-        position: relative;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        color: white;
-        text-align: center;
-        margin: 4rem 0 0 0;
-        padding: 5rem 2rem;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+    }
+
+    /* Container Styles */
+    .about-container,
+    .case-container,
+    .framework-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .abouthero {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        color: var(--white);
+        padding: 120px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
     }
 
     .abouthero::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 0;
-        animation: zoomIn 20s infinite alternate;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-            url("/static/images/aboutus.jpg") center/cover no-repeat;
-    }
-
-    .abouthero .container {
-        position: relative;
-        z-index: 2;
-        max-width: 1000px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q50,30 100,50 Q50,70 0,50" stroke="rgba(255,255,255,0.05)" fill="none" stroke-width="2"/></svg>');
+        opacity: 0.3;
+        pointer-events: none;
     }
 
     .abouthero h1 {
-        font-size: 4.2rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-        color: white;
-        animation: slideInDown 1s ease-out;
-    }
-
-
-    .abouthero-subtitle {
-        font-size: 1.8rem;
+        font-size: 3.5rem;
+        margin-bottom: 25px;
         font-weight: 300;
-        margin-bottom: 2rem;
-        color: rgba(255, 255, 255, 0.9);
-        font-style: italic;
-        position: relative;
-        display: inline-block;
-        padding: 0 2rem;
-        animation: slideInUp 1s ease-out 0.3s both;
-    }
-
-    .abouthero-subtitle::before,
-    .abouthero-subtitle::after {
-        content: "✦";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-        color: #4fc3f7;
-    }
-
-    .abouthero-subtitle::before {
-        left: 0;
-    }
-
-    .abouthero-subtitle::after {
-        right: 0;
-    }
-
-    .abouthero-description {
-        font-size: 1.2rem;
-        line-height: 1.7;
-        max-width: 700px;
-        margin: 0 auto 3rem;
-        color: rgba(255, 255, 255, 0.85);
-        padding: 2rem;
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        border-left: 4px solid #4fc3f7;
-        animation: fadeIn 1s ease-out 0.6s both;
-    }
-
-    /* Who We Are Section */
-    .about-section {
-        padding: 5rem 2rem;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
+        letter-spacing: -0.02em;
         position: relative;
         z-index: 1;
     }
 
-    /* Section Title */
-    .container>h2 {
-        font-size: 2.75rem;
-        font-weight: 800;
+    .hero-description {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+        font-weight: 300;
+        line-height: 1.7;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-section {
+        padding: 80px 20px;
+        background: var(--white);
+    }
+
+    .about-section h2 {
         text-align: center;
-        margin-bottom: 3rem;
-        color: #1a2639;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 60px;
+        font-weight: 300;
         position: relative;
+        padding-bottom: 15px;
     }
 
-    .container>h2::after {
-        content: '';
-        position: absolute;
-        bottom: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary-color, #2A6EBB), #4CAF50);
-        border-radius: 2px;
-    }
-
-    /* Content Layout */
-    .about-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: start;
-    }
-
-    @media (max-width: 992px) {
-        .about-content {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
-    }
-
-    /* Text Content */
-    .about-text {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-    }
-
-    .about-text h3 {
-        font-size: 1.75rem;
-        font-weight: 700;
-        color: var(--primary-color, #2A6EBB);
-        margin-bottom: 1rem;
-        position: relative;
-        padding-bottom: 0.75rem;
-    }
-
-    .about-text h3::after {
+    .about-section h2::after {
         content: '';
         position: absolute;
         bottom: 0;
-        left: 0;
-        width: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
         height: 3px;
-        background: linear-gradient(90deg, var(--primary-color, #2A6EBB), rgba(42, 110, 187, 0.3));
-        border-radius: 1.5px;
+        background: var(--primary-color);
     }
 
-    .about-text h3:nth-child(3)::after {
-        background: linear-gradient(90deg, #4CAF50, rgba(76, 175, 80, 0.3));
+    .about-content {
+        max-width: 800px;
+        margin: 0 auto;
     }
 
-    .about-text h3:nth-child(5)::after {
-        background: linear-gradient(90deg, #9b59b6, rgba(155, 89, 182, 0.3));
+    .about-text h3 {
+        font-size: 1.4rem;
+        color: var(--text-dark);
+        margin: 40px 0 15px 0;
+        font-weight: 600;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .about-text h3:first-child {
+        margin-top: 0;
+    }
+
+    .about-text h3::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background: var(--primary-color);
+        border-radius: 50%;
     }
 
     .about-text p {
-        font-size: 1.125rem;
+        color: var(--text-light);
+        margin-bottom: 25px;
+        font-size: 1.1rem;
         line-height: 1.7;
-        color: #4a5568;
-        margin-bottom: 1rem;
     }
 
-    .about-text p strong {
-        color: var(--primary-color, #2A6EBB);
-        font-weight: 700;
+    .about-text strong {
+        color: var(--text-dark);
+        font-weight: 600;
         position: relative;
-        padding: 0 2px;
     }
 
-    .about-text p strong::after {
+    .about-text strong::after {
         content: '';
         position: absolute;
-        bottom: -1px;
+        bottom: -2px;
         left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, var(--primary-color, #2A6EBB), transparent);
+        width: 100%;
+        height: 1px;
+        background: var(--primary-color);
         opacity: 0.3;
     }
 
-    .about-text p em {
-        color: #718096;
+    .about-text em {
         font-style: italic;
+        color: var(--text-dark);
         font-weight: 500;
+        display: block;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 25px;
+        margin: 30px 0;
+        background: var(--background-light);
+        border-left: 4px solid var(--primary-color);
+        border-radius: 0 8px 8px 0;
+        line-height: 1.6;
     }
 
-    /* Prosperity List */
-    .prosperity-list {
+    /* ===== CASE SECTION ===== */
+    .case-section {
+        padding: 80px 20px;
+        background: var(--background-light);
+        text-align: center;
+    }
+
+    .case-section h2 {
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 40px;
+        font-weight: 300;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.3;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem 1.5rem;
-        margin: 1.5rem 0;
-        padding: 0;
-        list-style: none;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 900px;
+        margin: 60px auto 0;
     }
 
-    @media (max-width: 480px) {
-        .prosperity-list {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .prosperity-list li {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        font-size: 1.125rem;
-        color: #2d3748;
-        padding: 0.75rem 1rem;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        border: 1px solid rgba(226, 232, 240, 0.8);
+    .stat-item {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 40px 20px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
     }
 
-    .prosperity-list li::before {
+    .stat-item::before {
         content: '';
         position: absolute;
-        left: 0;
         top: 0;
-        bottom: 0;
-        width: 4px;
-        background: var(--secondary-color, #4CAF50);
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
         opacity: 0;
         transition: opacity 0.3s ease;
     }
 
-    .prosperity-list li:hover {
-        transform: translateX(5px);
-        background: white;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        border-color: rgba(42, 110, 187, 0.2);
+    .stat-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        border-color: var(--primary-color);
     }
 
-    .prosperity-list li:hover::before {
+    .stat-item:hover::before {
         opacity: 1;
     }
 
-    .prosperity-list li i {
-        font-size: 1.25rem;
-        color: var(--secondary-color, #4CAF50);
-        flex-shrink: 0;
-        transition: transform 0.3s ease;
-    }
-
-    .prosperity-list li:hover i {
-        transform: scale(1.2);
-    }
-
-    /* Philosophy Quote */
-    .about-text>p:last-of-type {
-        background: linear-gradient(135deg, rgba(42, 110, 187, 0.05), rgba(76, 175, 80, 0.05));
-        padding: 1.75rem;
-        border-radius: 12px;
-        border-left: 4px solid var(--primary-color, #2A6EBB);
-        margin-top: 1rem;
-        font-size: 1.125rem;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .about-text>p:last-of-type::before {
-        content: '"';
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 5rem;
-        color: rgba(42, 110, 187, 0.1);
-        font-family: Georgia, serif;
-        line-height: 1;
-    }
-
-    /* Image Section */
-    .about-image {
-        position: relative;
-        height: 100%;
-        min-height: 400px;
-    }
-
-    .about-image>div {
-        background: white;
-        height: 100%;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 3rem;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(226, 232, 240, 0.8);
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s ease;
-    }
-
-    .about-image>div:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-    }
-
-    .about-image>div::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 6px;
-        background: linear-gradient(90deg, var(--primary-color, #2A6EBB), #4CAF50);
-    }
-
-    .about-image>div::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(42, 110, 187, 0.03), transparent 30%);
-    }
-
-    .about-image i {
-        font-size: 6rem;
-        background: linear-gradient(135deg, var(--primary-color, #2A6EBB), #4CAF50);
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 2rem;
-        filter: drop-shadow(0 5px 15px rgba(42, 110, 187, 0.2));
-    }
-
-    .about-image>div::before,
-    .about-image i {
-        animation: pulse 3s infinite;
-    }
-
-    @keyframes pulse {
-
-        0%,
-        100% {
-            opacity: 1;
-        }
-
-        50% {
-            opacity: 0.8;
-        }
-    }
-
-    /* Caption for Image */
-    .about-image::after {
-        content: 'Building bridges across the Global South';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        padding: 1.5rem;
-        font-weight: 600;
-        color: var(--primary-color, #2A6EBB);
-        font-size: 1.1rem;
-        background: linear-gradient(transparent, rgba(42, 110, 187, 0.05));
-        border-radius: 0 0 20px 20px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .about-section {
-            padding: 3rem 1.5rem;
-        }
-
-        .container>h2 {
-            font-size: 2.25rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .about-text h3 {
-            font-size: 1.5rem;
-        }
-
-        .about-text p {
-            font-size: 1.0625rem;
-        }
-
-        .prosperity-list {
-            gap: 0.5rem 1rem;
-        }
-
-        .prosperity-list li {
-            font-size: 1rem;
-            padding: 0.625rem 0.875rem;
-        }
-
-        .about-image {
-            min-height: 350px;
-        }
-
-        .about-image>div {
-            padding: 2rem;
-        }
-
-        .about-image i {
-            font-size: 5rem;
-        }
-    }
-
-    /* Animations */
-    @keyframes fadeInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes fadeInRight {
-        from {
-            opacity: 0;
-            transform: translateX(30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .about-text {
-        animation: fadeInLeft 0.8s ease-out;
-    }
-
-    .about-image {
-        animation: fadeInRight 0.8s ease-out 0.2s backwards;
-    }
-
-    /* Background Decoration */
-    .about-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 300px;
-        background: linear-gradient(135deg, rgba(42, 110, 187, 0.03), transparent);
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    .about-section::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 200px;
-        height: 200px;
-        background: radial-gradient(circle, rgba(76, 175, 80, 0.05), transparent 70%);
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    .case-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 3rem 2rem;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        line-height: 1.6;
-        color: var(--text-dark);
-    }
-
-    .case-content h3 {
-        font-size: 2.25rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        position: relative;
-        padding-bottom: 0.75rem;
-    }
-
-    .case-content h3::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 80px;
-        height: 4px;
-        background: linear-gradient(90deg, var(--accent-color), #4CAF50);
-        border-radius: 2px;
-    }
-
-    .case-content p {
-        font-size: 1.125rem;
-        color: var(--text-light);
-        margin-bottom: 2.5rem;
-        max-width: 800px;
-    }
-
-    .case-content p strong {
-        color: var(--accent-color);
-        font-weight: 600;
-    }
-
-    /* Challenges Grid */
-    .challenges-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1.5rem;
-        margin: 3rem 0;
-    }
-
-    .challenge-item {
-        background: white;
-        border-radius: 12px;
-        padding: 1.75rem 1rem;
-        text-align: center;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid #e2e8f0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
-    }
-
-    .challenge-item:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--hover-shadow);
-        border-color: var(--accent-color);
-    }
-
-    .challenge-item i {
-        font-size: 2.25rem;
-        margin-bottom: 0.5rem;
-        background: linear-gradient(135deg, var(--accent-color), #4299e1);
-        -webkit-text-fill-color: transparent;
-    }
-
-    .challenge-item span {
-        font-weight: 600;
-        color: var(--text-dark);
-        font-size: 1rem;
-    }
-
-    /* Last Paragraph Emphasis */
-    .case-content p:last-of-type {
-        background: linear-gradient(135deg, #f0f9ff, #e6f7ff);
-        padding: 1.75rem;
-        border-radius: 12px;
-        border-left: 4px solid var(--accent-color);
-        margin-top: 2.5rem;
-        font-size: 1.125rem;
-        color: var(--text-dark);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .case-content {
-            padding: 2rem 1.5rem;
-        }
-
-        .case-content h3 {
-            font-size: 1.75rem;
-        }
-
-        .challenges-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-
-        .challenge-item {
-            padding: 1.25rem 0.75rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .challenges-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    /* Founder Speech Section */
-    .founder-speech {
-        max-width: 800px;
-        margin: 4rem auto;
-        padding: 3rem 2rem;
-        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(42, 110, 187, 0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .founder-speech::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 6px;
-        height: 100%;
-        background: linear-gradient(to bottom, var(--primary-color, #2A6EBB), #4CAF50);
-        border-radius: 0 3px 3px 0;
-    }
-
-    /* Quote Section */
-    .speech-quote {
-        position: relative;
-        padding: 0 1rem;
-    }
-
-    .speech-quote .fa-quote-left {
-        float: left;
+    .stat-number {
         font-size: 3.5rem;
-        color: rgba(42, 110, 187, 0.15);
-        margin: 0.5rem 1.5rem 1rem 0;
-        transform: translateY(-0.5rem);
-    }
-
-    .speech-quote p {
-        font-size: 1.125rem;
-        line-height: 1.8;
-        margin-bottom: 2rem;
-        color: #2d3748;
-        text-align: justify;
-        hyphens: auto;
-        position: relative;
-        padding-left: 1rem;
-    }
-
-    .speech-quote p::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0.5rem;
-        bottom: 0.5rem;
-        width: 3px;
-        background: linear-gradient(to bottom,
-                transparent,
-                rgba(42, 110, 187, 0.3),
-                transparent);
-    }
-
-    .speech-quote p strong {
-        color: var(--primary-color, #2A6EBB);
         font-weight: 700;
-        position: relative;
-        padding: 0 2px;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        line-height: 1;
+        transition: all 0.5s ease;
     }
 
-    .speech-quote p strong::after {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg,
-                var(--primary-color, #2A6EBB),
-                rgba(42, 110, 187, 0.2));
-        border-radius: 1px;
+    .stat-item:hover .stat-number {
+        transform: scale(1.1);
     }
 
-    .speech-quote p em {
-        color: #4a5568;
-        font-style: italic;
+    .stat-item p {
+        color: var(--text-light);
+        font-size: 1rem;
         font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
-    /* Signature Section */
-    .founder-signature {
-        margin-top: 3rem;
-        padding-top: 2rem;
-        border-top: 2px solid rgba(42, 110, 187, 0.2);
-        position: relative;
+    /* ===== FRAMEWORK SECTION ===== */
+    .framework-section {
+        padding: 80px 20px;
+        background: var(--white);
     }
 
-    .founder-signature::before {
-        content: '❝';
-        position: absolute;
-        top: -1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background: white;
-        padding: 0 1.5rem;
-        color: var(--primary-color, #2A6EBB);
-        font-size: 2rem;
-    }
-
-    .founder-signature>div {
-        text-align: center;
-        padding: 0 2rem;
-    }
-
-    .founder-signature .signature-name {
-        font-weight: 700;
-        font-size: 1.4rem;
-        color: #2d3748;
-        margin-bottom: 0.25rem;
-        font-family: 'Georgia', serif;
-        letter-spacing: 0.5px;
-    }
-
-    .founder-signature .signature-title {
-        color: #718096;
-        font-size: 1rem;
-        font-style: italic;
-    }
-
-    /* CTA Buttons */
-    .speech-cta {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2.5rem;
-        padding-top: 2rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .speech-cta .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.875rem 2rem;
-        font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 50px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 2px solid transparent;
-        cursor: pointer;
-    }
-
-    .speech-cta .btn i {
-        font-size: 1.1rem;
-    }
-
-    /* Primary Button */
-    .speech-cta .btn:first-child {
-        background: linear-gradient(135deg, var(--primary-color, #2A6EBB), #4299e1);
-        color: white;
-        box-shadow: 0 4px 15px rgba(42, 110, 187, 0.2);
-    }
-
-    .speech-cta .btn:first-child:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(42, 110, 187, 0.3);
-        background: linear-gradient(135deg, #1e5ca3, var(--primary-color, #2A6EBB));
-    }
-
-    /* Secondary Button */
-    .speech-cta .btn-secondary {
-        background: transparent;
-        color: var(--primary-color, #2A6EBB);
-        border: 2px solid var(--primary-color, #2A6EBB);
-    }
-
-    .speech-cta .btn-secondary:hover {
-        background: rgba(42, 110, 187, 0.08);
-        transform: translateY(-3px);
-        box-shadow: 0 4px 15px rgba(42, 110, 187, 0.15);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .founder-speech {
-            margin: 2rem auto;
-            padding: 2rem 1.5rem;
-            border-radius: 16px;
-        }
-
-        .speech-quote {
-            padding: 0;
-        }
-
-        .speech-quote .fa-quote-left {
-            font-size: 2.5rem;
-            margin-right: 1rem;
-        }
-
-        .speech-quote p {
-            font-size: 1rem;
-            padding-left: 0.5rem;
-            text-align: left;
-        }
-
-        .speech-quote p::before {
-            width: 2px;
-        }
-
-        .founder-signature {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-        }
-
-        .founder-signature::before {
-            top: -1.25rem;
-            padding: 0 1rem;
-            font-size: 1.5rem;
-        }
-
-        .speech-cta {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0.75rem;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-        }
-
-        .speech-cta .btn {
-            justify-content: center;
-            width: 100%;
-        }
-    }
-
-    /* Animation */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .founder-speech {
-        animation: fadeInUp 0.8s ease-out;
-    }
-
-    .speech-quote p {
-        animation: fadeInUp 0.6s ease-out backwards;
-    }
-
-    .speech-quote p:nth-child(2) {
-        animation-delay: 0.1s;
-    }
-
-    .speech-quote p:nth-child(3) {
-        animation-
-
-        /* Add a subtle background pattern */
-        .founder-speech {
-            background-image:
-                radial-gradient(circle at 10% 20%, rgba(42, 110, 187, 0.03) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(76, 175, 80, 0.03) 0%, transparent 20%);
-        }
-
-        /* Add hover effect to entire card */
-        .founder-speech:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            transform: translateY(-5px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Add decorative corner accents */
-        .founder-speech::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            border-top: 2px solid rgba(42, 110, 187, 0.1);
-            border-right: 2px solid rgba(42, 110, 187, 0.1);
-            border-radius: 0 10px 0 0;
-        }
-
-        /* Smooth scroll for anchor link */
-        html {
-            scroll-behavior: smooth;
-        }
-    }
-
-    /* Framework Section */
-    .section {
-        padding: 5rem 2rem;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg,
-                transparent,
-                var(--primary-color, #2A6EBB),
-                transparent);
-    }
-
-    .container {
+    .framework-container {
         max-width: 1200px;
         margin: 0 auto;
-        position: relative;
-        z-index: 1;
+        padding: 0 20px;
     }
 
-    /* Section Header */
-    .container h2 {
-        font-size: 2.75rem;
-        font-weight: 800;
+    .framework-section h2 {
         text-align: center;
-        margin-bottom: 1rem;
-        color: #1a2639;
-        position: relative;
-        display: inline-block;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .container h2::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary-color, #2A6EBB), #4CAF50);
-        border-radius: 2px;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 20px;
+        font-weight: 300;
     }
 
     .section-subtitle {
         text-align: center;
-        font-size: 1.125rem;
-        color: #718096;
+        color: var(--text-light);
+        margin-bottom: 60px;
+        font-size: 1.1rem;
         max-width: 600px;
-        margin: 0 auto 3rem;
-        line-height: 1.6;
-        font-weight: 400;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /* Framework Grid */
     .framework-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
     }
 
     .framework-item {
-        background: white;
+        background: var(--white);
         border-radius: 16px;
-        padding: 2.5rem 2rem;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(226, 232, 240, 0.8);
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
-        z-index: 1;
     }
 
     .framework-item::before {
@@ -1294,173 +428,82 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary-color, #2A6EBB), #4CAF50);
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(0, 128, 128, 0.05), rgba(0, 102, 102, 0.05));
         opacity: 0;
         transition: opacity 0.3s ease;
     }
 
     .framework-item:hover {
         transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border-color: rgba(42, 110, 187, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        border-color: var(--primary-color);
     }
 
     .framework-item:hover::before {
         opacity: 1;
     }
 
-    /* Framework Icon */
     .framework-icon {
-        width: 70px;
-        height: 70px;
-        border-radius: 16px;
+        width: 80px;
+        height: 80px;
+        background: var(--primary-light);
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 1.5rem;
+        margin: 0 auto 25px;
         position: relative;
-        overflow: hidden;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .framework-icon::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: inherit;
-        opacity: 0.9;
-    }
-
-    .framework-icon i {
-        font-size: 2rem;
-        color: white;
         z-index: 1;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s ease;
     }
 
     .framework-item:hover .framework-icon {
+        background: var(--primary-color);
         transform: scale(1.1) rotate(5deg);
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Content Styling */
+    .framework-icon i {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .framework-item:hover .framework-icon i {
+        color: var(--white);
+    }
+
     .framework-item h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 0.75rem;
-        color: #2d3748;
+        font-size: 1.4rem;
+        color: var(--text-dark);
+        margin-bottom: 15px;
         position: relative;
-        padding-bottom: 0.5rem;
-    }
-
-    .framework-item h3::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-        height: 2px;
-        background: currentColor;
-        opacity: 0.3;
-        transition: width 0.3s ease;
-    }
-
-    .framework-item:hover h3::after {
-        width: 60px;
+        z-index: 1;
+        font-weight: 600;
     }
 
     .framework-item p {
-        color: #718096;
-        line-height: 1.7;
+        color: var(--text-light);
         font-size: 1rem;
-        margin: 0;
+        line-height: 1.6;
+        position: relative;
+        z-index: 1;
     }
 
-    /* Color Variations (remove inline styles) */
-    .framework-item:nth-child(1) .framework-icon {
-        background: linear-gradient(135deg, #1a5276 0%, #2c3e50 100%);
-    }
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
 
-    .framework-item:nth-child(2) .framework-icon {
-        background: linear-gradient(135deg, #28a745 0%, #2ecc71 100%);
-    }
-
-    .framework-item:nth-child(3) .framework-icon {
-        background: linear-gradient(135deg, #27ae60 0%, #16a085 100%);
-    }
-
-    .framework-item:nth-child(4) .framework-icon {
-        background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
-    }
-
-    .framework-item:nth-child(5) .framework-icon {
-        background: linear-gradient(135deg, #f39c12 0%, #f1c40f 100%);
-    }
-
-    .framework-item:nth-child(6) .framework-icon {
-        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-        .framework-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
-    @media (max-width: 768px) {
-        .section {
-            padding: 4rem 1.5rem;
-        }
-
-        .container h2 {
-            font-size: 2.25rem;
-        }
-
-        .section-subtitle {
-            font-size: 1rem;
-            margin-bottom: 2.5rem;
-            padding: 0 1rem;
-        }
-
-        .framework-grid {
-            grid-template-columns: 1fr;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .framework-item {
-            padding: 2rem 1.75rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .container h2 {
-            font-size: 2rem;
-        }
-
-        .framework-item {
-            padding: 1.75rem 1.5rem;
-        }
-
-        .framework-icon {
-            width: 60px;
-            height: 60px;
-        }
-
-        .framework-icon i {
-            font-size: 1.75rem;
-        }
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
+    @keyframes countUp {
         from {
             opacity: 0;
             transform: translateY(20px);
@@ -1472,8 +515,34 @@
         }
     }
 
+    /* Apply animations */
+    .about-content,
+    .stats-grid,
+    .framework-grid {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+    }
+
+    .stat-item {
+        animation: countUp 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    .stat-item:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .stat-item:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .stat-item:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
     .framework-item {
-        animation: fadeIn 0.6s ease-out backwards;
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
     }
 
     .framework-item:nth-child(1) {
@@ -1499,43 +568,388 @@
     .framework-item:nth-child(6) {
         animation-delay: 0.6s;
     }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 1024px) {
+        .abouthero h1 {
+            font-size: 3rem;
+        }
+
+        .framework-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .stats-grid {
+            gap: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .abouthero {
+            padding: 80px 20px;
+        }
+
+        .abouthero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+        }
+
+        .about-section,
+        .case-section,
+        .framework-section {
+            padding: 60px 20px;
+        }
+
+        .about-section h2,
+        .case-section h2,
+        .framework-section h2 {
+            font-size: 2rem;
+        }
+
+        .stats-grid {
+            grid-template-columns: 1fr;
+            max-width: 400px;
+        }
+
+        .stat-item {
+            padding: 30px 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+        }
+
+        .framework-grid {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .framework-item {
+            padding: 30px 25px;
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+        }
+
+        .about-text em {
+            font-size: 1.2rem;
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .abouthero {
+            padding: 60px 15px;
+        }
+
+        .abouthero h1 {
+            font-size: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+        }
+
+        .about-section,
+        .case-section,
+        .framework-section {
+            padding: 50px 15px;
+        }
+
+        .about-section h2,
+        .case-section h2,
+        .framework-section h2 {
+            font-size: 1.8rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+        }
+
+        .framework-item {
+            padding: 25px 20px;
+        }
+
+        .framework-icon {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .framework-icon i {
+            font-size: 1.8rem;
+        }
+
+        .framework-item h3 {
+            font-size: 1.3rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.2rem;
+            padding-left: 15px;
+        }
+
+        .about-text h3::before {
+            width: 6px;
+            height: 6px;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+        }
+
+        .about-text em {
+            font-size: 1.1rem;
+            padding: 18px;
+        }
+    }
+
+    /* ===== ENHANCEMENTS ===== */
+
+    /* Optional: Add background pattern to hero */
+    .abouthero::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: -50px;
+        right: -50px;
+        height: 100px;
+        background: var(--white);
+        transform: rotate(-2deg);
+        z-index: 0;
+    }
+
+    /* Optional: Add subtle gradient to framework items */
+    .framework-item::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-color), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .framework-item:hover::after {
+        opacity: 1;
+    }
+
+    /* Optional: Add hover effect to stats */
+    .stat-item:hover .stat-number::after {
+        content: '%';
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Optional: Add decorative line to section titles */
+    .case-section h2::after,
+    .framework-section h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 20px auto 0;
+        border-radius: 2px;
+    }
+
+    /* Optional: Add subtle hover effect to philosophy quote */
+    .about-text em {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .about-text em:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 128, 128, 0.1);
+    }
+
+    .about-text em::before {
+        content: '"';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 2rem;
+        color: var(--primary-color);
+        opacity: 0.3;
+        font-family: Georgia, serif;
+    }
+
+    .about-text em::after {
+        content: '"';
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 2rem;
+        color: var(--primary-color);
+        opacity: 0.3;
+        font-family: Georgia, serif;
+    }
 </style>
 {% endblock %}
 
 
 {% block scripts %}
 <script>
-    // Initialize counters when page loads
+
+    // Animated Statistics Counter
     document.addEventListener('DOMContentLoaded', function () {
-        const counters = document.querySelectorAll('.stat-number');
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 2000;
-            const increment = target / (duration / 16);
-            let current = 0;
+        // Function to animate numbers
+        function animateStatistics() {
+            const statNumbers = document.querySelectorAll('.stat-number');
 
-            const updateCounter = () => {
-                current += increment;
-                if (current < target) {
-                    counter.textContent = Math.ceil(current) + '%';
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target + '%';
-                }
-            };
+            // Check if element is in viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
 
-            // Start animation when element is in viewport
+            // Animate a single number
+            function animateNumber(element) {
+                const target = parseInt(element.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const frameDuration = 1000 / 60; // 60fps
+                const totalFrames = Math.round(duration / frameDuration);
+                let currentFrame = 0;
+
+                const counter = setInterval(() => {
+                    currentFrame++;
+                    const progress = currentFrame / totalFrames;
+                    const currentValue = Math.round(target * progress);
+
+                    element.textContent = currentValue;
+
+                    if (currentFrame === totalFrames) {
+                        clearInterval(counter);
+                        element.textContent = target;
+                    }
+                }, frameDuration);
+            }
+
+            // Intersection Observer for lazy animation
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        updateCounter();
-                        observer.unobserve(entry.target);
+                        const numberElement = entry.target;
+                        if (!numberElement.classList.contains('animated')) {
+                            numberElement.classList.add('animated');
+                            animateNumber(numberElement);
+                        }
+                        observer.unobserve(numberElement);
                     }
                 });
+            }, {
+                threshold: 0.5,
+                rootMargin: '0px 0px -50px 0px'
             });
 
-            observer.observe(counter);
+            // Observe all stat numbers
+            statNumbers.forEach(number => {
+                observer.observe(number);
+            });
+        }
+
+        // Initialize animations when page loads
+        animateStatistics();
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add hover effect to framework items
+        const frameworkItems = document.querySelectorAll('.framework-item');
+        frameworkItems.forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                const icon = this.querySelector('.framework-icon i');
+                icon.style.transform = 'rotate(10deg) scale(1.1)';
+            });
+
+            item.addEventListener('mouseleave', function () {
+                const icon = this.querySelector('.framework-icon i');
+                icon.style.transform = 'rotate(0) scale(1)';
+            });
+        });
+
+        // Add click effect to stat items
+        const statItems = document.querySelectorAll('.stat-item');
+        statItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const number = this.querySelector('.stat-number');
+                if (number.textContent.includes('%')) return;
+
+                const originalText = number.textContent;
+                number.textContent = originalText + '%';
+
+                setTimeout(() => {
+                    number.textContent = originalText;
+                }, 1000);
+            });
+        });
+
+        // Add parallax effect to hero background
+        window.addEventListener('scroll', function () {
+            const hero = document.querySelector('.abouthero');
+            if (hero) {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.5;
+                hero.style.backgroundPosition = `center ${rate}px`;
+            }
         });
     });
+
+
+
+
+
+
+
+
+
+
+
 </script>
 {% endblock %}

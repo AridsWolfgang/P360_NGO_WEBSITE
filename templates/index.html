@@ -22,11 +22,8 @@
 <!--================Mission Section ===================-->
 <section class="mission-statement">
     <div class="statement container">
-        <p>Our vision is a 360-degree prosperity <br>
-            <span>revolution</span> where every person, every <br>
-            idea, and every resource <span>contributes</span> <br>
-            to <span>shared growth</span>.
-        </p>
+        <p id="typewriter"></p>
+
         <div class="mission-cta">
             <a href="{{ url_for('get_involved')}}" class="btn btn-secondary">Get Started</a>
         </div>
@@ -38,7 +35,7 @@
     <div class="pillars-container">
         <h2>Strategic Pillars</h2>
     </div>
-    <p class="subtitle">Our core principles that drive innovation, growth, and sustainable success. <br> Each pillar
+    <p class="subtitle">Our core principles that drive innovation, growth, and sustainable<br> success. Each pillar
         represents a fundamental aspect of our strategic approach to achieving organizational excellence.</p>
     <div class="pillars-list">
         <a href="{{ url_for('innovation') }}">Innovation & Systems</a>
@@ -56,7 +53,7 @@
                     <div class="pillar-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <h3>Innovation & Technology</h3>
+                    <h3>Innovation & Systems</h3>
                     <div class="pillar-number">01</div>
                 </div>
                 <div class="card-body">
@@ -193,13 +190,13 @@
 <!--============ Testimonials Section =============================== -->
 <div class="testimonial-container">
     <div class="testimonial-header">
-        <h1>What People Say</h1>
+        <h1>Testimonials</h1>
         <p class="subtitle">Real feedback from clients and partners who've worked with us</p>
     </div>
 
     <div class="testimonial-carousel">
         <div class="testimonial-track" id="testimonialTrack">
-            <!-- Testimonial 1 -->
+
             <div class="testimonial-slide">
                 <div class="quote-icon">
                     <i class="fas fa-quote-left"></i>
@@ -218,7 +215,6 @@
                 </div>
             </div>
 
-            <!-- Testimonial 2 -->
             <div class="testimonial-slide">
                 <div class="quote-icon">
                     <i class="fas fa-quote-left"></i>
@@ -236,7 +232,7 @@
                 </div>
             </div>
 
-            <!-- Testimonial 3 -->
+
             <div class="testimonial-slide">
                 <div class="quote-icon">
                     <i class="fas fa-quote-left"></i>
@@ -255,7 +251,7 @@
                 </div>
             </div>
 
-            <!-- Testimonial 4 -->
+
             <div class="testimonial-slide">
                 <div class="quote-icon">
                     <i class="fas fa-quote-left"></i>
@@ -303,638 +299,562 @@
 
 {% block head %}
 <style>
-    /* Hero Section - Elegant Image Background  */
-    .indexhero {
-        position: relative;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        z-index: 1;
-        color: white;
-        text-align: center;
-        margin: 0 0 0 0;
+    /* ===== HOMEPAGE STYLES ===== */
+
+    /* Base Variables */
+    :root {
+        --primary-color: #008080;
+        --primary-light: rgba(0, 128, 128, 0.1);
+        --primary-dark: #006666;
+        --text-dark: #333;
+        --text-light: #666;
+        --white: #ffffff;
+        --background-light: #fafafa;
+        --border-color: #e0e0e0;
+        --shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        --radius: 12px;
+    }
+
+    /* Reset and Base */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
         padding: 0 20px;
-        border-top: 5px solid var(--color-teal-dark);
-       
+    }
+
+    .btn {
+        display: inline-block;
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 14px 32px;
+        border-radius: var(--radius);
+        text-decoration: none;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 128, 128, 0.2);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+    }
+
+    .btn-secondary:hover {
+        background: var(--primary-color);
+        color: var(--white);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .indexhero {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        color: var(--white);
+        padding: 140px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
     }
 
     .indexhero::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: -1;
-        animation: zoomIn 20s infinite alternate;
-        background: url("../static/images/backgroundimg.jpg") center/cover no-repeat;
+        background:
+            radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        pointer-events: none;
     }
 
-    .indexhero .container {
+    .indexhero-heading h1 {
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
         position: relative;
         z-index: 1;
-        max-width: 1000px;
-    }
-
-    .indexhero h1 {
-        font-size: 4.5rem;
-        font-weight: bolder;
-        margin: 2rem 0 0 0;
-        line-height: 1.1;
-        color: var(--color-teal-deep);
-        font-family: "montserrat", sans-serif;
-        animation: slideInDown 1s ease-out;
     }
 
     .indexhero-description {
         font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        opacity: 0.9;
+        font-weight: 300;
         line-height: 1.7;
-        margin: 0 auto 3rem;
-        color: var(--color-teal-deep);
-        padding: 1.5rem;
-        animation: fadeIn 1s ease-out 0.6s both;
+        position: relative;
+        z-index: 1;
     }
 
     .indexhero-cta {
-        animation: fadeIn 1s ease-out 0.9s both;
+        position: relative;
+        z-index: 1;
     }
 
-    .indexhero .btn {
-        padding: 1.1rem 2.2rem;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 8px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        min-width: 180px;
-        text-decoration: none;
-
-    }
-
-    .indexhero .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .indexhero .btn-secondary {
-        background: var(--color-warning);
-        border-color: white;
-        color: white;
-    }
-
-    .indexhero .btn-secondary:hover {
-        background: white;
-        color: #1a5276;
-    }
-
-    @keyframes zoomIn {
-        from {
-            transform: scale(1);
-        }
-
-        to {
-            transform: scale(1.1);
-        }
-    }
-
-    @keyframes slideInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-50px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes slideInUp {
-        from {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    /* Mission Statement Section - Centered Text with Button    */
-
+    /* ===== MISSION STATEMENT ===== */
     .mission-statement {
-        padding: 5rem 1rem;
+        padding: 100px 20px;
+        background: var(--white);
         text-align: center;
     }
 
-    .mission-statement .statement p {
-        font-size: 2rem;
-        line-height: 1.6;
-        margin-bottom: 2rem;
-        color: var(--color-teal-deep);
-        font-weight: lighter;
+    .statement {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    #typewriter {
+        font-size: 1.8rem;
+        color: var(--text-dark);
+        line-height: 1.7;
+        margin-bottom: 40px;
+        min-height: 120px;
+        font-weight: 300;
         font-style: italic;
     }
 
-    .mission-statement .statement p span {
-        font-weight: bold;
-        color: var(--color-teal-deep);
-    }
-
-
     .mission-cta {
-        padding-top: 2rem;
-        animation: fadeIn 1s ease-out 0.9s both;
+        margin-top: 40px;
     }
 
-    .mission-cta .btn {
-        padding: 1.1rem 2.2rem;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 8px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        min-width: 180px;
-        text-decoration: none;
-
-    }
-
-    .mission-cta .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .mission-cta .btn-secondary {
-        background: var(--color-success);
-        border-color: white;
-        color: white;
-    }
-
-    .mission-cta .btn-secondary:hover {
-        background: white;
-        color: #1a5276;
-    }
-
-    /* Strategic Pillars Section  */
+    /* ===== STRATEGIC PILLARS ===== */
     .pillars {
-        padding: 5rem 1rem;
-        background-color: var(--bg-primary-light);
-    }
-
-    .pillars-container {
-        max-width: 1200px;
-        margin: 0 auto;
+        padding: 100px 20px;
+        background: var(--background-light);
         text-align: center;
-        position: relative;
-        padding-bottom: 20px;
-    }
-
-    .pillars-container::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background-color: var(--color-teal-deep);
-        border-radius: 2px;
     }
 
     .pillars-container h2 {
-        font-size: 2.5rem;
-        color: var(--color-teal-deep);
-        margin-bottom: 2rem;
+        font-size: 2.8rem;
+        color: var(--text-dark);
+        margin-bottom: 20px;
+        font-weight: 300;
     }
 
-    .pillars-container p.subtitle {
-        font-size: 1.2rem;
-        color: var(--color-teal-deep);
-        text-align: center;
-        /* max-width: 800px; */
-        /* margin: 0 auto 3rem; */
+    .pillars .subtitle {
+        color: var(--text-light);
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto 60px;
+        line-height: 1.6;
     }
 
     .pillars-list {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 1.5rem;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 1.5rem;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
     }
 
     .pillars-list a {
-        background-color: var(--color-teal-light);
-        color: var(--color-teal-deep);
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
+        color: var(--primary-color);
         text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 600;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 12px 24px;
+        border: 2px solid var(--primary-color);
+        border-radius: 30px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        background: var(--white);
     }
 
     .pillars-list a:hover {
-        background-color: var(--color-teal-deep);
-        color: white;
+        background: var(--primary-color);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
     }
 
+    /* Carousel Container */
     .carousel-container {
+        max-width: 1200px;
+        margin: 0 auto;
         position: relative;
-        width: 100%;
-        margin: 30px auto;
         overflow: hidden;
-        border-radius: 20px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        background-color: white;
-        padding: 30px 0;
+        padding: 0 60px;
     }
 
     .carousel-track {
         display: flex;
-        transition: transform 0.5s ease-in-out;
-        padding: 10px 0;
+        gap: 30px;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
     }
 
+    /* Pillar Cards */
     .pillar-card {
-        flex: 0 0 350px;
-        margin: 0 15px;
-        background: white;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        background: var(--white);
+        border-radius: var(--radius);
+        border: 1px solid var(--border-color);
+        min-width: calc(33.333% - 20px);
+        flex-shrink: 0;
+        padding: 40px 30px;
         transition: all 0.3s ease;
-        border: 1px solid #f0f0f0;
+        box-shadow: var(--shadow);
     }
 
     .pillar-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        border-color: var(--primary-color);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
     .card-header {
-        padding: 25px 25px 15px;
-        background: var(--bg-primary-gradient);
-        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
         position: relative;
     }
 
     .pillar-icon {
-        width: 70px;
-        height: 70px;
-        background: rgba(255, 255, 255, 0.15);
+        width: 60px;
+        height: 60px;
+        background: var(--primary-light);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 15px;
-        font-size: 30px;
+        transition: all 0.3s ease;
+    }
+
+    .pillar-card:hover .pillar-icon {
+        background: var(--primary-color);
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .pillar-icon i {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .pillar-card:hover .pillar-icon i {
+        color: var(--white);
     }
 
     .card-header h3 {
-        font-size: 1.6rem;
-        margin-bottom: 5px;
+        flex: 1;
+        margin: 0 20px;
+        color: var(--text-dark);
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-align: left;
     }
 
     .pillar-number {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        background: rgba(255, 255, 255, 0.2);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        opacity: 0.3;
     }
 
-    .card-body {
-        padding: 25px;
+    .pillar-card:hover .pillar-number {
+        opacity: 1;
+        transform: scale(1.1);
     }
 
     .card-body p {
-        color: #555;
-        margin-bottom: 20px;
-        font-size: 1.05rem;
+        color: var(--text-light);
+        margin-bottom: 25px;
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left;
     }
 
     .pillar-features {
-        list-style-type: none;
-        margin-top: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
     }
 
     .pillar-features li {
-        padding: 8px 0;
-        border-bottom: 1px dashed #eee;
-        display: flex;
-        align-items: center;
-    }
-
-    .pillar-features li:last-child {
-        border-bottom: none;
+        color: var(--text-dark);
+        margin-bottom: 12px;
+        padding-left: 30px;
+        position: relative;
+        font-size: 0.95rem;
     }
 
     .pillar-features li i {
-        color: #2ecc71;
-        margin-right: 10px;
-        font-size: 0.9rem;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: var(--primary-color);
     }
 
+    /* Carousel Navigation */
     .carousel-btn {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         width: 50px;
         height: 50px;
+        background: var(--white);
+        border: 1px solid var(--border-color);
         border-radius: 50%;
-        background-color: white;
-        border: none;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        font-size: 20px;
-        color: #2c3e50;
         cursor: pointer;
-        z-index: 10;
-        transition: all 0.3s ease;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10;
     }
 
     .carousel-btn:hover {
-        background-color: #3498db;
-        color: white;
-        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .carousel-btn:hover i {
+        color: var(--white);
+    }
+
+    .carousel-btn i {
+        color: var(--text-dark);
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
     }
 
     .carousel-btn.prev {
-        left: 20px;
+        left: 0;
     }
 
     .carousel-btn.next {
-        right: 20px;
+        right: 0;
     }
 
-    /* Dots Indicator */
+    /* Carousel Dots */
     .carousel-dots {
         display: flex;
         justify-content: center;
-        margin-top: 30px;
+        gap: 10px;
+        margin-top: 40px;
     }
 
-    .dot {
+    .carousel-dots .dot {
         width: 12px;
         height: 12px;
         border-radius: 50%;
-        background-color: #ddd;
-        margin: 0 8px;
+        background: var(--border-color);
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
     }
 
-    .dot.active {
-        background-color: #3498db;
+    .carousel-dots .dot.active {
+        background: var(--primary-color);
         transform: scale(1.2);
     }
 
-
-    /* Animation for card entrance */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .pillar-card {
-        animation: fadeInUp 0.5s ease forwards;
-    }
-
-    .card-header {
-        animation-delay: 0.1s;
-    }
-
-    /* Testimonials Section  */
-    .testimonial-container {}
-
-    .testimonial-header {
+    /* ===== TESTIMONIALS ===== */
+    .testimonial-container {
+        padding: 100px 20px;
+        background: var(--white);
         text-align: center;
-        margin-bottom: 60px;
     }
 
     .testimonial-header h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        color: var(--text-dark);
+        margin-bottom: 20px;
         font-weight: 300;
-        color: #2c3e50;
-        margin-bottom: 10px;
-        letter-spacing: -0.5px;
     }
 
-    .subtitle {
+    .testimonial-header .subtitle {
+        color: var(--text-light);
         font-size: 1.1rem;
-        color: #7f8c8d;
         max-width: 600px;
-        margin: 0 auto;
+        margin: 0 auto 60px;
+        line-height: 1.6;
     }
 
-    /* Testimonial Carousel */
     .testimonial-carousel {
-        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
         overflow: hidden;
-        border-radius: 12px;
-        background: white;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        padding: 40px 0;
     }
 
     .testimonial-track {
         display: flex;
-        transition: transform 0.4s ease;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
     }
 
     .testimonial-slide {
         min-width: 100%;
-        padding: 20px 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-shrink: 0;
+        background: var(--background-light);
+        border-radius: var(--radius);
+        padding: 50px;
+        border: 1px solid var(--border-color);
     }
 
     .quote-icon {
         font-size: 2.5rem;
-        color: #3498db;
+        color: var(--primary-color);
         margin-bottom: 30px;
-        opacity: 0.2;
+        opacity: 0.3;
     }
 
     .testimonial-text {
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: #2c3e50;
-        line-height: 1.8;
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        line-height: 1.7;
         margin-bottom: 40px;
-        max-width: 700px;
         font-style: italic;
+        font-weight: 300;
     }
 
     .testimonial-author {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     .author-avatar {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+        background: var(--primary-light);
         border-radius: 50%;
-        background-color: #e0e0e0;
-        margin-bottom: 15px;
-        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.8rem;
-        color: #7f8c8d;
-        font-weight: 300;
+        color: var(--primary-color);
+        font-weight: 600;
+        font-size: 1.2rem;
     }
 
     .author-name {
-        font-size: 1.2rem;
+        color: var(--text-dark);
+        font-size: 1.1rem;
         font-weight: 600;
-        color: #2c3e50;
-        margin-bottom: 5px;
     }
 
     .author-role {
+        color: var(--text-light);
         font-size: 0.95rem;
-        color: #7f8c8d;
     }
 
-    /* Navigation */
+    /* Testimonial Navigation */
     .carousel-nav {
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
     }
 
-    .nav-btn {
+    .carousel-nav .nav-btn {
         width: 50px;
         height: 50px;
+        background: var(--white);
+        border: 1px solid var(--border-color);
         border-radius: 50%;
-        border: 1px solid #e0e0e0;
-        background: white;
-        color: #7f8c8d;
-        font-size: 1.2rem;
         cursor: pointer;
-        transition: all 0.2s ease;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .nav-btn:hover {
-        border-color: #3498db;
-        color: #3498db;
-        box-shadow: 0 3px 10px rgba(52, 152, 219, 0.1);
-    }
-
-    .carousel-dots {
-        display: flex;
-        margin: 0 30px;
-    }
-
-    .dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #ddd;
-        margin: 0 6px;
-        cursor: pointer;
         transition: all 0.3s ease;
     }
 
-    .dot.active {
-        background-color: #3498db;
-        transform: scale(1.2);
+    .carousel-nav .nav-btn:hover {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
     }
 
-    /* Footer */
-    .footer {
-        margin-top: 80px;
+    .carousel-nav .nav-btn:hover i {
+        color: var(--white);
+    }
+
+    .carousel-nav .nav-btn i {
+        color: var(--text-dark);
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter {
+        padding: 100px 20px;
+        background: var(--background-light);
         text-align: center;
-        color: #95a5a6;
-        font-size: 0.9rem;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 2rem;
-        }
-
-        .testimonial-slide {
-            padding: 20px 30px;
-        }
-
-        .testimonial-text {
-            font-size: 1.1rem;
-        }
+    .newsletter-container {
+        max-width: 600px;
+        margin: 0 auto;
     }
 
-    @media (max-width: 480px) {
-        .testimonial-slide {
-            padding: 20px;
-        }
-
-        .nav-btn {
-            width: 45px;
-            height: 45px;
-        }
-
-        .testimonial-text {
-            font-size: 1rem;
-        }
+    .newsletter h2 {
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 20px;
+        font-weight: 300;
     }
 
-    /* Animation */
-    .testimonial-slide {
-        animation: fadeIn 0.8s ease;
+    .newsletter p {
+        color: var(--text-light);
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        line-height: 1.6;
     }
 
-    @keyframes fadeIn {
+    .newsletter-form {
+        display: flex;
+        gap: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        padding: 16px 20px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .newsletter-form input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
+    }
+
+    .newsletter-form .btn {
+        white-space: nowrap;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
         from {
             opacity: 0;
-            transform: translateY(10px);
+            transform: translateY(30px);
         }
 
         to {
@@ -943,141 +863,670 @@
         }
     }
 
-    /* Newsletter Section  */
-    .newsletter {
-        background-color: var(--bg-primary);
-        padding: 4rem 1rem;
-        text-align: center;
-    }
-
-    .newsletter-container h2 {
-        font-size: 2.5rem;
-        color: var(--color-teal-deep);
-        margin-bottom: 1rem;
-    }
-
-    .newsletter-container p {
-        font-size: 1.2rem;
-        color: var(--color-teal-deep);
-        margin-bottom: 2rem;
-    }
-
-    .newsletter-form {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .newsletter-form input[type="email"] {
-        padding: 12px 15px;
-        font-size: 1rem;
-        border: 2px solid var(--color-teal-deep);
-        border-radius: 8px;
-        width: 300px;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .newsletter-form .btn-secondary {
-        padding: 12px 25px;
-        font-size: 1rem;
-        border-radius: 8px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        min-width: 150px;
-        text-decoration: none;
-    }
-
-    .newsletter-form .btn-secondary:hover {
-        background: white;
-        color: #1a5276;
-    }
-
-    .newsletter-form input[type="email"]:focus {
-        outline: none;
-        border-color: var(--color-warning);
-        box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
-    }
-
-    .newsletter-form .btn-secondary:focus {
-        outline: none;
-        box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
-    }
-
-    .newsletter-form .btn-secondary {
-        background: var(--color-warning);
-        border-color: white;
-        color: white;
-    }
-
-
-
-
-    /* Responsiveness Adjustments that has to do with index.html */
-    @media (max-width: 768px) {
-        .indexhero h1 {
-            font-size: 2.8rem;
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
         }
 
-        .indexhero-subtitle {
-            font-size: 1.4rem;
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    /* Apply animations */
+    .indexhero-heading,
+    .indexhero-description,
+    .indexhero-cta {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+    }
+
+    .indexhero-heading {
+        animation-delay: 0.2s;
+    }
+
+    .indexhero-description {
+        animation-delay: 0.4s;
+    }
+
+    .indexhero-cta {
+        animation-delay: 0.6s;
+    }
+
+    .pillars-container,
+    .testimonial-header,
+    .newsletter-container {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+    }
+
+    .pillar-card,
+    .testimonial-slide {
+        animation: slideInRight 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    /* Stagger animations */
+    .pillar-card:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .pillar-card:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .pillar-card:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .pillar-card:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .pillar-card:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .pillar-card:nth-child(6) {
+        animation-delay: 0.6s;
+    }
+
+    /* Typewriter effect */
+    #typewriter {
+        overflow: hidden;
+        border-right: 3px solid var(--primary-color);
+        white-space: nowrap;
+        margin: 0 auto;
+        animation:
+            typewriter 4s steps(40, end),
+            blink 0.75s step-end infinite;
+        width: 0;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 1024px) {
+        .pillar-card {
+            min-width: calc(50% - 15px);
+        }
+
+        .carousel-container {
+            padding: 0 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .indexhero {
+            padding: 100px 20px;
+        }
+
+        .indexhero-heading h1 {
+            font-size: 2.5rem;
+        }
+
+        .indexhero-description {
+            font-size: 1.1rem;
+        }
+
+        .mission-statement {
+            padding: 80px 20px;
+        }
+
+        #typewriter {
+            font-size: 1.5rem;
+            white-space: normal;
+            animation: none;
+            border-right: none;
+            width: 100%;
+        }
+
+        .pillars,
+        .testimonial-container,
+        .newsletter {
+            padding: 80px 20px;
+        }
+
+        .pillars-container h2,
+        .testimonial-header h1,
+        .newsletter h2 {
+            font-size: 2.2rem;
+        }
+
+        .pillar-card {
+            min-width: calc(100% - 20px);
+        }
+
+        .carousel-container {
+            padding: 0 40px;
+        }
+
+        .testimonial-slide {
+            padding: 40px 30px;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+        }
+
+        .newsletter-form input,
+        .newsletter-form .btn {
+            width: 100%;
+        }
+
+        .pillars-list {
+            gap: 15px;
+        }
+
+        .pillars-list a {
+            padding: 10px 20px;
+            font-size: 0.95rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .indexhero {
+            padding: 80px 15px;
+        }
+
+        .indexhero-heading h1 {
+            font-size: 2rem;
         }
 
         .indexhero-description {
             font-size: 1rem;
-            padding: 1.5rem;
         }
 
-        .mission-statement .statement p {
-            font-size: 1.5rem;
-            line-height: 1.6;
-
-        }
-    }
-
-
-    @media (max-width: 850px) {
-        .pillar-card {
-            flex: 0 0 320px;
+        .mission-statement {
+            padding: 60px 15px;
         }
 
-        h1 {
-            font-size: 2.4rem;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .pillar-card {
-            flex: 0 0 280px;
-            margin: 0 10px;
+        #typewriter {
+            font-size: 1.3rem;
+            min-height: 100px;
         }
 
-        h1 {
-            font-size: 2rem;
+        .pillars,
+        .testimonial-container,
+        .newsletter {
+            padding: 60px 15px;
+        }
+
+        .pillars-container h2,
+        .testimonial-header h1,
+        .newsletter h2 {
+            font-size: 1.8rem;
+        }
+
+        .pillars .subtitle,
+        .testimonial-header .subtitle,
+        .newsletter p {
+            font-size: 1rem;
+        }
+
+        .carousel-container {
+            padding: 0 30px;
         }
 
         .carousel-btn {
-            width: 45px;
-            height: 45px;
-            font-size: 18px;
+            width: 40px;
+            height: 40px;
         }
 
-        .carousel-btn.prev {
-            left: 10px;
+        .pillar-card {
+            padding: 30px 20px;
         }
 
-        .carousel-btn.next {
-            right: 10px;
+        .card-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
         }
 
-        .card-header,
-        .card-body {
-            padding: 20px;
+        .pillar-icon {
+            order: -1;
+            margin-bottom: 10px;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .pillar-number {
+            position: absolute;
+            top: 30px;
+            right: 0;
+        }
+
+        .testimonial-slide {
+            padding: 30px 20px;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+        }
+
+        .carousel-nav {
+            gap: 20px;
+        }
+
+        .carousel-nav .nav-btn {
+            width: 40px;
+            height: 40px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 0.95rem;
+        }
+
+        .pillars-list a {
+            padding: 8px 16px;
+            font-size: 0.9rem;
         }
     }
 </style>
+{% endblock %}
+{% block scripts %}
+<script>
+    // Homepage Interactive Features
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize all interactive components
+        initPillarsCarousel();
+        initTestimonialsCarousel();
+        initTypewriter();
+        initScrollAnimations();
+        initHoverEffects();
+    });
+
+    // Pillars Carousel
+    function initPillarsCarousel() {
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.pillar-card');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        if (!track || !slides.length) return;
+
+        let currentIndex = 0;
+        const slidesPerView = getSlidesPerView();
+        const totalSlides = slides.length;
+        const maxIndex = Math.max(0, totalSlides - slidesPerView);
+
+        // Create dots
+        for (let i = 0; i <= maxIndex; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        // Navigation functions
+        function updateCarousel() {
+            const slideWidth = slides[0].offsetWidth + 30; // width + gap
+            const translateX = -currentIndex * slideWidth;
+            track.style.transform = `translateX(${translateX}px)`;
+
+            // Update dots
+            document.querySelectorAll('.carousel-dots .dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Loop back to start
+            }
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = maxIndex; // Loop to end
+            }
+            updateCarousel();
+        }
+
+        function getSlidesPerView() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Auto-advance carousel (optional)
+        let autoSlideInterval = setInterval(nextSlide, 5000);
+
+        // Pause auto-advance on hover
+        track.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        track.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        });
+
+        // Update on window resize
+        window.addEventListener('resize', () => {
+            const newSlidesPerView = getSlidesPerView();
+            const newMaxIndex = Math.max(0, totalSlides - newSlidesPerView);
+
+            if (currentIndex > newMaxIndex) {
+                currentIndex = newMaxIndex;
+            }
+
+            // Recreate dots if needed
+            if (maxIndex !== newMaxIndex) {
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i <= newMaxIndex; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'dot';
+                    if (i === currentIndex) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(i));
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            updateCarousel();
+        });
+
+        // Initialize
+        updateCarousel();
+    }
+
+    // Testimonials Carousel
+    function initTestimonialsCarousel() {
+        const track = document.getElementById('testimonialTrack');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        if (!track || !slides.length) return;
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        // Navigation functions
+        function updateCarousel() {
+            const slideWidth = slides[0].offsetWidth;
+            const translateX = -currentIndex * slideWidth;
+            track.style.transform = `translateX(${translateX}px)`;
+
+            // Update dots
+            document.querySelectorAll('.carousel-dots .dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Auto-advance carousel (optional)
+        let autoSlideInterval = setInterval(nextSlide, 6000);
+
+        // Pause auto-advance on hover
+        track.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        track.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(nextSlide, 6000);
+        });
+
+        // Initialize
+        updateCarousel();
+    }
+
+    // Typewriter Effect
+    function initTypewriter() {
+        const typewriterElement = document.getElementById('typewriter');
+        if (!typewriterElement) return;
+
+        const texts = [
+            "Prosperity360 Foundation is a Pan-African, Global South–rooted development institution that accelerates multi-dimensional prosperity, systems transformation, and community-driven development across Africa, Latin America, South Asia, and other emerging regions.",
+            "Our mission is to create sustainable prosperity through innovation, economic empowerment, and community transformation across the Global South.",
+            "We believe in building systems that empower communities, transform institutions, and create lasting impact for generations to come."
+        ];
+
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 50;
+
+        function typeWriter() {
+            const currentText = texts[textIndex];
+
+            if (isDeleting) {
+                // Deleting text
+                typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 30;
+            } else {
+                // Typing text
+                typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 50;
+            }
+
+            // Check if text is complete
+            if (!isDeleting && charIndex === currentText.length) {
+                // Pause at the end of typing
+                isDeleting = true;
+                setTimeout(typeWriter, 2000);
+                return;
+            }
+
+            // Check if text is deleted
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeWriter, 500);
+                return;
+            }
+
+            setTimeout(typeWriter, typingSpeed);
+        }
+
+        // Start typewriter effect after a delay
+        setTimeout(typeWriter, 1000);
+    }
+
+    // Scroll Animations
+    function initScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe animated elements
+        document.querySelectorAll('[style*="animation"]').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    }
+
+    // Hover Effects
+    function initHoverEffects() {
+        // Add hover effect to pillar cards
+        const pillarCards = document.querySelectorAll('.pillar-card');
+        pillarCards.forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                const icon = this.querySelector('.pillar-icon i');
+                const number = this.querySelector('.pillar-number');
+
+                if (icon) icon.style.transform = 'scale(1.2) rotate(10deg)';
+                if (number) number.style.transform = 'scale(1.2)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                const icon = this.querySelector('.pillar-icon i');
+                const number = this.querySelector('.pillar-number');
+
+                if (icon) icon.style.transform = 'scale(1) rotate(0)';
+                if (number) number.style.transform = 'scale(1)';
+            });
+        });
+
+        // Add hover effect to testimonial author avatars
+        const authorAvatars = document.querySelectorAll('.author-avatar');
+        authorAvatars.forEach(avatar => {
+            avatar.addEventListener('mouseenter', function () {
+                this.style.transform = 'scale(1.1)';
+                this.style.backgroundColor = 'var(--primary-color)';
+                this.style.color = 'var(--white)';
+            });
+
+            avatar.addEventListener('mouseleave', function () {
+                this.style.transform = 'scale(1)';
+                this.style.backgroundColor = 'var(--primary-light)';
+                this.style.color = 'var(--primary-color)';
+            });
+        });
+    }
+
+    // Newsletter Form Submission
+    function initNewsletterForm() {
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const emailInput = this.querySelector('input[type="email"]');
+                const submitBtn = this.querySelector('button[type="submit"]');
+
+                if (!emailInput.value) {
+                    alert('Please enter your email address.');
+                    return;
+                }
+
+                // Save original text
+                const originalText = submitBtn.innerHTML;
+
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+                submitBtn.disabled = true;
+
+                // Simulate form submission
+                setTimeout(() => {
+                    // Show success
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                    submitBtn.style.background = '#27ae60';
+
+                    // Reset form
+                    emailInput.value = '';
+
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.background = '';
+                    }, 3000);
+                }, 2000);
+            });
+        }
+    }
+
+    // Initialize newsletter form
+    initNewsletterForm();
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            e.preventDefault();
+            const targetElement = document.querySelector(href);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
 {% endblock %}
