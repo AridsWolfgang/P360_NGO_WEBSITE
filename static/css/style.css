@@ -827,3 +827,102 @@ nav {
     transform: translateX(100px);
   }
 }
+
+/* Add these styles to style.css */
+
+/* Mobile menu overlay */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+.nav-overlay.active {
+  display: block;
+}
+
+/* Mobile menu close button */
+.mobile-menu-btn .fa-times {
+  display: none;
+}
+
+.mobile-menu-btn.active .fa-bars {
+  display: none;
+}
+
+.mobile-menu-btn.active .fa-times {
+  display: inline-block;
+}
+
+/* Language dropdown arrow animation */
+.translate-btn .fa-chevron-down {
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.translate-btn.active .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Ensure dropdown is above other content */
+.language-dropdown {
+  z-index: 1001;
+}
+
+/* Fix for mobile menu positioning */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    padding: 80px 30px 30px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-links li a {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  /* Add overlay when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  body.menu-open .nav-overlay {
+    display: block;
+  }
+}
